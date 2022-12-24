@@ -1,13 +1,15 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "thepushkarp-site",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Pushkar's site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Pushkar Patel <thepushkarp@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/thepushkarp/site"
   },
   "dependencies": {
+    "@fontsource/cutive-mono": "^4.5.10",
+    "@fontsource/dm-mono": "^4.5.10",
     "@fontsource/merriweather": "^4.5.14",
     "@fontsource/montserrat": "^4.5.13",
     "gatsby": "^5.3.3",
@@ -28,14 +30,14 @@
   "devDependencies": {
     "prettier": "^2.8.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/thepushkarp/site#readme",
   "keywords": [
-    "gatsby"
+    "thepushkarp"
   ],
   "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/thepushkarp/site.git"
   },
   "scripts": {
     "build": "gatsby build",

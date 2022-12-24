@@ -1,4 +1,7 @@
 // custom typefaces
+// import dm mono
+import "@fontsource/dm-mono"
+import "@fontsource/cutive-mono"
 import "@fontsource/montserrat/variable.css"
 import "@fontsource/merriweather"
 // normalize CSS across browsers
