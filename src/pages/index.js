@@ -36,7 +36,7 @@ const BlogIndex = ({ data, location }) => {
         <br />
         This nonsense that now for a minute you've stared.
         <br />
-        I wish you had better thing to care.
+        I wish you had better things to care.
         <br />
       </p>
       <p>
