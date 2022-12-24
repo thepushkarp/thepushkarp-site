@@ -84,10 +84,6 @@ body {
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
-  position: absolute;
-  bottom: 0;
-  height: 100px;
-  width: 100%;
 }
 
 hr {
