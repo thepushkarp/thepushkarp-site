@@ -77,6 +77,8 @@ const BlogIndex = ({ data, location }) => {
         >
           in/thepushkarp
         </a>
+        <br />
+        Mail: thepushkarp[AT]gmail[DOT]com
       </p>
     </Layout>
   )
