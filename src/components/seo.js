@@ -30,16 +30,6 @@ const Seo = ({ description, title, children }) => {
 
   return (
     <>
-      // Google tag (gtag.js)
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-Q4S79DE3D1"
-      ></script>
-      <script>
-        window.dataLayer = window.dataLayer || []; function gtag()
-        {dataLayer.push(arguments)}
-        gtag('js', new Date()); gtag('config', 'G-Q4S79DE3D1');
-      </script>
       <title>{`${defaultTitle}`}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
