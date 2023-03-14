@@ -51,6 +51,15 @@ const BlogIndex = ({ data, location }) => {
           The Perceptron
         </a>
         <br />
+        Mirror:{" "}
+        <a
+          href="https://mirror.xyz/0x2Dc33edAC5F15e328dfFfF98021D365d1C4da620"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pushkar Patel
+        </a>
+        <br />
         Twitter:{" "}
         <a
           href="https://twitter.com/thepushkarp"

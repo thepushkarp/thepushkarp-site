@@ -25,7 +25,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with love, sweat and a tear
+        © {new Date().getFullYear()}, Built with love, sweat and tears
       </footer>
     </div>
   )
