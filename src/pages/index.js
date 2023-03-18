@@ -78,15 +78,6 @@ const BlogIndex = ({ data, location }) => {
           thepushkarp
         </a>
         <br />
-        LinkedIn:{" "}
-        <a
-          href="https://linkedin.com/in/thepushkarp"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          in/thepushkarp
-        </a>
-        <br />
         Mail: thepushkarp[AT]gmail[DOT]com
       </p>
     </Layout>
