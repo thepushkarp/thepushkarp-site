@@ -56,7 +56,7 @@ const BlogIndex = ({ data, location }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          The Perceptron
+          Nibble
         </a>
         <br />
         Substack Blog:{" "}
