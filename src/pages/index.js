@@ -98,6 +98,14 @@ const BlogIndex = ({ data, location }) => {
         Mail: thepushkarp[AT]gmail[DOT]com
         <br />
       </p>
+      <iframe
+        src="https://thenibble.substack.com/embed"
+        width="480"
+        height="320"
+        styles="border:1px solid #EEE; background:white;"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
     </Layout>
   )
   // }
