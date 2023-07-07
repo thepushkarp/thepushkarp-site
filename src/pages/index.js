@@ -68,15 +68,6 @@ const BlogIndex = ({ data, location }) => {
           The Perceptron
         </a>
         <br />
-        Mirror Blog:{" "}
-        <a
-          href="https://mirror.xyz/0x2Dc33edAC5F15e328dfFfF98021D365d1C4da620"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Pushkar Patel
-        </a>
-        <br />
         Twitter:{" "}
         <a
           href="https://twitter.com/thepushkarp"
@@ -85,6 +76,15 @@ const BlogIndex = ({ data, location }) => {
         >
           @thepushkarp
         </a>
+        Threads:{" "}
+        <a
+          href="https://www.threads.net/@thepushkarp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @thepushkarp
+        </a>
+        <br />
         <br />
         GitHub:{" "}
         <a
