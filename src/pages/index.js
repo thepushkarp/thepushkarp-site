@@ -76,6 +76,7 @@ const BlogIndex = ({ data, location }) => {
         >
           @thepushkarp
         </a>
+        <br />
         Threads:{" "}
         <a
           href="https://www.threads.net/@thepushkarp"
@@ -84,7 +85,6 @@ const BlogIndex = ({ data, location }) => {
         >
           @thepushkarp
         </a>
-        <br />
         <br />
         GitHub:{" "}
         <a
