@@ -77,15 +77,6 @@ const BlogIndex = ({ data, location }) => {
           @thepushkarp
         </a>
         <br />
-        Threads:{" "}
-        <a
-          href="https://www.threads.net/@thepushkarp"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @thepushkarp
-        </a>
-        <br />
         GitHub:{" "}
         <a
           href="https://github.com/thepushkarp"
