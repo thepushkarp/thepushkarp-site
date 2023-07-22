@@ -42,6 +42,15 @@ const BlogIndex = ({ data, location }) => {
       <p>
         Now while you're at it, do check me out here:
         <br />
+        Personal Blog:{" "}
+        <a
+          href="https://blog.thepushkarp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pushkar's Blog
+        </a>
+        <br />
         Tech Newsletter with{" "}
         <a
           href="https://aashutosh.dev/"
@@ -57,15 +66,6 @@ const BlogIndex = ({ data, location }) => {
           rel="noopener noreferrer"
         >
           Nibble
-        </a>
-        <br />
-        Substack Blog:{" "}
-        <a
-          href="https://theperceptron.substack.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          The Perceptron
         </a>
         <br />
         Twitter:{" "}
