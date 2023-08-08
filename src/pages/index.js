@@ -94,8 +94,9 @@ const BlogIndex = ({ data, location }) => {
         width="480"
         height="320"
         styles="border:1px solid #EEE; background:white;"
-        frameborder="0"
+        frameBorder="0"
         scrolling="no"
+        title="Nibble"
       ></iframe>
     </Layout>
   )
