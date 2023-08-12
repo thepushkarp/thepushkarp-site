@@ -12,16 +12,17 @@ module.exports = {
     title: `Pushkar Patel`,
     author: {
       name: `Pushkar Patel`,
-      summary: `who's attempted to build his website a zillion times.`,
     },
     description: `Pushkar's Website`,
     siteUrl: `https://thepushkarp.com/`,
     social: {
       twitter: `thepushkarp`,
+      github: `thepushkarp`,
     },
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -143,6 +144,26 @@ module.exports = {
           // Delays processing pageview events on route update (in milliseconds)
           delayOnRouteUpdate: 0,
         },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      siteUrl: "https://thepushkarp.com/",
+      options: {
+        output: "/sitemap.xml",
+        exclude: ["/private-page/*"],
+        // Additional customization options
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://thepushkarp.com/",
+        sitemap: "https://thepushkarp.com/sitemap.xml",
+        policy: [
+          { userAgent: "*", allow: "/" },
+          // Additional rules
+        ],
       },
     },
   ],
