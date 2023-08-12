@@ -150,7 +150,6 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap",
       siteUrl: "https://thepushkarp.com/",
       options: {
-        output: "/sitemap.xml",
         exclude: ["/private-page/*"],
         // Additional customization options
       },
@@ -159,7 +158,7 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://thepushkarp.com/",
-        sitemap: "https://thepushkarp.com/sitemap.xml",
+        sitemap: "https://thepushkarp.com/sitemap-index.xml",
         policy: [
           { userAgent: "*", allow: "/" },
           // Additional rules
