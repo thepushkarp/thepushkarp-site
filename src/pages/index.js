@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
-import NibbleSubstackSignupForm from '../components/nibble-signup'
+const NibbleSubstackSignupForm = React.lazy(() => '../components/nibble-signup')
 
 import useOnScreen from '../hooks/useOnScreen'
 
