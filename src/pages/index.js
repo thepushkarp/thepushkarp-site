@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
-const NibbleSubstackSignupForm = React.lazy(() => '../components/nibble-signup')
+import NibbleSubstackSignupForm from '../components/nibble-signup'
 
 import useOnScreen from '../hooks/useOnScreen'
 
@@ -127,7 +127,7 @@ const BlogIndex = ({ data, location }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          @thepushkarp
+          thepushkarp
         </a>
         <br />
         Mail:{' '}
