@@ -110,6 +110,5 @@ module.exports = {
         stripQueryString: true,
       },
     },
-    `gatsby-plugin-webpack-bundle-analyser-v2`,
   ],
 }
