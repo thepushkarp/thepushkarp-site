@@ -370,7 +370,7 @@ a:focus {
   }
   .footer-content {
     margin: var(--spacing-0) var(--spacing-0);
-    font-size: x-small;
+    font-size: smaller;
   }
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
@@ -381,7 +381,7 @@ a:focus {
     list-style-position: inside;
   }
   main p {
-    font-size: x-small;
+    font-size: smaller ;
   }
 }
 
