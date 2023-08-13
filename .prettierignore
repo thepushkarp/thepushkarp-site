@@ -3,3 +3,6 @@ package.json
 package-lock.json
 public
 *.min.js
+yarn.lock
+node_modules
+LICENSE
