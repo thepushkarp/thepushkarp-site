@@ -265,6 +265,7 @@ a:focus {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   margin: var(--spacing-0) var(--spacing-4);
 }
 
