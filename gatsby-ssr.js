@@ -7,6 +7,18 @@
 /**
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
-exports.onRenderBody = ({ setHtmlAttributes }) => {
+exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
   setHtmlAttributes({ lang: `en` })
+  setHeadComponents([
+    <link
+      key="google-fonts"
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    />,
+    <link
+      key="google-fonts"
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />,
+  ])
 }

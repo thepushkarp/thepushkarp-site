@@ -36,6 +36,7 @@
     "styled-components": "^6.0.7"
   },
   "devDependencies": {
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.31",
     "prettier": "^2.8.0"
   },
   "homepage": "https://github.com/thepushkarp/site#readme",
@@ -50,7 +51,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\" --ignore-path .gitignore",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",

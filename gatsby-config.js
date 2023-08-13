@@ -65,7 +65,7 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-Q4S79DE3D1", // Google Analytics / GA
+          'G-Q4S79DE3D1', // Google Analytics / GA
         ],
         // This config will be shared across all trackingIds
         gtagConfig: {
@@ -78,27 +78,27 @@ module.exports = {
           // Setting this parameter is also optional
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          exclude: ['/preview/**', '/do-not-track/me/too/'],
           // Delays processing pageview events on route update (in milliseconds)
           delayOnRouteUpdate: 0,
         },
       },
     },
     {
-      resolve: "gatsby-plugin-sitemap",
-      siteUrl: "https://thepushkarp.com/",
+      resolve: 'gatsby-plugin-sitemap',
+      siteUrl: 'https://thepushkarp.com/',
       options: {
-        exclude: ["/private-page/*"],
+        exclude: ['/private-page/*'],
         // Additional customization options
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: "https://thepushkarp.com/",
-        sitemap: "https://thepushkarp.com/sitemap-index.xml",
+        host: 'https://thepushkarp.com/',
+        sitemap: 'https://thepushkarp.com/sitemap-index.xml',
         policy: [
-          { userAgent: "*", allow: "/" },
+          { userAgent: '*', allow: '/' },
           // Additional rules
         ],
       },
@@ -110,5 +110,6 @@ module.exports = {
         stripQueryString: true,
       },
     },
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
   ],
 }
