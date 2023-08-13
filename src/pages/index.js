@@ -51,15 +51,7 @@ const BlogIndex = ({ data, location }) => {
         Personal Blog:{' '}
         <a href="https://blog.thepushkarp.com/">Pushkar's Blog</a>
         <br />
-        Tech Newsletter with{' '}
-        <a
-          href="https://aashutosh.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @aashutoshrathi
-        </a>
-        :{' '}
+        Tech Newsletters:{' '}
         <a
           href="https://thenibble.substack.com/"
           target="_blank"
@@ -83,7 +75,7 @@ const BlogIndex = ({ data, location }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          thepushkarp
+          @thepushkarp
         </a>
         <br />
         Mail:{' '}
