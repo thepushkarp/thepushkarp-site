@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
+import { isBrowser } from '../common/utils'
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -20,7 +22,10 @@ const Layout = ({ location, title, children }) => {
     )
   }
 
-  let footerPaddingTop = window.innerHeight - window.innerHeight * 0.1 - 100
+  var footerPaddingTop = 0
+  if (isBrowser()) {
+    footerPaddingTop = window.innerHeight - window.innerHeight * 0.1 - 100
+  }
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
