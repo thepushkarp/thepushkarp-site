@@ -8,13 +8,14 @@
     "url": "https://github.com/thepushkarp/site"
   },
   "dependencies": {
-    "@fontsource/cutive-mono": "^4.5.10",
-    "@fontsource/dm-mono": "^4.5.10",
-    "@fontsource/merriweather": "^4.5.14",
-    "@fontsource/montserrat": "^4.5.13",
+    "@fontsource-variable/montserrat": "^5.0.9",
+    "@fontsource/cutive-mono": "^5.0.8",
+    "@fontsource/dm-mono": "^5.0.8",
+    "@fontsource/merriweather": "^5.0.8",
     "babel-plugin-styled-components": "^2.1.4",
-    "gatsby": "^5.10.0",
+    "gatsby": "^5.11.0",
     "gatsby-plugin-canonical-urls": "^5.11.0",
+    "gatsby-plugin-catch-links": "^5.11.0",
     "gatsby-plugin-google-gtag": "^5.3.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.3.1",
@@ -35,7 +36,7 @@
     "styled-components": "^6.0.7"
   },
   "devDependencies": {
-    "prettier": "^2.8.0"
+    "prettier": "^3.0.1"
   },
   "homepage": "https://github.com/thepushkarp/site#readme",
   "keywords": [
@@ -49,7 +50,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
