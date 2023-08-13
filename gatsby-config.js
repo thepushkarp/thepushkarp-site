@@ -110,20 +110,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-csp`,
       options: {
-        disableOnDev: true,
+        disableOnDev: false,
         reportOnly: false, // Changes header to Content-Security-Policy-Report-Only for csp testing purposes
         mergeScriptHashes: false, // you can disable scripts sha256 hashes
         mergeStyleHashes: false, // you can disable styles sha256 hashes
         mergeDefaultDirectives: true,
         directives: {
           'script-src':
-            "'self' www.google-analytics.com www.googletagmanager.com 'unsafe-inline'",
-          'style-src-elem': "'self' 'unsafe-inline'",
-          'style-src': "'self' 'unsafe-inline'",
-          'img-src': "'self' data: www.google-analytics.com 'unsafe-inline'",
+            "'self' www.google-analytics.com www.googletagmanager.com 'sha256-v1oYH69RcooFs6F5XhMTzHiWlftYwnuQHDxIz0suNeo=' 'sha256-16w5xFrRdq95h8sWQwonPsZHpfRdqGkc4+fPdmOuXNw=' 'sha256-egpbluqkD8NT0bY3bWy7raM9tRIMkfUWboq0Y8KqsFk=' sha256-x2TqfkGAJwKOZ/cHEs0DBIIUNtpy4/LAhY+s1xSdd9Y=' sha256-kFyTmDMH0EQNscxKTycN4EqV1r0TJhB/T3c8kxL8sIo=' 'sha256-x2TqfkGAJwKOZ/cHEs0DBIIUNtpy4/LAhY+s1xSdd9Y=' 'sha256-kFyTmDMH0EQNscxKTycN4EqV1r0TJhB/T3c8kxL8sIo='",
+          'default-src': "'self'",
+          'object-src': "'none'",
+          'style-src-elem':
+            "'self' fonts.googleapis.com 'sha256-eTTw1JTprayccOkX5IM/hiyhLo7fRCE3UXN1XZzYFp0=' 'sha256-n6qp5RzqWFPk8bwgYOlYGoExLtqxN33EngZLqOl9uWw=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='",
+          'style-src':
+            "'self' 'sha256-MtxTLcyxVEJFNLEIqbVTaqR4WWr0+lYSZ78AzGmNsuA=' 'sha256-gRoTCRSbQL/D/6OeKoxn8m2+gAT03vxGZxwag9pM1DM=' 'sha256-o4LYhp5wtluJ8/NWUV2vi+r5AxmP8X2zEvYHCpji+kI=' 'unsafe-hashes'",
+          'img-src':
+            "'self' data: www.google-analytics.com www.googletagmanager.com",
           'connect-src':
             "'self' www.google-analytics.com www.googletagmanager.com",
-          'frame-src': "'self' https://thenibble.substack.com/",
+          'frame-src': "'self' thenibble.substack.com",
           // you can add your directives or override defaults
         },
       },

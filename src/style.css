@@ -361,6 +361,18 @@ a:focus {
   align-items: center;
 }
 
+.ghost-signup-form {
+  height: 40vmin;
+  min-height: 360px;
+  width: 100%;
+}
+
+.nibble-substack-form {
+  height: 40vmin;
+  min-height: 360px;
+  width: 100%
+}
+
 /* Media queries */
 
 /* Extra Small Devices (Phones) */
