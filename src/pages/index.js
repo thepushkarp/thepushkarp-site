@@ -4,8 +4,19 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
+import NibbleSubstackSignupForm from '../components/nibble-signup'
+
+import useOnScreen from '../hooks/useOnScreen'
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
+
+  const ref = React.useRef()
+  const onScreen = useOnScreen(ref, '0px')
+  let showWidget
+  if (onScreen) {
+    showWidget = true
+  }
 
   const revealEmail = () => {
     const email = 'thepushkarp[AT]gmail[DOT]com'
@@ -133,16 +144,8 @@ const BlogIndex = ({ data, location }) => {
         </span>
         <br />
       </p>
-      <div className="iframe-container">
-        <iframe
-          src="https://thenibble.substack.com/embed"
-          width="100%"
-          height="320"
-          styles="border:1px solid #EEE; background:white;"
-          frameBorder="0"
-          scrolling="no"
-          title="Nibble"
-        ></iframe>
+      <div className="iframe-container" ref={ref}>
+        {showWidget && <NibbleSubstackSignupForm />}
       </div>
     </Layout>
   )

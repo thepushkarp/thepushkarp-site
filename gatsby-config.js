@@ -128,6 +128,17 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-preconnect',
+      options: {
+        domains: [
+          'https://twitter.com',
+          'https://github.com',
+          'https://blog.thepushkarp.com/',
+          'https://thenibble.substack.com/',
+        ],
+      },
+    },
     `gatsby-plugin-preact`,
   ],
 }
