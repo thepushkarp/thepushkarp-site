@@ -120,10 +120,14 @@ module.exports = {
         mergeStyleHashes: false, // you can disable styles sha256 hashes
         mergeDefaultDirectives: true,
         directives: {
-          'script-src': "'self' www.google-analytics.com 'unsafe-inline'",
+          'script-src':
+            "'self' www.google-analytics.com www.googletagmanager.com 'unsafe-inline'",
           'style-src-elem': "'self' 'unsafe-inline'",
           'style-src': "'self' 'unsafe-inline'",
           'img-src': "'self' data: www.google-analytics.com 'unsafe-inline'",
+          'connect-src':
+            "'self' www.google-analytics.com www.googletagmanager.com",
+          'frame-src': "'self' https://thenibble.substack.com/",
           // you can add your directives or override defaults
         },
       },
