@@ -20,12 +20,21 @@ const Layout = ({ location, title, children }) => {
     )
   }
 
+  let footerPaddingTop = window.innerHeight - window.innerHeight * 0.1 - 100
+
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with love, sweat and tears
+      <footer className="global-footer">
+        <div
+          style={{ paddingTop: footerPaddingTop }}
+          className="footer-content-container"
+        >
+          <p className="footer-content">
+            © {new Date().getFullYear()}, Built with love, sweat and tears
+          </p>
+        </div>
       </footer>
     </div>
   )
