@@ -1,8 +1,8 @@
-import * as React from "react"
-import { graphql } from "gatsby"
+import * as React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -42,7 +42,7 @@ const BlogIndex = ({ data, location }) => {
       <p>
         Now while you're at it, do check me out here:
         <br />
-        Personal Blog:{" "}
+        Personal Blog:{' '}
         <a
           href="https://blog.thepushkarp.com/"
           target="_blank"
@@ -51,7 +51,7 @@ const BlogIndex = ({ data, location }) => {
           Pushkar's Blog
         </a>
         <br />
-        Tech Newsletter with{" "}
+        Tech Newsletter with{' '}
         <a
           href="https://aashutosh.dev/"
           target="_blank"
@@ -59,7 +59,7 @@ const BlogIndex = ({ data, location }) => {
         >
           @aashutoshrathi
         </a>
-        :{" "}
+        :{' '}
         <a
           href="https://thenibble.substack.com/"
           target="_blank"
@@ -68,7 +68,7 @@ const BlogIndex = ({ data, location }) => {
           Nibble
         </a>
         <br />
-        Twitter:{" "}
+        Twitter:{' '}
         <a
           href="https://twitter.com/thepushkarp"
           target="_blank"
@@ -77,7 +77,7 @@ const BlogIndex = ({ data, location }) => {
           @thepushkarp
         </a>
         <br />
-        GitHub:{" "}
+        GitHub:{' '}
         <a
           href="https://github.com/thepushkarp"
           target="_blank"
