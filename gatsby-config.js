@@ -88,10 +88,6 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       siteUrl: 'https://thepushkarp.com/',
-      options: {
-        exclude: ['/private-page/*'],
-        // Additional customization options
-      },
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -132,5 +128,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
+    `gatsby-plugin-preact`,
   ],
 }
