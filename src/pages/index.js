@@ -91,21 +91,26 @@ const BlogIndex = ({ data, location }) => {
           className="click-to-reveal-email"
           id="hidden-address"
           onClick={revealEmail}
+          onKeyDown={revealEmail}
+          role="button"
+          tabIndex={0}
         >
           {' '}
           Click to reveal{' '}
         </span>
         <br />
       </p>
-      <iframe
-        src="https://thenibble.substack.com/embed"
-        width="480"
-        height="320"
-        styles="border:1px solid #EEE; background:white;"
-        frameBorder="0"
-        scrolling="no"
-        title="Nibble"
-      ></iframe>
+      <div className="iframe-container">
+        <iframe
+          src="https://thenibble.substack.com/embed"
+          width="100%"
+          height="320"
+          styles="border:1px solid #EEE; background:white;"
+          frameBorder="0"
+          scrolling="no"
+          title="Nibble"
+        ></iframe>
+      </div>
     </Layout>
   )
 }
