@@ -12,41 +12,84 @@ const BlogIndex = ({ data, location }) => {
     const emailElement = document.querySelector('#hidden-address')
     emailElement.innerHTML = email
     emailElement.classList.remove('click-to-reveal-email')
+    emailElement.classList.add('revealed-email')
   }
 
   return (
     <Layout location={location} title={siteTitle}>
       <p>Hello, I am Pushkar.</p>
       <p>
-        For most of my time, I write software.
+        For most of my time,
         <br />
-        I also write other stuff that I should share.
+        I write software.
         <br />
-        So I'm putting this site out there.
         <br />
-        To give myself a teeny-tiny little dare.
+        I also write other stuff,
         <br />
-        To write a little more, raw and bare.
+        that I should share.
         <br />
-        Maybe I'll do that a justice square and fair.
         <br />
-        Or maybe not; I honestly don't care.
+        So I'm putting this site
         <br />
-        All I want is to write with a little flair.
+        out there somewhere.
         <br />
-        And grow a little more self-aware.
         <br />
-        This rhyme makes no sense and it is so unfair.
+        To give myself a
         <br />
-        To you dear reader for having to bear.
+        teeny-tiny little dare.
         <br />
-        This nonsense that for a minute you've stared.
         <br />
-        I wish you had better things to care.
+        To write a little more,
+        <br />
+        raw and bare.
+        <br />
+        <br />
+        Maybe I'll do that a
+        <br />
+        justice square and fair.
+        <br />
+        <br />
+        Or maybe not;
+        <br />
+        I honestly don't care.
+        <br />
+        <br />
+        All I want is to write
+        <br />
+        with a little flair.
+        <br />
+        <br />
+        And grow a little
+        <br />
+        more self-aware.
+        <br />
+        <br />
+        This rhyme makes no sense
+        <br />
+        and it is so unfair.
+        <br />
+        <br />
+        To you dear reader for
+        <br />
+        having to bear.
+        <br />
+        <br />
+        This nonsense that for a
+        <br />
+        minute now you've stared.
+        <br />
+        <br />
+        I wish you had
+        <br />
+        better things to care.
+        <br />
         <br />
       </p>
       <p>
-        Now while you're at it, do check me out here:
+        Now while you're at it,
+        <br />
+        do check me out here:
+        <br />
         <br />
         Personal Blog:{' '}
         <a href="https://blog.thepushkarp.com/">Pushkar's Blog</a>
