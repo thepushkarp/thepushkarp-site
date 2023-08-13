@@ -5523,6 +5523,14 @@ gatsby-plugin-catch-links@^5.11.0:
     "@babel/runtime" "^7.20.13"
     escape-string-regexp "^1.0.5"
 
+gatsby-plugin-csp@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-csp/-/gatsby-plugin-csp-1.1.4.tgz#f93901ae8c0bdf262c1e0dc26940e52f6bdfbff7"
+  integrity sha512-aMDN27QAbHcI/3F5sH9J3w4wE0vNWWKTxGXjQ4VsKVVbIfxnPNXf82i9nOp4Ef2MQT4bIKnfZjf9jaLG3aWXcQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    lodash.flatten "^4.4.0"
+
 gatsby-plugin-google-gtag@^5.3.0:
   version "5.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-5.11.0.tgz#8e65a028561df6487173d808de59d426ec1658ce"
@@ -7275,6 +7283,11 @@ lodash.every@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.every/-/lodash.every-4.6.0.tgz#eb89984bebc4364279bb3aefbbd1ca19bfa6c6a7"
   integrity sha512-isF82d+65/sNvQ3aaQAW7LLHnnTxSN/2fm4rhYyuufLzA4VtHz6y6S5vFwe6PQVr2xdqUOyxBbTNKDpnmeu50w==
+
+lodash.flatten@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
+  integrity sha512-C5N2Z3DgnnKr0LOpv/hKCgKdb7ZZwafIrsesve6lmzvZIRZRGaZ/l6Q8+2W7NaT+ZwO3fFlSCzCzrDCFdJfZ4g==
 
 lodash.flattendeep@^4.4.0:
   version "4.4.0"
