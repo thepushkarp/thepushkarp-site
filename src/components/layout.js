@@ -24,7 +24,7 @@ const Layout = ({ location, title, children }) => {
 
   var footerPaddingTop = 0
   if (isBrowser()) {
-    footerPaddingTop = window.innerHeight - window.innerHeight * 0.1 - 100
+    footerPaddingTop = 0.15 * window.innerHeight + 100
   }
 
   return (
