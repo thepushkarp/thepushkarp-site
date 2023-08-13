@@ -370,7 +370,7 @@ a:focus {
   }
   .footer-content {
     margin: var(--spacing-0) var(--spacing-0);
-    font-size: smaller;
+    font-size: x-small;
   }
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
@@ -381,7 +381,11 @@ a:focus {
     list-style-position: inside;
   }
   main p {
-    font-size: smaller ;
+    font-size: smaller
+  }
+
+  .revealed-address {
+    font-size: smaller;
   }
 }
 
