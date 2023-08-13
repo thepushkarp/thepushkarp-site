@@ -82,8 +82,6 @@ const BlogIndex = ({ data, location }) => {
         I wish you had
         <br />
         better things to care.
-        <br />
-        <br />
       </p>
       <p>
         Now while you're at it,
