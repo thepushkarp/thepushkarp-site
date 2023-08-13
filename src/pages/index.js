@@ -20,17 +20,17 @@ const BlogIndex = ({ data, location }) => {
       <p>
         For most of my time, I write software.
         <br />
-        But I also write other stuff that I should share.
+        I also write other stuff that I should share.
         <br />
         So I'm putting this site out there.
         <br />
-        In order to give myself a teeny-tiny little dare.
+        To give myself a teeny-tiny little dare.
         <br />
         To write a little more, raw and bare.
         <br />
         Maybe I'll do that a justice square and fair.
         <br />
-        Or maybe not, I honestly don't care.
+        Or maybe not; I honestly don't care.
         <br />
         All I want is to write with a little flair.
         <br />
@@ -40,7 +40,7 @@ const BlogIndex = ({ data, location }) => {
         <br />
         To you dear reader for having to bear.
         <br />
-        This nonsense that now for a minute you've stared.
+        This nonsense that for a minute you've stared.
         <br />
         I wish you had better things to care.
         <br />
