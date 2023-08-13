@@ -362,7 +362,16 @@ a:focus {
 
 /* Media queries */
 
-@media (max-width: 42rem) {
+/* Extra Small Devices (Phones) */
+@media only screen and (max-width: 35.9375rem) {
+  /* CSS rules for phones */
+  .footer-content-container {
+    margin: var(--spacing-0) var(--spacing-0);
+  }
+  .footer-content {
+    margin: var(--spacing-0) var(--spacing-0);
+    font-size: small;
+  }
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
     margin-left: var(--spacing-0);
@@ -371,4 +380,35 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+  main p {
+    font-size: small;
+  }
+}
+
+/* Small Devices (Phones in Landscape and Small Tablets) */
+@media only screen and (min-width: 36rem) and (max-width: 47.9375rem) {
+  /* CSS rules for small tablets */
+  blockquote {
+    padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
+    margin-left: var(--spacing-0);
+  }
+  ul,
+  ol {
+    list-style-position: inside;
+  }
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media only screen and (min-width: 48rem) and (max-width: 61.9375rem) {
+  /* CSS rules for medium-sized tablets */
+}
+
+/* Large Devices (Laptops and Desktops) */
+@media only screen and (min-width: 62rem) and (max-width: 74.9375rem) {
+  /* CSS rules for laptops */
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media only screen and (min-width: 75rem) {
+  /* CSS rules for large desktops */
 }
