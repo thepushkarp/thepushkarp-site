@@ -117,11 +117,11 @@ module.exports = {
         mergeDefaultDirectives: true,
         directives: {
           'script-src':
-            "'self' www.google-analytics.com www.googletagmanager.com 'sha256-v1oYH69RcooFs6F5XhMTzHiWlftYwnuQHDxIz0suNeo=' 'sha256-16w5xFrRdq95h8sWQwonPsZHpfRdqGkc4+fPdmOuXNw=' 'sha256-egpbluqkD8NT0bY3bWy7raM9tRIMkfUWboq0Y8KqsFk=' sha256-x2TqfkGAJwKOZ/cHEs0DBIIUNtpy4/LAhY+s1xSdd9Y=' sha256-kFyTmDMH0EQNscxKTycN4EqV1r0TJhB/T3c8kxL8sIo=' 'sha256-x2TqfkGAJwKOZ/cHEs0DBIIUNtpy4/LAhY+s1xSdd9Y=' 'sha256-kFyTmDMH0EQNscxKTycN4EqV1r0TJhB/T3c8kxL8sIo='",
+            "'self' www.google-analytics.com www.googletagmanager.com 'sha256-v1oYH69RcooFs6F5XhMTzHiWlftYwnuQHDxIz0suNeo=' 'sha256-16w5xFrRdq95h8sWQwonPsZHpfRdqGkc4+fPdmOuXNw=' 'sha256-egpbluqkD8NT0bY3bWy7raM9tRIMkfUWboq0Y8KqsFk=' sha256-x2TqfkGAJwKOZ/cHEs0DBIIUNtpy4/LAhY+s1xSdd9Y=' sha256-kFyTmDMH0EQNscxKTycN4EqV1r0TJhB/T3c8kxL8sIo=' 'sha256-x2TqfkGAJwKOZ/cHEs0DBIIUNtpy4/LAhY+s1xSdd9Y=' 'sha256-kFyTmDMH0EQNscxKTycN4EqV1r0TJhB/T3c8kxL8sIo=' 'unsafe-hashes'",
           'default-src': "'self'",
           'object-src': "'none'",
           'style-src-elem':
-            "'self' fonts.googleapis.com 'sha256-eTTw1JTprayccOkX5IM/hiyhLo7fRCE3UXN1XZzYFp0=' 'sha256-n6qp5RzqWFPk8bwgYOlYGoExLtqxN33EngZLqOl9uWw=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='",
+            "'self' fonts.googleapis.com 'sha256-eTTw1JTprayccOkX5IM/hiyhLo7fRCE3UXN1XZzYFp0=' 'sha256-n6qp5RzqWFPk8bwgYOlYGoExLtqxN33EngZLqOl9uWw=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' 'unsafe-hashes'",
           'style-src':
             "'self' 'sha256-MtxTLcyxVEJFNLEIqbVTaqR4WWr0+lYSZ78AzGmNsuA=' 'sha256-gRoTCRSbQL/D/6OeKoxn8m2+gAT03vxGZxwag9pM1DM=' 'sha256-o4LYhp5wtluJ8/NWUV2vi+r5AxmP8X2zEvYHCpji+kI=' 'unsafe-hashes'",
           'img-src':
