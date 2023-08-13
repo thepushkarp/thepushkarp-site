@@ -91,6 +91,9 @@ const BlogIndex = ({ data, location }) => {
           className="click-to-reveal-email"
           id="hidden-address"
           onClick={revealEmail}
+          onKeyDown={revealEmail}
+          role="button"
+          tabIndex={0}
         >
           {' '}
           Click to reveal{' '}
