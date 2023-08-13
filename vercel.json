@@ -9,7 +9,7 @@
         },
         {
           "key": "X-Frame-Options",
-          "value": "ALLOW-FROM https://thenibble.substack.com/"
+          "value": "ALLOW-FROM https://thenibble.substack.com/embed"
         },
         {
           "key": "X-XSS-Protection",
