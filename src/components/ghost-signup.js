@@ -1,7 +1,7 @@
 import React from 'react'
 
 const GhostSignupForm = () => (
-  <div style={{ height: '40vmin', minHeight: '360px', width: '100%' }}>
+  <div className="ghost-signup-form">
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js"

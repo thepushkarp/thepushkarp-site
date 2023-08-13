@@ -1,7 +1,7 @@
 import React from 'react'
 
 const NibbleSubstackSignupForm = () => (
-  <div style={{ height: '40vmin', minHeight: '360px', width: '100%' }}>
+  <div className="nibble-substack-form">
     <iframe
       src="https://thenibble.substack.com/embed"
       width="100%"
