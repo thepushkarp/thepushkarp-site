@@ -123,7 +123,7 @@ module.exports = {
           'style-src-elem':
             "'self' fonts.googleapis.com 'sha256-eTTw1JTprayccOkX5IM/hiyhLo7fRCE3UXN1XZzYFp0=' 'sha256-n6qp5RzqWFPk8bwgYOlYGoExLtqxN33EngZLqOl9uWw=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' 'unsafe-hashes'",
           'style-src':
-            "'self' 'sha256-MtxTLcyxVEJFNLEIqbVTaqR4WWr0+lYSZ78AzGmNsuA=' 'sha256-gRoTCRSbQL/D/6OeKoxn8m2+gAT03vxGZxwag9pM1DM=' 'sha256-o4LYhp5wtluJ8/NWUV2vi+r5AxmP8X2zEvYHCpji+kI=' 'unsafe-hashes'",
+            "'self' fonts.googleapis.com 'sha256-MtxTLcyxVEJFNLEIqbVTaqR4WWr0+lYSZ78AzGmNsuA=' 'sha256-gRoTCRSbQL/D/6OeKoxn8m2+gAT03vxGZxwag9pM1DM=' 'sha256-o4LYhp5wtluJ8/NWUV2vi+r5AxmP8X2zEvYHCpji+kI=' 'unsafe-hashes'",
           'img-src':
             "'self' data: www.google-analytics.com www.googletagmanager.com",
           'connect-src':
