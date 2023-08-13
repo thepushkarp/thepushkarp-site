@@ -1111,7 +1111,7 @@
   resolved "https://registry.yarnpkg.com/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.17.9", "@babel/runtime@^7.20.13", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.0", "@babel/runtime@^7.21.5", "@babel/runtime@^7.3.4", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.17.9", "@babel/runtime@^7.20.13", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.0", "@babel/runtime@^7.21.5", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.22.10"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.10.tgz#ae3e9631fd947cb7e3610d3e9d8fef5f76696682"
   integrity sha512-21t/fkKLMZI4pqP2wlmsQAWnYW1PDyKyyUV4vCi+B25ydmdaYTKXPwCj0BzSUnZf4seIiYvSA3jcZ3gdsMFkLQ==
@@ -5643,6 +5643,13 @@ gatsby-plugin-preact@^7.11.0:
     "@gatsbyjs/webpack-hot-middleware" "^2.25.3"
     "@prefresh/babel-plugin" "^0.4.3"
     "@prefresh/webpack" "^3.3.4"
+
+gatsby-plugin-preconnect@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-preconnect/-/gatsby-plugin-preconnect-1.4.0.tgz#882f39e882f46bdd2f7345406236a1884d8b8c46"
+  integrity sha512-sH9RPjhi9Mcn/W+4PoA4KZ5Cn18ukRLam1iDist8/cb6ZH/IuJqXZhgZC/A1AuUHdwWo2ooyrojBSYNuLlum2A==
+  dependencies:
+    "@babel/runtime" "^7.4.3"
 
 gatsby-plugin-robots-txt@^1.8.0:
   version "1.8.0"
