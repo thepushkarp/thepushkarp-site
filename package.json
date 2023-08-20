@@ -10,7 +10,6 @@
   "dependencies": {
     "@fontsource/cutive-mono": "^5.0.8",
     "@fontsource/dm-mono": "^5.0.8",
-    "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.11.0",
     "gatsby-plugin-canonical-urls": "^5.11.0",
     "gatsby-plugin-catch-links": "^5.11.0",
@@ -22,7 +21,6 @@
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.11.0",
     "gatsby-plugin-sitemap": "^6.11.0",
-    "gatsby-plugin-styled-components": "^6.11.0",
     "gatsby-remark-images": "^7.3.1",
     "gatsby-remark-prismjs": "^7.3.0",
     "gatsby-remark-responsive-iframe": "^6.3.0",
@@ -31,8 +29,7 @@
     "gatsby-transformer-sharp": "^5.11.0",
     "prismjs": "^1.29.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "styled-components": "^6.0.7"
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.31",
