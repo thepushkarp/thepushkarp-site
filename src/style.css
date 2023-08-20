@@ -240,59 +240,6 @@ a:focus {
 
 /* Custom classes */
 
-.global-wrapper {
-  margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
-}
-
-.global-wrapper[data-is-root-path='true'] .bio {
-  margin-bottom: var(--spacing-20);
-}
-
-.global-header {
-  margin-bottom: var(--spacing-12);
-}
-
-.global-footer {
-  align-items: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.footer-content-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  margin: var(--spacing-0) var(--spacing-4);
-}
-
-.footer-disclaimer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  margin: var(--spacing-0) var(--spacing-4);
-  font-size: x-small;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  margin: var(--spacing-0) var(--spacing-4);
-}
-
-.main-heading {
-  font-size: var(--fontSize-7);
-  margin: 0;
-  font-weight: var(--fontWeight-black);
-  /* text-align: center; */
-}
-
 .post-list-item {
   margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
@@ -311,13 +258,6 @@ a:focus {
 
 .post-list-item header {
   margin-bottom: var(--spacing-4);
-}
-
-.header-link-home {
-  font-weight: var(--fontWeight-bold);
-  font-family: var(--font-heading);
-  text-decoration: none;
-  font-size: var(--fontSize-2);
 }
 
 .bio {
@@ -361,6 +301,13 @@ a:focus {
   text-decoration: underline;
 }
 
+.i-am-doxxed {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;         /* Standard Syntax */
+}
+
 .iframe-container {
   position: relative;
   width: 100%;
@@ -371,30 +318,11 @@ a:focus {
   align-items: center;
 }
 
-.ghost-signup-form {
-  height: 40vmin;
-  min-height: 360px;
-  width: 100%;
-}
-
-.nibble-substack-form {
-  height: 40vmin;
-  min-height: 360px;
-  width: 100%
-}
-
 /* Media queries */
 
 /* Extra Small Devices (Phones) */
 @media only screen and (max-width: 35.9375rem) {
   /* CSS rules for phones */
-  .footer-content-container {
-    margin: var(--spacing-0) var(--spacing-0);
-  }
-  .footer-content {
-    margin: var(--spacing-0) var(--spacing-0);
-    font-size: x-small;
-  }
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
     margin-left: var(--spacing-0);
@@ -403,16 +331,13 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+
   main p {
     font-size: smaller
   }
 
   .i-am-doxxed {
     font-size: smaller;
-  }
-
-  .footer-disclaimer {
-    font-size: xx-small;
   }
 }
 
@@ -423,6 +348,7 @@ a:focus {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
     margin-left: var(--spacing-0);
   }
+
   ul,
   ol {
     list-style-position: inside;

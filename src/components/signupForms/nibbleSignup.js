@@ -1,7 +1,8 @@
 import React from 'react';
+import * as styles from './signupForms.module.css';
 
 const NibbleSubstackSignupForm = () => (
-  <div className="nibble-substack-form">
+  <div className={styles.nibbleSubstackForm}>
     <iframe
       src="https://thenibble.substack.com/embed"
       width="100%"
