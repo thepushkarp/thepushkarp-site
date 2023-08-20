@@ -269,6 +269,15 @@ a:focus {
   margin: var(--spacing-0) var(--spacing-4);
 }
 
+.footer-disclaimer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: var(--spacing-0) var(--spacing-4);
+  font-size: x-small;
+}
+
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -344,11 +353,11 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
-.click-to-reveal-email {
+.hi-there-fellow-geek {
   cursor: pointer;
 }
 
-.click-to-reveal-email:hover {
+.hi-there-fellow-geek:hover {
   text-decoration: underline;
 }
 
@@ -398,8 +407,12 @@ a:focus {
     font-size: smaller
   }
 
-  .revealed-address {
+  .i-am-doxxed {
     font-size: smaller;
+  }
+
+  .footer-disclaimer {
+    font-size: xx-small;
   }
 }
 
