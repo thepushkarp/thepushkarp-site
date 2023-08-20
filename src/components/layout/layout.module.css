@@ -1,0 +1,95 @@
+.globalWrapper {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-wrapper);
+  padding: var(--spacing-10) var(--spacing-5);
+}
+
+.globalWrapper[data-is-root-path='true'] .bio {
+  margin-bottom: var(--spacing-20);
+}
+
+.globalHeader {
+  margin-bottom: var(--spacing-12);
+}
+
+.globalFooter {
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.footerContentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: var(--spacing-0) var(--spacing-4);
+}
+
+.footerDisclaimer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: var(--spacing-0) var(--spacing-4);
+  font-size: x-small;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: var(--spacing-0) var(--spacing-4);
+}
+
+.mainHeading {
+  font-size: var(--fontSize-7);
+  margin: 0;
+  font-weight: var(--fontWeight-black);
+  /* text-align: center; */
+}
+
+.headerLinkHome {
+  font-weight: var(--fontWeight-bold);
+  font-family: var(--font-heading);
+  text-decoration: none;
+  font-size: var(--fontSize-2);
+}
+
+@media only screen and (max-width: 35.9375rem) {
+  /* CSS rules for phones */
+  .footerContentContainer {
+    margin: var(--spacing-0) var(--spacing-0);
+  }
+
+  .footerContent {
+    margin: var(--spacing-0) var(--spacing-0);
+    font-size: x-small;
+  }
+
+  .footerDisclaimer {
+    font-size: xx-small;
+  }
+}
+
+/* Small Devices (Phones in Landscape and Small Tablets) */
+@media only screen and (min-width: 36rem) and (max-width: 47.9375rem) {
+  /* CSS rules for small tablets */
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media only screen and (min-width: 48rem) and (max-width: 61.9375rem) {
+  /* CSS rules for medium-sized tablets */
+}
+
+/* Large Devices (Laptops and Desktops) */
+@media only screen and (min-width: 62rem) and (max-width: 74.9375rem) {
+  /* CSS rules for laptops */
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media only screen and (min-width: 75rem) {
+  /* CSS rules for large desktops */
+}
