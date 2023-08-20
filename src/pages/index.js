@@ -1,32 +1,32 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
+import * as React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import Layout from '../components/layout';
+import Seo from '../components/seo';
 
-import NibbleSubstackSignupForm from '../components/nibble-signup'
+import NibbleSubstackSignupForm from '../components/nibble-signup';
 
-import useOnScreen from '../hooks/useOnScreen'
-import useDeviceDetect from '../hooks/useDeviceDetect'
+import useOnScreen from '../hooks/useOnScreen';
+import useDeviceDetect from '../hooks/useDeviceDetect';
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
 
-  const ref = React.useRef()
-  const onScreen = useOnScreen(ref, '0px')
-  const device = useDeviceDetect()
-  let showWidget
+  const ref = React.useRef();
+  const onScreen = useOnScreen(ref, '0px');
+  const device = useDeviceDetect();
+  let showWidget;
   if (onScreen) {
-    showWidget = true
+    showWidget = true;
   }
 
   const revealEmail = () => {
-    const email = 'thepushkarp[AT]gmail[DOT]com'
-    const emailElement = document.querySelector('#do-not-doxx-me')
-    emailElement.innerHTML = email
-    emailElement.classList.remove('hi-there-fellow-geek')
-    emailElement.classList.add('i-am-doxxed')
-  }
+    const email = 'thepushkarp[AT]gmail[DOT]com';
+    const emailElement = document.querySelector('#do-not-doxx-me');
+    emailElement.innerHTML = email;
+    emailElement.classList.remove('hi-there-fellow-geek');
+    emailElement.classList.add('i-am-doxxed');
+  };
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -148,17 +148,17 @@ const BlogIndex = ({ data, location }) => {
         {showWidget && <NibbleSubstackSignupForm />}
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 /**
  * Head export to define metadata for the page
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo />
+export const Head = () => <Seo />;
 
 export const pageQuery = graphql`
   {
@@ -181,4 +181,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

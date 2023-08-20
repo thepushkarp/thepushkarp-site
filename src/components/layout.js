@@ -1,30 +1,30 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import * as React from 'react';
+import { Link } from 'gatsby';
 
-import { isBrowser } from '../common/utils'
+import { isBrowser } from '../common/utils';
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  let header
+  const rootPath = `${__PATH_PREFIX__}/`;
+  const isRootPath = location.pathname === rootPath;
+  let header;
 
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
         <Link to="/">{title}</Link>
       </h1>
-    )
+    );
   } else {
     header = (
       <Link className="header-link-home" to="/">
         {title}
       </Link>
-    )
+    );
   }
 
-  var footerPaddingTop = 0
+  var footerPaddingTop = 0;
   if (isBrowser()) {
-    footerPaddingTop = 0.15 * window.innerHeight + 100
+    footerPaddingTop = 0.15 * window.innerHeight + 100;
   }
 
   return (
@@ -48,7 +48,7 @@ const Layout = ({ location, title, children }) => {
         </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

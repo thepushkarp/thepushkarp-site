@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const NibbleSubstackSignupForm = () => (
   <div className="nibble-substack-form">
@@ -12,6 +12,6 @@ const NibbleSubstackSignupForm = () => (
       title="Nibble"
     ></iframe>
   </div>
-)
+);
 
-export default NibbleSubstackSignupForm
+export default NibbleSubstackSignupForm;
