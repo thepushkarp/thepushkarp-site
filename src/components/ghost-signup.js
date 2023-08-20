@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const GhostSignupForm = () => (
   <div className="ghost-signup-form">
@@ -17,6 +17,6 @@ const GhostSignupForm = () => (
       async
     ></script>
   </div>
-)
+);
 
-export default GhostSignupForm
+export default GhostSignupForm;
