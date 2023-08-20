@@ -1,7 +1,8 @@
 import React from 'react';
+import * as styles from './signupForms.module.css';
 
 const GhostSignupForm = () => (
-  <div className="ghost-signup-form">
+  <div className={styles.ghostSignupForm}>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js"

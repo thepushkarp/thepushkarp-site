@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
-import Seo from '../components/seo';
+import Layout from '../components/layout/layout';
+import Seo from '../components/seo/seo';
 
-import NibbleSubstackSignupForm from '../components/nibble-signup';
+import NibbleSubstackSignupForm from '../components/signupForms/nibbleSignup';
 
 import useOnScreen from '../hooks/useOnScreen';
 import useDeviceDetect from '../hooks/useDeviceDetect';
