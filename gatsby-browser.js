@@ -1,7 +1,7 @@
 // custom typefaces
 // import dm mono
 import '@fontsource/dm-mono';
-import '@fontsource/courier-prime';
+import '@fontsource/pt-mono';
 // normalize CSS across browsers
 import './src/normalize.css';
 // custom CSS styles

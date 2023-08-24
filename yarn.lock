@@ -1166,6 +1166,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource-variable/playfair-display@^5.0.9":
+  version "5.0.9"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/playfair-display/-/playfair-display-5.0.9.tgz#84ed650aa0e039abf1fe8ecf0f7ec4dd2eaf8af9"
+  integrity sha512-Ljj75d1lIR2YdePy5vb2CIJgqeu3w7I1DTNTkTClASrfNNgXL2+xzADu9z1W4dnmEJDE3k9OcoWi9sU40bs+aQ==
+
 "@fontsource/courier-prime@^5.0.8":
   version "5.0.8"
   resolved "https://registry.yarnpkg.com/@fontsource/courier-prime/-/courier-prime-5.0.8.tgz#6b26ef310178741fadf393bb6f33971b672964b9"
@@ -1175,6 +1180,11 @@
   version "5.0.8"
   resolved "https://registry.yarnpkg.com/@fontsource/dm-mono/-/dm-mono-5.0.8.tgz#3eda6d2656e1b9c630131033514560769bfc3823"
   integrity sha512-wz+wRLEa2MSip8PIkAOx7/rJSf69qT334PduBnrtBAcIhQGXMZI2geHFqiTcnhGknyzgfjJW3vn5xVvmMQAm4A==
+
+"@fontsource/pt-mono@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/pt-mono/-/pt-mono-5.0.8.tgz#3cd95ae8b1ae3ab87ed4df01986e7066f9c2b3e5"
+  integrity sha512-AToVQgpZgzLKa5q+c6lc2kf4UjFIK5gAex/CzruxrFUJ2dKZ97i7Cy8z5UTJUoU7Fti1Qh0FH2HCxX1G2p3mqw==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.11.0":
   version "2.11.0"
