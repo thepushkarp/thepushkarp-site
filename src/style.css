@@ -31,7 +31,7 @@
     BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Noto Color Emoji';
-  --fontFamily-serif: 'Courier Prime', 'Georgia', Cambria,
+  --fontFamily-serif: 'PT Mono', 'Georgia', Cambria,
     'Times New Roman', Times, serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
