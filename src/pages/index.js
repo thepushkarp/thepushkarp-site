@@ -130,6 +130,15 @@ const BlogIndex = ({ data, location }) => {
           thepushkarp
         </a>
         <br />
+        Product Hunt:{' '}
+        <a
+          href="https://www.producthunt.com/@thepushkarp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          thepushkarp
+        </a>
+        <br />
         Mail:{' '}
         <span
           className="hi-there-fellow-geek"
