@@ -318,6 +318,10 @@ a:focus {
   align-items: center;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 /* Media queries */
 
 /* Extra Small Devices (Phones) */
