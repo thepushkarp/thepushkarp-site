@@ -112,15 +112,6 @@ const BlogIndex = ({ data, location }) => {
           Nibble
         </a>
         <br />
-        Twitter:{' '}
-        <a
-          href="https://twitter.com/thepushkarp"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @thepushkarp
-        </a>
-        <br />
         GitHub:{' '}
         <a
           href="https://github.com/thepushkarp"
@@ -128,6 +119,17 @@ const BlogIndex = ({ data, location }) => {
           rel="noopener noreferrer"
         >
           thepushkarp
+          <span className="invisible">github</span>
+        </a>
+        <br />
+        Twitter:{' '}
+        <a
+          href="https://twitter.com/thepushkarp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @thepushkarp
+          <span className="invisible">twiter</span>
         </a>
         <br />
         Product Hunt:{' '}
@@ -137,6 +139,7 @@ const BlogIndex = ({ data, location }) => {
           rel="noopener noreferrer"
         >
           thepushkarp
+          <span className="invisible">github</span>
         </a>
         <br />
         Mail:{' '}
