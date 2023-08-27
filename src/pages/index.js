@@ -139,7 +139,7 @@ const BlogIndex = ({ data, location }) => {
           rel="noopener noreferrer"
         >
           thepushkarp
-          <span className="invisible">github</span>
+          <span className="invisible">producthunt</span>
         </a>
         <br />
         Mail:{' '}
