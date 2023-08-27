@@ -1,0 +1,6 @@
+.invisible {
+  visibility: hidden !important;
+  text-decoration: none !important;
+  font-size: 0 !important;
+  color: transparent !important;
+}

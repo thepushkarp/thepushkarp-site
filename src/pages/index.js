@@ -9,6 +9,8 @@ import NibbleSubstackSignupForm from '../components/signupForms/nibbleSignup';
 import useOnScreen from '../hooks/useOnScreen';
 import useDeviceDetect from '../hooks/useDeviceDetect';
 
+import * as styles from './pages.module.css';
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
@@ -119,7 +121,7 @@ const BlogIndex = ({ data, location }) => {
           rel="noopener noreferrer"
         >
           thepushkarp
-          <span className="invisible">github</span>
+          <span className={styles.invisible}>github</span>
         </a>
         <br />
         Twitter:{' '}
@@ -129,7 +131,7 @@ const BlogIndex = ({ data, location }) => {
           rel="noopener noreferrer"
         >
           @thepushkarp
-          <span className="invisible">twiter</span>
+          <span className={styles.invisible}>twiter</span>
         </a>
         <br />
         Product Hunt:{' '}
@@ -139,7 +141,7 @@ const BlogIndex = ({ data, location }) => {
           rel="noopener noreferrer"
         >
           thepushkarp
-          <span className="invisible">producthunt</span>
+          <span className={styles.invisible}>producthunt</span>
         </a>
         <br />
         Mail:{' '}
