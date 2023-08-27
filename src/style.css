@@ -319,7 +319,8 @@ a:focus {
 }
 
 .invisible {
-  visibility: hidden;
+  visibility: hidden !important;
+  text-decoration: none !important;
 }
 
 /* Media queries */
