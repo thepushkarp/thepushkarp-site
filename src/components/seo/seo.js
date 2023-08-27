@@ -80,6 +80,8 @@ const Seo = ({ description, title, children }) => {
         name="twitter:site"
         content={site.siteMetadata?.social?.twitter || ''}
       />
+      <link rel="prefetch" href="../../style.css" as="style" />
+      <link rel="preload" href="../../style.css" as="style" />
       {children}
     </>
   );
