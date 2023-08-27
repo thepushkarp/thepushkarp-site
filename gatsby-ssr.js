@@ -9,6 +9,4 @@
  */
 exports.onRenderBody = ({ setHtmlAttributes }) => {
   setHtmlAttributes({ lang: `en` });
-  <link rel="prefetch" href="/src/style.css" as="style" />;
-  <link rel="preload" href="/src/style.css" as="style" />;
 };
