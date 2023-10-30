@@ -114,6 +114,15 @@ const BlogIndex = ({ data, location }) => {
           Nibble
         </a>
         <br />
+        Notes:{' '}
+        <a
+          href="https://notes.thepushkarp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pushkar's Notes
+        </a>
+        <br />
         GitHub:{' '}
         <a
           href="https://github.com/thepushkarp"
