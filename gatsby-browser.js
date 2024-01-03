@@ -1,5 +1,4 @@
 // custom typefaces
-// import dm mono
 import '@fontsource/dm-mono';
 import '@fontsource/pt-mono';
 // normalize CSS across browsers
