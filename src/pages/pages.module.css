@@ -4,3 +4,18 @@
   font-size: 0 !important;
   color: transparent !important;
 }
+
+.para {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    display: inline-block;
+  }
+}
+
+.prose {
+  span + span {
+    margin-top: 1rem;
+  }
+}

@@ -1245,9 +1245,9 @@
   integrity sha512-SLty2XzwCiRXfbJom6Aa2kpFYxuXS2KP+rk1oxH8/TKU3UWjauG+W0eMtZUsf/N88JcIfX4l4PQwvuTDcGJpwA==
 
 "@fontsource/dm-mono@^5.0.8":
-  version "5.0.8"
-  resolved "https://registry.yarnpkg.com/@fontsource/dm-mono/-/dm-mono-5.0.8.tgz#3eda6d2656e1b9c630131033514560769bfc3823"
-  integrity sha512-wz+wRLEa2MSip8PIkAOx7/rJSf69qT334PduBnrtBAcIhQGXMZI2geHFqiTcnhGknyzgfjJW3vn5xVvmMQAm4A==
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource/dm-mono/-/dm-mono-5.0.18.tgz#e8fe9b872f5ccedef7ae4c56d71f7b2e6caeb45a"
+  integrity sha512-cKIxxlXfKiE/IhoiemJoZZFL8KshcVQv/DSjlQoTTNjZ0Lhko2WCIGNSdtskcE8J8miaTaz062StG/eKaftLKA==
 
 "@fontsource/pt-mono@^5.0.8":
   version "5.0.8"

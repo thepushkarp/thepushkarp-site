@@ -52,12 +52,30 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-primary: #B3DAF1; /* Sky Blue */
+  --color-text: #333333; /* Dark Charcoal */
+  --color-text-light: #666666; /* Medium Charcoal */
+  --color-heading: #333333; /* Dark Charcoal */
+  --color-heading-black: black; /* Black */
+  --color-accent: #FFAA64; /* Sunrise Orange */
+  --color-background: #EBF5FC; /* Pale Cerulean */
+  --color-selection-highlight: #FFD9B0; /* Light Orange */
+  --color-selection-text: #333333; /* Dark Charcoal */
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #3A5F7D; /* Deep Sky */
+    --color-text: #CDD7DC; /* Light Slate */
+    --color-text-light: #9BA9B1; /* Cadet Grey */
+    --color-heading: #CDD7DC; /* Light Slate */
+    --color-heading-black: white; /* White */
+    --color-accent: #E67E30; /* Dark Orange */
+    --color-background: #273746; /* Dark Blue Grey */
+    --color-selection-highlight: #5C3A00; /* Very Dark Orange, almost brown */
+    --color-selection-text: #FAF3E0; /* Light Cream */
+  }
 }
 
 /* HTML elements */
@@ -66,6 +84,15 @@
 :after,
 :before {
   box-sizing: border-box;
+  background-color: var(--color-background);
+  ::selection {
+    background-color: var(--color-selection-highlight);
+    color: var(--color-selection-text);
+  }
+  ::-moz-selection {
+    background-color: var(--color-selection-highlight);
+    color: var(--color-selection-text);
+  }
 }
 
 html {
