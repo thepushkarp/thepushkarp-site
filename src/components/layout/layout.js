@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 
-import { isBrowser } from '../../common/utils';
-
 import * as styles from './layout.module.css';
 
 const Layout = ({ location, title, children }) => {
@@ -24,20 +22,12 @@ const Layout = ({ location, title, children }) => {
     );
   }
 
-  var footerPaddingTop = 0;
-  if (isBrowser()) {
-    footerPaddingTop = 0.6 * window.innerHeight;
-  }
-
   return (
     <div className={styles.globalWrapper} data-is-root-path={isRootPath}>
       <header className={styles.globalHeader}>{header}</header>
       <main>{children}</main>
       <footer className={styles.globalFooter}>
-        <div
-          style={{ paddingTop: footerPaddingTop }}
-          className={styles.footerContentContainer}
-        >
+        <div className={styles.footerContentContainer}>
           <p className={styles.footerContent}>
             © {new Date().getFullYear()} Pushkar Patel.
             <br />

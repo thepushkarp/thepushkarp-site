@@ -23,9 +23,10 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <p>Hi,</p>
-      <p className={`${styles.para}`}>
+      <p className={styles.para}>
         <span className={styles.prose}>
+          Hi,
+          <br />
           For most of my time {device === 'mobile' && <br />}I write software.
           <br />I also write other stuff {device === 'mobile' && <br />} that I
           should share.
@@ -64,8 +65,7 @@ const BlogIndex = ({ data, location }) => {
           Now while you're at it, {device === 'mobile' && <br />}
           check me out here:
         </span>
-      </p>
-      <p className={styles.para}>
+        <br />
         <span>
           &gt; Tech Newsletter:{' '}
           <a
