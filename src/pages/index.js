@@ -17,96 +17,67 @@ const BlogIndex = ({ data, location }) => {
     const email = 'hi[AT]thepushkarp[DOT]com';
     const emailElement = document.querySelector('#do-not-doxx-me');
     emailElement.innerHTML = email;
-    emailElement.classList.remove('hi-there-fellow-geek');
+    emailElement.classList.remove('hi-nerd');
     emailElement.classList.add('i-am-doxxed');
   };
 
   return (
     <Layout location={location} title={siteTitle}>
-      <p>Hello, I am Pushkar.</p>
-      <p className={`${styles.para} ${styles.prose}`}>
-        <span>
+      <p>Hi,</p>
+      <p className={`${styles.para}`}>
+        <span className={styles.prose}>
           For most of my time {device === 'mobile' && <br />}I write software.
-        </span>
-        <span>
-          I also write other stuff {device === 'mobile' && <br />}
-          that I should share.
-        </span>
-        <span>
+          <br />I also write other stuff {device === 'mobile' && <br />} that I
+          should share.
+          <br />
           So I'm putting this site {device === 'mobile' && <br />}
           out there somewhere.
-        </span>
-        <span>
+          <br />
           To give myself a {device === 'mobile' && <br />}
-          teeny-tiny little dare.
-        </span>
-        <span>
-          To write a little more, {device === 'mobile' && <br />}
+          teeny-tiny dare.
+          <br />
+          And write a little more, {device === 'mobile' && <br />}
           raw and bare.
-        </span>
-        <span>
+          <br />
           Maybe I'll do that a {device === 'mobile' && <br />}
           justice square and fair.
-        </span>
-        <span>
-          Or maybe not; {device === 'mobile' && <br />}I honestly don't care.
-        </span>
-        <span>
-          All I want is to write {device === 'mobile' && <br />}
-          with a little flair.
-        </span>
-        <span>
-          And grow a little {device === 'mobile' && <br />}
+          <br />
+          Or maybe not — {device === 'mobile' && <br />}I honestly don't care.
+          <br />
+          All I want is to look up {device === 'mobile' && <br />}
+          at the stars and stare.
+          <br />
+          And be a little {device === 'mobile' && <br />}
           more self-aware.
-        </span>
-        <span>
+          <br />
           This rhyme makes no sense {device === 'mobile' && <br />}
-          and it is so unfair.
-        </span>
-        <span>
+          and it is so unfair;
+          <br />
           To you dear reader for {device === 'mobile' && <br />}
-          having to bear.
-        </span>
-        <span>
+          having to bear...
+          <br />
           This nonsense that for a {device === 'mobile' && <br />}
           minute now you've stared.
-        </span>
-        <span>
-          I wish you had {device === 'mobile' && <br />}
+          <br />I wish you had {device === 'mobile' && <br />}
           better things to care.
-        </span>
-        <span>
-          Now while you're at it {device === 'mobile' && <br />}
-          do check me out here:
+          <br />
+          Now while you're at it, {device === 'mobile' && <br />}
+          check me out here:
         </span>
       </p>
       <p className={styles.para}>
         <span>
-          Personal Blog:{' '}
-          <a href="https://blog.thepushkarp.com/">Pushkar's Blog</a>
-        </span>
-        <span>
-          Tech Newsletter:{' '}
+          &gt; Tech Newsletter:{' '}
           <a
-            href="https://thenibble.substack.com/"
+            href="https://nibbles.dev/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Nibble
+            The Nibble
           </a>
         </span>
         <span>
-          Notes:{' '}
-          <a
-            href="https://notes.thepushkarp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Pushkar's Notes
-          </a>
-        </span>
-        <span>
-          GitHub:{' '}
+          &gt; GitHub:{' '}
           <a
             href="https://github.com/thepushkarp"
             target="_blank"
@@ -117,7 +88,7 @@ const BlogIndex = ({ data, location }) => {
           </a>
         </span>
         <span>
-          Twitter:{' '}
+          &gt; Twitter:{' '}
           <a
             href="https://twitter.com/thepushkarp"
             target="_blank"
@@ -128,20 +99,9 @@ const BlogIndex = ({ data, location }) => {
           </a>
         </span>
         <span>
-          Product Hunt:{' '}
-          <a
-            href="https://www.producthunt.com/@thepushkarp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            thepushkarp
-            <span className={styles.invisible}>producthunt</span>
-          </a>
-        </span>
-        <span>
-          Mail:{' '}
+          &gt; Mail:{' '}
           <span
-            className="hi-there-fellow-geek"
+            className="hi-nerd"
             id="do-not-doxx-me"
             onClick={revealEmail}
             onKeyDown={revealEmail}

@@ -38,14 +38,12 @@ const Layout = ({ location, title, children }) => {
           style={{ paddingTop: footerPaddingTop }}
           className={styles.footerContentContainer}
         >
-          <p className={styles.footerDisclaimer}>
-            [This Space Intentionally Left Blank]
-            <br />
-            The bottom of every page is padded so readers can maintain a
-            consistent eyeline.
-          </p>
           <p className={styles.footerContent}>
-            © {new Date().getFullYear()}, Built with love, sweat and tears
+            © {new Date().getFullYear()} Pushkar Patel.
+            <br />
+          </p>
+          <p className={styles.footerDisclaimer}>
+            Built with love, sweat and tears.
           </p>
         </div>
       </footer>

@@ -8,14 +8,10 @@
 .para {
   display: flex;
   flex-direction: column;
-
-  span {
-    display: inline-block;
-  }
 }
 
 .prose {
-  span + span {
-    margin-top: 1rem;
-  }
+  display: inline-block;
+  /* line height */
+  line-height: 2;
 }
