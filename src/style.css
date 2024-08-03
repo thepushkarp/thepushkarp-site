@@ -320,11 +320,11 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
-.hi-there-fellow-geek {
+.hi-nerd {
   cursor: pointer;
 }
 
-.hi-there-fellow-geek:hover {
+.hi-nerd:hover {
   text-decoration: underline;
 }
 

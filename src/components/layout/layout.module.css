@@ -42,6 +42,7 @@
   align-items: center;
   text-align: center;
   margin: var(--spacing-0) var(--spacing-4);
+  font-size: small;
 }
 
 .mainHeading {
