@@ -66,14 +66,14 @@
 /* Dark Theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #3A5F7D; /* Deep Sky */
-    --color-text: #CDD7DC; /* Light Slate */
-    --color-text-light: #9BA9B1; /* Cadet Grey */
-    --color-heading: #CDD7DC; /* Light Slate */
+    --color-primary: #7D9AB3; /* Muted Sky Blue */
+    --color-text: #D1D7DC; /* Muted Light Slate */
+    --color-text-light: #A9B1B8; /* Muted Cadet Grey */
+    --color-heading: #D1D7DC; /* Muted Light Slate */
     --color-heading-black: white; /* White */
-    --color-accent: #E67E30; /* Dark Orange */
-    --color-background: #273746; /* Dark Blue Grey */
-    --color-selection-highlight: #5C3A00; /* Very Dark Orange, almost brown */
+    --color-accent: #B38A7D; /* Muted Orange */
+    --color-background: #374756; /* Muted Dark Blue Grey */
+    --color-selection-highlight: #8A6D5C; /* Muted Dark Orange */
     --color-selection-text: #FAF3E0; /* Light Cream */
   }
 }
@@ -328,12 +328,6 @@ a:focus {
   text-decoration: underline;
 }
 
-.i-am-doxxed {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
-  user-select: none;         /* Standard Syntax */
-}
 
 .iframe-container {
   position: relative;

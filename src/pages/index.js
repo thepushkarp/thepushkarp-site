@@ -14,11 +14,10 @@ const BlogIndex = ({ data, location }) => {
   const device = useDeviceDetect();
 
   const revealEmail = () => {
-    const email = 'hi[AT]thepushkarp[DOT]com';
+    const email = ' hi[AT]thepushkarp[DOT]com';
     const emailElement = document.querySelector('#do-not-doxx-me');
     emailElement.innerHTML = email;
     emailElement.classList.remove('hi-nerd');
-    emailElement.classList.add('i-am-doxxed');
   };
 
   return (
