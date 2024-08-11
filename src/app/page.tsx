@@ -1,4 +1,4 @@
-import { BlogPosts } from 'app/components/posts'
+import { BlogPosts } from "@/components/posts";
 
 export default function Page() {
   return (
@@ -17,5 +17,5 @@ export default function Page() {
         <BlogPosts />
       </div>
     </section>
-  )
+  );
 }

@@ -1,0 +1,28 @@
+# This is an editorconfig file for a gatsby prject using js, jsx, ts, tsx, md and mdx files
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+max_line_length = 80
+trim_trailing_whitespace = true
+
+[*.{md,mdx}]
+max_line_length = 0
+trim_trailing_whitespace = false
+
+[*.json]
+indent_size = 2
+
+[*.y{a,}ml]
+indent_size = 2
+
+[*.{js{,x},ts{,x}}]
+indent_size = 2
+
+[*.{css,scss,sass}]
+indent_size = 2
