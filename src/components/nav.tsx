@@ -10,12 +10,12 @@ const navItems = {
   '/blog': {
     name: 'blog',
   },
-  '/notes': {
-    name: 'notes',
-  },
-  '/projects': {
-    name: 'projects',
-  },
+  // '/notes': {
+  //   name: 'notes',
+  // },
+  // '/projects': {
+  //   name: 'projects',
+  // },
 };
 
 export function Navbar() {
