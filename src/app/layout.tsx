@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Footer from '../components/footer';
 import { baseUrl } from './sitemap';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -40,15 +41,17 @@ const cx = (...classes) => classes.filter(Boolean).join(' ');
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={cx('text-black bg-white', GeistSans.variable, GeistMono.variable)}>
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          <Navbar />
-          {children}
-          <Footer />
+    <html lang="en" className={cx(GeistSans.variable, GeistMono.variable)}>
+      <body className="antialiased">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <div className="max-w-xl mx-auto px-4 py-8">
+            <Navbar />
+            <main className="mt-6">{children}</main>
+            <Footer />
+          </div>
           <Analytics />
           <SpeedInsights />
-        </main>
+        </ThemeProvider>
       </body>
     </html>
   );
