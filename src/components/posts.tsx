@@ -42,7 +42,7 @@ export function BlogPosts() {
           </div>
         ))}
       {numPosts === 0 && (
-        <p>all blogs are currently in my mind&apos;s latent space and i&apos;m struggling to get them out...</p>
+        <p>all blogs are currently in my mind&apos;s latent space and i&apos;m fighting to get them out...</p>
       )}
     </div>
   );
