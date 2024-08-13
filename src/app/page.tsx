@@ -32,10 +32,10 @@ this nonsense that for a minute now you've stared.
 i wish you had better things to care.
 now while you're at it, check me out here:`}
       </p>
-      <ul className="font-sm mt-4 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0">
+      <ul className="font-sm mt-4 flex flex-col space-x-0 space-y-2 text-muted-foreground md:flex-row md:space-x-4 md:space-y-0">
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800"
+            className="flex items-center transition-all hover:text-primary"
             rel="noopener noreferrer"
             target="_blank"
             href="https://nibbles.dev"
@@ -46,7 +46,7 @@ now while you're at it, check me out here:`}
         </li>
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800"
+            className="flex items-center transition-all hover:text-primary"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/thepushkarp"
@@ -57,7 +57,7 @@ now while you're at it, check me out here:`}
         </li>
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800"
+            className="flex items-center transition-all hover:text-primary"
             rel="noopener noreferrer"
             target="_blank"
             href="https://twitter.com/thepushkarp"
@@ -68,7 +68,7 @@ now while you're at it, check me out here:`}
         </li>
         <li>
           <span
-            className="transition-all hover:text-neutral-800"
+            className="transition-all hover:text-primary"
             id="do-not-doxx-me"
             onClick={revealEmail}
             onKeyDown={revealEmail}

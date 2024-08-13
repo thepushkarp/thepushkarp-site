@@ -36,7 +36,7 @@ export function Navbar() {
                 key={path}
                 href={path}
                 className={`transition-colors py-1 px-2 ${
-                  isActive ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900'
+                  isActive ? 'text-primary' : 'text-muted-foreground hover:text-primary'
                 }`}
               >
                 {name}
