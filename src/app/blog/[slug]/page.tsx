@@ -77,7 +77,8 @@ export default function Blog({ params }) {
         }}
       />
       <h1 className="title font-semibold tracking-tighter">{post.metadata.title}</h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
+      {post.metadata.summary && <p className="text-sm">{post.metadata.summary}</p>}
+      <div className="flex justify-between items-center mt-2 mb-8 text-xs">
         <p className="text-sm text-muted-foreground">{formatDate(post.metadata.publishedAt, true)}</p>
       </div>
       <article className="prose prose-quoteless prose-neutral dark:prose-invert">
