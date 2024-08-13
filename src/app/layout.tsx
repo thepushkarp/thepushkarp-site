@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "pushkar's site.",
     url: baseUrl,
     siteName: 'pushkar patel',
-    locale: 'en_US',
+    locale: 'en_GB',
     type: 'website',
     images: [
       {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     creator: '@thepushkarp',
     card: 'summary_large_image',
     images: ['/images/android-chrome-512x512.png'],
-    site: baseUrl,
+    site: '@thepushkarp',
   },
   robots: {
     index: true,

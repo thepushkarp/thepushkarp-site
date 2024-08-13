@@ -28,6 +28,8 @@ export function generateMetadata({ params }) {
       description,
       type: 'article',
       publishedTime,
+      siteName: 'pushkar patel',
+      locale: 'en_GB',
       url: `${baseUrl}/blog/${post.slug}`,
       images: [
         {
@@ -39,7 +41,9 @@ export function generateMetadata({ params }) {
       card: 'summary_large_image',
       title,
       description,
+      creator: '@thepushkarp',
       images: [ogImage],
+      site: '@thepushkarp',
     },
   };
 }
