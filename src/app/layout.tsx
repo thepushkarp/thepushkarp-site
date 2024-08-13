@@ -7,7 +7,8 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Footer from '../components/footer';
 import { baseUrl } from './sitemap';
-import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeProvider } from '@/components/themeProvider';
+import { GoogleAnalytics } from '@/components/googleAnalytics';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <Analytics />
           <SpeedInsights />
+          <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         </ThemeProvider>
       </body>
     </html>
