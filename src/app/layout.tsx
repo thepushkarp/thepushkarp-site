@@ -62,7 +62,6 @@ export const metadata: Metadata = {
       { url: '/images/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
     ],
     apple: [{ url: '/images/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
-    other: [{ rel: 'mask-icon', url: '/images/safari-pinned-tab.svg', color: '#5bbad5' }],
   },
 };
 
