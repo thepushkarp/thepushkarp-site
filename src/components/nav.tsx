@@ -23,7 +23,6 @@ const navItems = {
 
 export function Navbar() {
   const pathname = usePathname();
-  const { setTheme } = useTheme();
 
   return (
     <aside className="mb-16 w-full max-w-[800px] mx-auto">
@@ -53,7 +52,7 @@ export function Navbar() {
 }
 
 function ThemeToggle() {
-  const { setTheme } = useTheme();
+  const { setTheme, theme, resolvedTheme } = useTheme();
 
   return (
     <DropdownMenu>
@@ -65,9 +64,15 @@ function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>Light</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>Dark</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>System</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('light')}>
+          <span className={theme !== 'system' && resolvedTheme === 'light' ? 'font-semibold' : ''}>Light</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('dark')}>
+          <span className={theme !== 'system' && resolvedTheme === 'dark' ? 'font-semibold' : ''}>Dark</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('system')}>
+          <span className={theme === 'system' ? 'font-semibold' : ''}>System</span>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
