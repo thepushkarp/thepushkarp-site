@@ -9,6 +9,9 @@ export default function Page() {
     if (emailElement) {
       emailElement.innerHTML = email;
       emailElement.removeAttribute('role');
+      emailElement.removeAttribute('onClick');
+      emailElement.removeAttribute('onKeyDown');
+      emailElement.className = '';
     }
   };
 
