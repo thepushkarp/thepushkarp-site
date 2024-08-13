@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     template: '%s | pushkar patel',
   },
   description: "pushkar's site.",
+  authors: [{ name: 'Pushkar Patel' }],
+  keywords: ['thepushkarp', 'pushkar', 'patel', 'pushkar patel'],
+  creator: 'Pushkar Patel',
+  publisher: 'Pushkar Patel',
   openGraph: {
     title: 'pushkar patel',
     description: "pushkar's site.",

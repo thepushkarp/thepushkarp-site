@@ -17,12 +17,16 @@ export function generateMetadata({ params }) {
     return;
   }
 
-  let { title, publishedAt: publishedTime, summary: description, image } = post.metadata;
+  let { title, publishedAt: publishedTime, summary: description, keywords, image } = post.metadata;
   let ogImage = image ? image : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,
     description,
+    keywords,
+    alternates: {
+      canonical: `${baseUrl}/blog/${post.slug}`,
+    },
     openGraph: {
       title,
       description,
