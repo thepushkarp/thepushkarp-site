@@ -12,9 +12,6 @@ export async function GET(request: NextRequest) {
   const bgClass = theme === 'dark' ? 'bg-slate-800' : 'bg-white';
   const textClass = theme === 'dark' ? 'text-white' : 'text-slate-800';
 
-  const fontRegular = readFileSync(join(process.cwd(), 'public/fonts/Geist-Regular.ttf'));
-  const fontBold = readFileSync(join(process.cwd(), 'public/fonts/Geist-Bold.ttf'));
-
   return new ImageResponse(
     (
       <div tw={`flex flex-col w-full h-full items-center justify-center antialiased ${bgClass}`}>
@@ -30,20 +27,6 @@ export async function GET(request: NextRequest) {
     {
       width: 1200,
       height: 630,
-      fonts: [
-        {
-          name: 'Geist',
-          data: fontRegular,
-          style: 'normal',
-          weight: 400,
-        },
-        {
-          name: 'Geist',
-          data: fontBold,
-          style: 'normal',
-          weight: 700,
-        },
-      ],
     }
   );
 }
