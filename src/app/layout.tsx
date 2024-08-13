@@ -42,7 +42,7 @@ const cx = (...classes) => classes.filter(Boolean).join(' ');
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={cx(GeistSans.variable, GeistMono.variable)}>
-      <body className="antialiased">
+      <body className="antialiased font-sans">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="max-w-xl mx-auto px-4 py-8">
             <Navbar />

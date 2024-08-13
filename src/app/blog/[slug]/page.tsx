@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { CustomMDX } from '@/components/mdx';
 import { formatDate, getBlogPosts } from '@/app/blog/utils';
 import { baseUrl } from '@/app/sitemap';
+import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 
 export async function generateStaticParams() {
   let posts = getBlogPosts();
@@ -75,13 +76,26 @@ export default function Blog({ params }) {
           }),
         }}
       />
-      <h1 className="title font-semibold text-2xl tracking-tighter">{post.metadata.title}</h1>
+      <h1 className="title font-semibold tracking-tighter">{post.metadata.title}</h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-muted-foreground">{formatDate(post.metadata.publishedAt, true)}</p>
       </div>
-      <article className="prose">
+      <article className="prose prose-quoteless prose-neutral dark:prose-invert">
         <CustomMDX source={post.content} />
       </article>
+      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 md:flex-row md:space-x-4 md:space-y-0">
+        <li>
+          <a
+            className="flex items-center transition-all text-muted-foreground hover:text-primary"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="/rss"
+          >
+            <ArrowTopRightIcon />
+            <p className="ml-2 h-7">rss</p>
+          </a>
+        </li>
+      </ul>
     </section>
   );
 }

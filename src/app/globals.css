@@ -29,6 +29,9 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --font-geist-sans: 'GeistSans', sans-serif;
+    --font-geist-mono: 'GeistMono', monospace;
+
   }
 
   .dark {
@@ -56,6 +59,34 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tighter;
+  }
+
+  h1 {
+    @apply text-3xl mb-6;
+  }
+
+  h2 {
+    @apply text-2xl mb-4 mt-8;
+  }
+
+  h3 {
+    @apply text-xl mb-3 mt-6;
+  }
+
+  h4 {
+    @apply text-lg mb-2 mt-4;
+  }
+
+  h5 {
+    @apply text-base mb-2 mt-3;
+  }
+
+  h6 {
+    @apply text-sm mb-2 mt-3;
   }
 }
 

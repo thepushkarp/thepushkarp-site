@@ -24,7 +24,7 @@ export function BlogPosts() {
     <div>
       {sortedYears.map(year => (
         <div key={year}>
-          <h3 className="mb-2 text-sm">{year}</h3>
+          <h2 className="mb-2 text-sm">{year}</h2>
           {postsByYear[Number(year)]
             .sort((a, b) => (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt) ? -1 : 1))
             .map(post => (

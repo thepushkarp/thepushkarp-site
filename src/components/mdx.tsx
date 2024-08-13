@@ -48,7 +48,7 @@ function RoundedImage(props) {
 
 function Code({ children, ...props }) {
   let codeHTML = highlight(children);
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
+  return <code className="font-mono" dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
 
 function slugify(str) {
@@ -63,25 +63,17 @@ function slugify(str) {
 }
 
 function createHeading(level) {
-  const Heading = ({ children }) => {
+  return function Heading({ children }) {
     let slug = slugify(children);
-    return React.createElement(
-      `h${level}`,
-      { id: slug },
-      [
-        React.createElement('a', {
-          href: `#${slug}`,
-          key: `link-${slug}`,
-          className: 'anchor',
-        }),
-      ],
-      children
-    );
+    return React.createElement(`h${level}`, { id: slug }, [
+      React.createElement('a', {
+        href: `#${slug}`,
+        key: `link-${slug}`,
+        className: 'anchor',
+      }),
+      children,
+    ]);
   };
-
-  Heading.displayName = `Heading${level}`;
-
-  return Heading;
 }
 
 let components = {
