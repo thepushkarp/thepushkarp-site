@@ -40,6 +40,7 @@
     --sh-jsxliterals: #6266d1;
     --sh-property: #e25a1c;
     --sh-entity: #e25a1c;
+    --selection-bg: 210 70% 75%; /* More saturated blue for light theme */
   }
 
   .dark {
@@ -71,6 +72,11 @@
     --sh-identifier: white;
     --sh-keyword: #f47067;
     --sh-string: #0fa295;
+    --selection-bg: 210 70% 40%; /* Saturated blue for dark theme */
+  }
+
+  ::selection {
+    background-color: hsl(var(--selection-bg));
   }
 
   h1, h2, h3, h4, h5, h6 {
