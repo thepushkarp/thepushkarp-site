@@ -18,11 +18,26 @@ export const metadata: Metadata = {
   description: "pushkar's site.",
   openGraph: {
     title: 'pushkar patel',
-    description: "pushkar's  site.",
+    description: "pushkar's site.",
     url: baseUrl,
     siteName: 'pushkar patel',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/images/android-chrome-512x512.png',
+        width: 512,
+        height: 512,
+      },
+    ],
+  },
+  twitter: {
+    title: 'pushkar patel',
+    description: "pushkar's site.",
+    creator: '@thepushkarp',
+    card: 'summary_large_image',
+    images: ['/images/android-chrome-512x512.png'],
+    site: baseUrl,
   },
   robots: {
     index: true,
@@ -34,6 +49,15 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  icons: {
+    icon: [
+      { url: '/images/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/images/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
+    ],
+    apple: [{ url: '/images/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    other: [{ rel: 'mask-icon', url: '/images/safari-pinned-tab.svg', color: '#5bbad5' }],
   },
 };
 
