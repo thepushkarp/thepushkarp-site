@@ -3,26 +3,7 @@ import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { highlight } from 'sugar-high';
 import React from 'react';
-
-function Table({ data }) {
-  let headers = data.headers.map((header, index) => <th key={index}>{header}</th>);
-  let rows = data.rows.map((row, index) => (
-    <tr key={index}>
-      {row.map((cell, cellIndex) => (
-        <td key={cellIndex}>{cell}</td>
-      ))}
-    </tr>
-  ));
-
-  return (
-    <table>
-      <thead>
-        <tr>{headers}</tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </table>
-  );
-}
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 function CustomLink(props) {
   let href = props.href;
@@ -86,7 +67,6 @@ let components = {
   Image: RoundedImage,
   a: CustomLink,
   code: Code,
-  Table,
 };
 
 export function CustomMDX(props) {
