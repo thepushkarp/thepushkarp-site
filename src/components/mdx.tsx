@@ -2,8 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { highlight } from 'sugar-high';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import React from 'react';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import 'katex/dist/katex.min.css';
 
 function CustomLink(props) {
   let href = props.href;
@@ -24,7 +27,11 @@ function CustomLink(props) {
 }
 
 function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />;
+  return (
+    <div className="my-4 flex justify-center">
+      <Image alt={props.alt} className="rounded-lg" {...props} />
+    </div>
+  );
 }
 
 function Code({ children, ...props }) {
@@ -69,6 +76,12 @@ let components = {
   code: Code,
 };
 
-export function CustomMDX(props) {
-  return <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} />;
+export function CustomMDX(mdxSource) {
+  return (
+    <MDXRemote
+      {...mdxSource}
+      components={{ ...components, ...(mdxSource.components || {}) }}
+      options={{ mdxOptions: { remarkPlugins: [remarkGfm, remarkMath], rehypePlugins: [rehypeKatex] } }}
+    />
+  );
 }

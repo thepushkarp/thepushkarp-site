@@ -154,8 +154,12 @@
       @apply underline transition-all decoration-muted-foreground underline-offset-2 decoration-[0.1em];
     }
 
+    blockquote {
+      @apply mt-6 border-l-2 pl-6 italic;
+    }
+
     pre {
-      @apply bg-muted text-muted-foreground rounded-lg overflow-x-auto border border-border py-2 px-3 text-sm;
+      @apply bg-muted text-muted-foreground rounded-lg overflow-x-auto border border-border py-2 px-3 mb-4 text-sm;
 
       code {
         @apply p-0;
