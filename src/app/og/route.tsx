@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
 
   const bgColor = '#ffffff';
   const textColor = '#1e293b';
-  const dominantColor = generateColor(title + subtitle);
+  const dominantColor = generateColor(`title=${title} subtitle=${subtitle}`);
 
   return new ImageResponse(
     (
