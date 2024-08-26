@@ -35,7 +35,7 @@ function getMDXFiles(dir) {
   return fs.readdirSync(dir).filter(file => path.extname(file) === '.mdx');
 }
 
-function readMDXFile(filePath) {
+export function readMDXFile(filePath) {
   let rawContent = fs.readFileSync(filePath, 'utf-8');
   return parseFrontmatter(rawContent);
 }
