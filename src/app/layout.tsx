@@ -71,7 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={cx(GeistSans.variable, GeistMono.variable)}>
       <body className="antialiased font-sans">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="max-w-xl mx-auto px-4 py-8">
             <Navbar />
             <main className="mt-6">{children}</main>

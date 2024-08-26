@@ -30,32 +30,18 @@ export function BlogPosts() {
             {postsByYear[Number(year)]
               .sort((a, b) => (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt) ? -1 : 1))
               .map(post => (
-                <>
-                  <Link
-                    key={post.slug}
-                    className="flex flex-col p-1 rounded-md transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
-                    href={`/blog/${post.slug}`}
-                  >
-                    <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
-                      <p className="text-muted-foreground w-[100px] tabular-nums">
-                        {formatDate(post.metadata.publishedAt, false)}
-                      </p>
-                      <p className="tracking-tight">{post.metadata.title}</p>
-                    </div>
-                  </Link>
-                  <Link
-                    key={post.slug}
-                    className="flex flex-col p-1 rounded-md transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
-                    href={`/blog/${post.slug}`}
-                  >
-                    <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
-                      <p className="text-muted-foreground w-[100px] tabular-nums">
-                        {formatDate(post.metadata.publishedAt, false)}
-                      </p>
-                      <p className="tracking-tight">{post.metadata.title}</p>
-                    </div>
-                  </Link>
-                </>
+                <Link
+                  key={post.slug}
+                  className="flex flex-col py-1 px-2 rounded-md transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+                  href={`/blog/${post.slug}`}
+                >
+                  <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
+                    <p className="text-muted-foreground w-[100px] tabular-nums">
+                      {formatDate(post.metadata.publishedAt, false)}
+                    </p>
+                    <p className="tracking-tight">{post.metadata.title}</p>
+                  </div>
+                </Link>
               ))}
           </div>
         ))}
