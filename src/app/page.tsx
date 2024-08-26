@@ -17,7 +17,7 @@ export default function Page() {
 
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">pushkar patel</h1>
+      <h1 className="mb-8 text-3xl font-semibold tracking-tighter">pushkar patel</h1>
       <p className="mb-4 whitespace-pre-wrap" style={{ lineHeight: '1.6' }}>
         {`hi,
 for most of my time i write software.
