@@ -64,6 +64,18 @@ function createHeading(level) {
   };
 }
 
+function Poetry({ children }) {
+  return <div className="whitespace-pre-wrap">{children}</div>;
+}
+
+function PoetryAuthor({ children }) {
+  return <div className="italic">{children}</div>;
+}
+
+function HorizontalRule() {
+  return <hr className="my-4" />;
+}
+
 let components = {
   h1: createHeading(1),
   h2: createHeading(2),
@@ -74,6 +86,9 @@ let components = {
   Image: RoundedImage,
   a: CustomLink,
   code: Code,
+  Poetry: Poetry,
+  PoetryAuthor: PoetryAuthor,
+  hr: HorizontalRule,
 };
 
 export function CustomMDX(mdxSource) {
