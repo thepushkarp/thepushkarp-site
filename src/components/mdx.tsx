@@ -13,17 +13,27 @@ function CustomLink(props) {
 
   if (href.startsWith('/')) {
     return (
-      <Link href={href} {...props}>
+      <Link
+        href={href}
+        className="underline transition-colors decoration-muted-foreground underline-offset-2 decoration-[0.1em] hover:bg-gray-100 dark:hover:bg-gray-800 duration-200"
+      >
         {props.children}
       </Link>
     );
   }
 
   if (href.startsWith('#')) {
-    return <a {...props} />;
+    return <a {...props} className="hover:bg-gray-100 dark:hover:bg-gray-800 duration-200" />;
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />;
+  return (
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      {...props}
+      className="hover:bg-gray-100 dark:hover:bg-gray-800 duration-200"
+    />
+  );
 }
 
 function RoundedImage(props) {
