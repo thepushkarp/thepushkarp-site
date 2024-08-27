@@ -12,10 +12,20 @@ export default function Page() {
       <p className="text-muted-foreground mb-8">{metadata.description}</p>
       <ul className="list-disc list-inside space-y-2">
         <li>
-          <Link href="/etymology">etymology</Link>
+          <Link
+            href="/etymology"
+            className="underline transition-colors decoration-muted-foreground underline-offset-2 decoration-[0.1em] hover:bg-gray-100 dark:hover:bg-gray-800 duration-200"
+          >
+            etymology
+          </Link>
         </li>
         <li>
-          <Link href="/poems">poems</Link>
+          <Link
+            href="/poems"
+            className="underline transition-colors decoration-muted-foreground underline-offset-2 decoration-[0.1em] hover:bg-gray-100 dark:hover:bg-gray-800 duration-200"
+          >
+            poems
+          </Link>
         </li>
       </ul>
     </section>
