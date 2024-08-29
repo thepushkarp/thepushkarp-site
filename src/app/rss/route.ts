@@ -20,9 +20,9 @@ export async function GET() {
   const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
   <rss version="2.0">
     <channel>
-        <title>pushkar patel</title>
-        <link>${baseUrl}</link>
-        <description>rss feed of pushkar\'s site</description>
+        <title>blog | pushkar patel</title>
+        <link>${baseUrl}/blog</link>
+        <description>rss feed of pushkar\'s blog</description>
         ${itemsXml}
     </channel>
   </rss>`;
