@@ -1,8 +1,29 @@
 import { BlogPosts } from '@/components/posts';
+import { baseUrl } from '@/app/sitemap';
 
 export const metadata = {
   title: 'blog',
-  description: 'read my blog',
+  description: 'some thoughts, some ideas, some rants, some code',
+  openGraph: {
+    title: 'blog',
+    description: 'some thoughts, some ideas, some rants, some code',
+    type: 'article',
+    url: `${baseUrl}/blog`,
+    images: [
+      {
+        url: `${baseUrl}/og?title=${encodeURIComponent('blog')}&subtitle=${encodeURIComponent('some thoughts, some ideas, some rants, some code')}`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'blog',
+    description: 'some thoughts, some ideas, some rants, some code',
+    creator: '@thepushkarp',
+    images: [
+      `${baseUrl}/og?title=${encodeURIComponent('blog')}&subtitle=${encodeURIComponent('some thoughts, some ideas, some rants, some code')}`,
+    ],
+  },
 };
 
 export default function Page() {
