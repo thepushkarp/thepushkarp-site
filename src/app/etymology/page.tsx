@@ -1,10 +1,31 @@
 import { CustomMDX } from '@/components/mdx';
 import { readMDXFile } from '@/app/blog/utils';
 import path from 'path';
+import { baseUrl } from '@/app/sitemap';
 
 export const metadata = {
   title: 'etymology',
   description: 'word origins i found interesting',
+  openGraph: {
+    title: 'etymology',
+    description: 'word origins i found interesting',
+    type: 'article',
+    url: `${baseUrl}/etymology`,
+    images: [
+      {
+        url: `${baseUrl}/og?title=${encodeURIComponent('etymology')}&subtitle=${encodeURIComponent('word origins i found interesting')}`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'etymology',
+    description: 'word origins i found interesting',
+    creator: '@thepushkarp',
+    images: [
+      `${baseUrl}/og?title=${encodeURIComponent('etymology')}&subtitle=${encodeURIComponent('word origins i found interesting')}`,
+    ],
+  },
 };
 
 export default function Page() {
