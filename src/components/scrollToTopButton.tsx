@@ -37,6 +37,7 @@ const ScrollToTopButton = () => {
           className="fixed bottom-4 right-4 z-50 rounded-full"
           onClick={scrollToTop}
           aria-label="Scroll to top"
+          title="Scroll to top"
         >
           <ArrowUpIcon />
         </Button>
