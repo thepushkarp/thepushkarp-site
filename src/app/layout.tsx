@@ -9,6 +9,7 @@ import Footer from '../components/footer';
 import { baseUrl } from './sitemap';
 import { ThemeProvider } from '@/components/themeProvider';
 import { GoogleAnalytics } from '@/components/googleAnalytics';
+import ScrollToTopButton from '@/components/scrollToTopButton';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -77,6 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main className="mt-6">{children}</main>
             <Footer />
           </div>
+          <ScrollToTopButton />
           <Analytics />
           <SpeedInsights />
           <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
