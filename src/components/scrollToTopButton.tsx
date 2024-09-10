@@ -29,20 +29,19 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <>
-      {isVisible && (
-        <Button
-          variant="secondary"
-          size="icon"
-          className="fixed bottom-4 right-4 z-50 rounded-full"
-          onClick={scrollToTop}
-          aria-label="Scroll to top"
-          title="Scroll to top"
-        >
-          <ArrowUpIcon />
-        </Button>
-      )}
-    </>
+    <Button
+      variant="secondary"
+      size="icon"
+      className={`fixed bottom-4 right-4 z-50 rounded-full transition-opacity duration-300 ${
+        isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}
+      onClick={scrollToTop}
+      aria-label="Scroll to top"
+      title="Scroll to top"
+      tabIndex={isVisible ? 0 : -1}
+    >
+      <ArrowUpIcon />
+    </Button>
   );
 };
 
