@@ -10,6 +10,7 @@ import { baseUrl } from './sitemap';
 import { ThemeProvider } from '@/components/themeProvider';
 import { GoogleAnalytics } from '@/components/googleAnalytics';
 import ScrollToTopButton from '@/components/scrollToTopButton';
+import ReadingProgressBar from '@/components/readingProgressBar';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={cx(GeistSans.variable, GeistMono.variable)}>
       <body className="antialiased font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ReadingProgressBar />
           <div className="max-w-xl mx-auto px-4 py-8">
             <Navbar />
             <main className="mt-6">{children}</main>
