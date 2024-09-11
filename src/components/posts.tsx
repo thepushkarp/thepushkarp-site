@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { formatDate, getBlogPosts } from '@/app/blog/utils';
+import { getBlogPosts } from '@/app/blog/utils';
+import { formatDateYYYYMMDD } from '@/lib/utils';
 
 export function BlogPosts() {
   let allBlogs = getBlogPosts();
@@ -27,22 +28,24 @@ export function BlogPosts() {
         sortedYears.map(year => (
           <div key={year}>
             <h2 className="mb-2 text-sm">{year}</h2>
-            {postsByYear[Number(year)]
-              .sort((a, b) => (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt) ? -1 : 1))
-              .map(post => (
-                <Link
-                  key={post.slug}
-                  className="flex flex-col py-1 px-2 rounded-md transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
-                  href={`/blog/${post.slug}`}
-                >
-                  <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
-                    <p className="text-muted-foreground w-[100px] tabular-nums">
-                      {formatDate(post.metadata.publishedAt, false)}
-                    </p>
-                    <p className="tracking-tight">{post.metadata.title}</p>
-                  </div>
-                </Link>
-              ))}
+            <ul className="list-none pl-0">
+              {postsByYear[Number(year)]
+                .sort((a, b) => (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt) ? -1 : 1))
+                .map(post => (
+                  <li key={post.slug} className="mb-1">
+                    <Link
+                      className="flex flex-row items-center space-x-2 py-1 px-2 rounded-md transition-all hover:outline-2 hover:outline-dashed hover:outline-gray-300 dark:hover:outline-gray-600"
+                      href={`/blog/${post.slug}`}
+                    >
+                      <span className="flex-shrink-0 select-none">&gt;</span>
+                      <p className="text-muted-foreground w-[100px] flex-shrink-0 tabular-nums">
+                        {formatDateYYYYMMDD(post.metadata.publishedAt)}
+                      </p>
+                      <p className="tracking-tight truncate">{post.metadata.title}</p>
+                    </Link>
+                  </li>
+                ))}
+            </ul>
           </div>
         ))}
       {numPosts === 0 && (
