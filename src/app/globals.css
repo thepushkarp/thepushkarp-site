@@ -41,6 +41,7 @@
     --sh-property: #e25a1c;
     --sh-entity: #e25a1c;
     --selection-bg: 210 70% 75%; /* More saturated blue for light theme */
+    --progress-bar: 210 100% 50%; /* Bright blue for light theme */
   }
 
   .dark {
@@ -73,6 +74,7 @@
     --sh-keyword: #f47067;
     --sh-string: #0fa295;
     --selection-bg: 210 70% 40%; /* Saturated blue for dark theme */
+    --progress-bar: 210 100% 70%; /* Lighter blue for dark theme */
   }
 
   ::selection {
