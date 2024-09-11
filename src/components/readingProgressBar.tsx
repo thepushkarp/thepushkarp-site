@@ -24,16 +24,8 @@ const ReadingProgressBar = () => {
       aria-valuenow={Math.round(progress)}
       aria-valuemin={0}
       aria-valuemax={100}
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: `${progress}%`,
-        height: '2px',
-        backgroundColor: 'hsl(var(--primary))',
-        zIndex: 9999,
-        transition: 'width 0.1s ease-out',
-      }}
+      className="fixed top-0 left-0 h-0.5 bg-[hsl(var(--progress-bar))] z-[9999] transition-[width] duration-100 ease-out shadow-[0_1px_3px_rgba(0,0,0,0.1)]"
+      style={{ width: `${progress}%` }}
     />
   );
 };
