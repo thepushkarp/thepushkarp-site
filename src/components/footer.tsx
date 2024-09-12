@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 import { usePathname } from 'next/navigation';
 
@@ -12,37 +13,37 @@ export default function Footer() {
       {!isRoot && (
         <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 md:flex-row md:space-x-4 md:space-y-0 text-muted-foreground">
           <li>
-            <a
+            <Link
               className="flex items-center transition-all hover:text-primary"
               rel="noopener noreferrer"
               target="_blank"
               href="/rss"
             >
-              <ArrowTopRightIcon />
               <p className="ml-2 h-7">rss</p>
-            </a>
+              <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="flex items-center transition-all hover:text-primary"
               rel="noopener noreferrer"
               target="_blank"
               href="https://twitter.com/thepushkarp"
             >
-              <ArrowTopRightIcon />
               <p className="ml-2 h-7">twitter</p>
-            </a>
+              <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="flex items-center transition-all hover:text-primary"
               rel="noopener noreferrer"
               target="_blank"
               href="https://github.com/thepushkarp"
             >
-              <ArrowTopRightIcon />
               <p className="ml-2 h-7">github</p>
-            </a>
+              <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+            </Link>
           </li>
         </ul>
       )}

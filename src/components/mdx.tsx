@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import React from 'react';
+import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 import 'katex/dist/katex.min.css';
 
 function CustomLink(props) {
@@ -23,16 +24,23 @@ function CustomLink(props) {
   }
 
   if (href.startsWith('#')) {
-    return <a {...props} className="hover:bg-gray-100 dark:hover:bg-gray-800 duration-200" />;
+    return (
+      <Link href={href} className="hover:bg-gray-100 dark:hover:bg-gray-800 duration-200">
+        {props.children}
+      </Link>
+    );
   }
 
   return (
-    <a
+    <Link
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
-      {...props}
-      className="hover:bg-gray-100 dark:hover:bg-gray-800 duration-200"
-    />
+      className="hover:bg-gray-100 dark:hover:bg-gray-800 duration-200 inline-flex items-center"
+    >
+      {props.children}
+      <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+    </Link>
   );
 }
 

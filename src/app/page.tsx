@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 
 export default function Page() {
@@ -37,37 +38,37 @@ now while you're at it, check me out here:`}
       </p>
       <ul className="font-sm mt-4 flex flex-col space-x-0 space-y-2 text-muted-foreground md:flex-row md:space-x-4 md:space-y-0">
         <li>
-          <a
+          <Link
             className="flex items-center transition-all hover:text-primary"
             rel="noopener noreferrer"
             target="_blank"
             href="https://nibbles.dev"
           >
-            <ArrowTopRightIcon />
             <p className="ml-2 h-7">the nibble</p>
-          </a>
+            <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             className="flex items-center transition-all hover:text-primary"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/thepushkarp"
           >
-            <ArrowTopRightIcon />
             <p className="ml-2 h-7">github</p>
-          </a>
+            <ArrowTopRightIcon className="ml-1 h-3 w-3" />
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             className="flex items-center transition-all hover:text-primary"
             rel="noopener noreferrer"
             target="_blank"
             href="https://twitter.com/thepushkarp"
           >
-            <ArrowTopRightIcon />
             <p className="ml-2 h-7">twitter</p>
-          </a>
+            <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+          </Link>
         </li>
         <li>
           <span
