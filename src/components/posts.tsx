@@ -34,14 +34,14 @@ export function BlogPosts() {
                 .map(post => (
                   <li key={post.slug} className="mb-1">
                     <Link
-                      className="flex flex-row items-center space-x-2 py-1 px-2 rounded-md transition-all hover:outline-2 hover:outline-dashed hover:outline-gray-300 dark:hover:outline-gray-600"
+                      className="flex flex-row items-center space-x-2 py-1 px-2 rounded-md hover:outline-2 hover:outline-dashed hover:outline-gray-300 dark:hover:outline-gray-600 w-full"
                       href={`/blog/${post.slug}`}
                     >
                       <span className="flex-shrink-0 select-none">&gt;</span>
                       <p className="text-muted-foreground w-[100px] flex-shrink-0 tabular-nums">
                         {formatDateYYYYMMDD(post.metadata.publishedAt)}
                       </p>
-                      <p className="tracking-tight truncate">{post.metadata.title}</p>
+                      <p className="tracking-tight truncate flex-grow">{post.metadata.title}</p>
                     </Link>
                   </li>
                 ))}
