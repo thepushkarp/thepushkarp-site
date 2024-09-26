@@ -44,11 +44,21 @@ function CustomLink(props) {
   );
 }
 
-function RoundedImage(props) {
+function RoundedImage({ caption, src, ...props }) {
   return (
-    <div className="my-4 flex justify-center">
-      <Image alt={props.alt} className="rounded-lg" {...props} />
-    </div>
+    <figure className="my-4 flex flex-col items-center">
+      <Image src={src} alt={props.alt} className="rounded-lg" {...props} />
+      {caption && (
+        <figcaption className="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">
+          <MDXRemote
+            source={caption}
+            components={{
+              a: CustomLink,
+            }}
+          />
+        </figcaption>
+      )}
+    </figure>
   );
 }
 
