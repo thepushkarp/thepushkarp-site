@@ -83,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ScrollToTopButton />
           <Analytics />
           <SpeedInsights />
-          <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+          <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
         </ThemeProvider>
       </body>
     </html>
