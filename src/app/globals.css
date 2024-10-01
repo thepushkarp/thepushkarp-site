@@ -45,36 +45,36 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --background: 220 13% 18%;
+    --foreground: 60 9% 98%;
+    --card: 220 13% 23%;
+    --card-foreground: 60 9% 98%;
+    --popover: 220 13% 23%;
+    --popover-foreground: 60 9% 98%;
+    --primary: 32 95% 44%;
+    --primary-foreground: 220 13% 18%;
+    --secondary: 220 13% 25%;
+    --secondary-foreground: 60 9% 98%;
+    --muted: 220 13% 23%;
+    --muted-foreground: 60 5% 64%;
+    --accent: 32 95% 44%;
+    --accent-foreground: 220 13% 18%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
-    --selection-bg: 210 70% 40%;
-    --progress-bar: 210 100% 70%;
+    --destructive-foreground: 60 9% 98%;
+    --border: 220 13% 28%;
+    --input: 220 13% 23%;
+    --ring: 32 95% 44%;
+    --chart-1: 32 95% 44%;
+    --chart-2: 220 13% 40%;
+    --chart-3: 220 13% 60%;
+    --chart-4: 32 70% 50%;
+    --chart-5: 32 50% 60%;
+    --sh-class: #ffa64d;
+    --sh-identifier: #e6e6e6;
+    --sh-keyword: #ff9933;
+    --sh-string: #66cccc;
+    --selection-bg: 32 95% 30%;
+    --progress-bar: 32 95% 44%;
   }
 
   ::selection {
