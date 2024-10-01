@@ -10,9 +10,14 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Reading progress bar
 - [x] External link icon
 - [x] Image captions
-- [ ] Image and equation references
-- [ ] Auto ToC generation
+- [ ] Different font for headings (https://departuremono.com/)
+- [ ] Animate external link icon on hover
+- [ ] Add site source code link
 - [ ] Improve OG Image generation
+- [ ] Add content from TIL site
+- [ ] Image and equation references
+- [ ] Automatic ToC generation
+- [ ] Automatic last edited date in every post
 - [ ] Homogenize link styles
 - [ ] Homogenize colour usage
 - [ ] Better content for landing page
