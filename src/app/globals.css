@@ -4,34 +4,34 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --background: 210 30% 98%;
+    --foreground: 220 20% 20%;
+    --card: 210 25% 97%;
+    --card-foreground: 220 20% 20%;
+    --popover: 210 25% 97%;
+    --popover-foreground: 220 20% 20%;
+    --primary: 210 60% 60%;
+    --primary-foreground: 210 25% 98%;
+    --secondary: 210 30% 94%;
+    --secondary-foreground: 220 20% 25%;
+    --muted: 210 25% 92%;
+    --muted-foreground: 220 15% 45%;
+    --accent: 210 40% 85%;
+    --accent-foreground: 220 20% 25%;
+    --destructive: 0 70% 70%;
+    --destructive-foreground: 210 25% 98%;
+    --border: 210 25% 90%;
+    --input: 210 25% 90%;
+    --ring: 210 60% 60%;
     --radius: 0.5rem;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --chart-1: 210 60% 70%;
+    --chart-2: 210 50% 75%;
+    --chart-3: 210 40% 80%;
+    --chart-4: 210 55% 72%;
+    --chart-5: 210 45% 77%;
     --font-geist-sans: 'GeistSans', sans-serif;
     --font-geist-mono: 'GeistMono', monospace;
-    --sh-class: #2d5e9d;
+    --sh-class: #080a0c;
     --sh-identifier: #354150;
     --sh-sign: #8996a3;
     --sh-string: #007f7a;
@@ -81,8 +81,16 @@
     background-color: hsl(var(--selection-bg));
   }
 
+  .font-geist-sans {
+    font-family: var(--font-geist-sans);
+  }
+
+  .font-geist-mono {
+    font-family: var(--font-geist-mono);
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tighter;
+    @apply font-semibold tracking-tighter font-geist-mono;
   }
 
   h1 {
