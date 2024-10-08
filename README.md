@@ -11,6 +11,7 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] External link icon
 - [x] Image captions
 - [x] Different font for headings
+- [ ] Blog read indicator
 - [ ] Animate external link icon on hover
 - [ ] Add site source code link in footer
 - [ ] Homogenize link styles
