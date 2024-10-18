@@ -12,17 +12,17 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Image captions
 - [x] Different font for headings
 - [ ] Blog read indicator
+- [ ] Kino Dark mode (inspiration: https://x.com/benfryc/status/1846982819425190100)
 - [ ] Animate external link icon on hover
+- [ ] Homogenize link styles and colour usage
 - [ ] Add site source code link in footer
-- [ ] Homogenize link styles
-- [ ] Homogenize colour usage
 - [ ] Improve OG Image generation
 - [ ] Add content from TIL site
 - [ ] Image and equation references
 - [ ] Automatic ToC generation
 - [ ] Automatic last edited date in every post
-- [ ] Better content for landing page
-- [ ] Drop Caps
+- [ ] Improve content for landing page
+- [ ] Drop Caps, ooofff
 
 ## credits
 
