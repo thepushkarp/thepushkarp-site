@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { MoonIcon, SunIcon, BlendingModeIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
@@ -8,9 +8,16 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 
 export default function ThemeToggle() {
   const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleTheme = () => {
-    if (theme === 'system') {
+    if (!theme) {
+      setTheme('system');
+    } else if (theme === 'system') {
       setTheme('dark');
     } else if (theme === 'dark') {
       setTheme('light');
@@ -18,6 +25,10 @@ export default function ThemeToggle() {
       setTheme('system');
     }
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <TooltipProvider>

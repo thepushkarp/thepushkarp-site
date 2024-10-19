@@ -36,10 +36,12 @@ function CustomLink(props) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:bg-gray-100 dark:hover:bg-gray-800 duration-200 inline-flex items-center"
+      className="hover:bg-gray-100 dark:hover:bg-gray-800 duration-200 inline-flex items-center group"
     >
       {props.children}
-      <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+      <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
+        <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+      </span>
     </Link>
   );
 }

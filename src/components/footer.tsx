@@ -14,35 +14,54 @@ export default function Footer() {
         <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 md:flex-row md:space-x-4 md:space-y-0 text-muted-foreground">
           <li>
             <Link
-              className="flex items-center transition-all hover:text-primary"
+              className="flex items-center transition-all hover:text-primary group"
               rel="noopener noreferrer"
               target="_blank"
               href="/rss"
             >
               <p className="ml-2 h-7">rss</p>
-              <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+              <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
+                <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+              </span>
             </Link>
           </li>
           <li>
             <Link
-              className="flex items-center transition-all hover:text-primary"
+              className="flex items-center transition-all hover:text-primary group"
               rel="noopener noreferrer"
               target="_blank"
               href="https://twitter.com/thepushkarp"
             >
               <p className="ml-2 h-7">twitter</p>
-              <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+              <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
+                <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+              </span>
             </Link>
           </li>
           <li>
             <Link
-              className="flex items-center transition-all hover:text-primary"
+              className="flex items-center transition-all hover:text-primary group"
               rel="noopener noreferrer"
               target="_blank"
               href="https://github.com/thepushkarp"
             >
               <p className="ml-2 h-7">github</p>
-              <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+              <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
+                <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="flex items-center transition-all hover:text-primary group"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/thepushkarp/thepushkarp-site"
+            >
+              <p className="ml-2 h-7">source code</p>
+              <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
+                <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+              </span>
             </Link>
           </li>
         </ul>

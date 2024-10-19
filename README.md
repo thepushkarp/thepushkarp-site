@@ -12,9 +12,9 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Image captions
 - [x] Different font for headings
 - [x] Kino Dark mode (inspiration: https://x.com/benfryc/status/1846982819425190100)
-- [ ] Animate external link icon on hover
+- [x] Animate external link icon on hover
+- [x] Add site source code link in footer
 - [ ] Homogenize link styles and colour usage
-- [ ] Add site source code link in footer
 - [ ] Automatic last edited date in every post
 - [ ] Improve OG Image generation
 - [ ] Improve content for landing page
