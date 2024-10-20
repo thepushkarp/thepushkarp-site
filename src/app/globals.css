@@ -42,6 +42,7 @@
     --sh-entity: #e25a1c;
     --selection-bg: 210 70% 75%;
     --progress-bar: 210 100% 50%;
+    --visited-link-color: 250 50% 60%;
   }
 
   .dark {
@@ -75,10 +76,15 @@
     --sh-string: #66cccc;
     --selection-bg: 32 95% 30%;
     --progress-bar: 32 95% 44%;
+    --visited-link-color: 280 40% 60%;
   }
 
   ::selection {
     background-color: hsl(var(--selection-bg));
+  }
+
+  .custom-link:visited {
+    text-decoration-color: hsl(var(--visited-link-color));
   }
 
   .font-geist-sans {
@@ -87,6 +93,10 @@
 
   .font-geist-mono {
     font-family: var(--font-geist-mono);
+  }
+
+  a {
+    @apply decoration-muted-foreground decoration-[0.05em];
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -98,7 +108,7 @@
   }
 
   h2 {
-    @apply text-2xl mb-4 mt-8;
+    @apply text-2xl mb-4 mt-8 ;
   }
 
   h3 {
@@ -116,9 +126,15 @@
   h6 {
     @apply text-sm mb-2 mt-3;
   }
+
+  a:hover {
+    @apply text-primary;
+  }
+
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -131,6 +147,11 @@
     -moz-appearance: none;
     appearance: none;
     }
+  }
+
+  @keyframes nudgeTopRight {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(2px, -2px); }
   }
 }
 
@@ -158,10 +179,6 @@
 
     *:hover > .anchor {
       @apply visible;
-    }
-
-    a {
-      @apply underline transition-all decoration-muted-foreground underline-offset-2 decoration-[0.1em];
     }
 
     blockquote {
@@ -211,24 +228,8 @@
       @apply my-4;
     }
 
-    h1 {
-      @apply text-4xl font-medium tracking-tight mt-6 mb-2;
-    }
-
-    h2 {
-      @apply text-xl font-medium tracking-tight mt-6 mb-2;
-    }
-
-    h3 {
-      @apply text-xl font-medium tracking-tight mt-6 mb-2;
-    }
-
-    h4 {
-      @apply text-lg font-medium tracking-tight mt-6 mb-2;
-    }
-
-    strong {
-      @apply font-medium text-foreground;
+    a {
+      @apply transition-all underline underline-offset-2 decoration-[0.1em];
     }
 
     ul {

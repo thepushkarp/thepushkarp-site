@@ -13,22 +13,11 @@ function CustomLink(props) {
   let href = props.href;
 
   if (href.startsWith('/')) {
-    return (
-      <Link
-        href={href}
-        className="underline transition-colors decoration-muted-foreground underline-offset-2 decoration-[0.1em] hover:bg-gray-100 dark:hover:bg-gray-800 duration-200"
-      >
-        {props.children}
-      </Link>
-    );
+    return <Link href={href}>{props.children}</Link>;
   }
 
   if (href.startsWith('#')) {
-    return (
-      <Link href={href} className="hover:bg-gray-100 dark:hover:bg-gray-800 duration-200">
-        {props.children}
-      </Link>
-    );
+    return <Link href={href}>{props.children}</Link>;
   }
 
   return (
@@ -36,11 +25,11 @@ function CustomLink(props) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:bg-gray-100 dark:hover:bg-gray-800 duration-200 inline-flex items-center group"
+      className="duration-200 inline-flex items-center group custom-link"
     >
       {props.children}
-      <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
-        <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+      <span className="inline-block ml-1">
+        <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
       </span>
     </Link>
   );

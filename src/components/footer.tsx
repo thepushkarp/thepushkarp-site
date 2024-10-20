@@ -21,7 +21,7 @@ export default function Footer() {
             >
               <p className="ml-2 h-7">rss</p>
               <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
-                <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+                <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
               </span>
             </Link>
           </li>
@@ -34,7 +34,7 @@ export default function Footer() {
             >
               <p className="ml-2 h-7">twitter</p>
               <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
-                <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+                <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
               </span>
             </Link>
           </li>
@@ -47,7 +47,7 @@ export default function Footer() {
             >
               <p className="ml-2 h-7">github</p>
               <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
-                <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+                <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
               </span>
             </Link>
           </li>
@@ -60,7 +60,7 @@ export default function Footer() {
             >
               <p className="ml-2 h-7">source code</p>
               <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
-                <ArrowTopRightIcon className="ml-1 h-3 w-3 -mt-1" />
+                <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
               </span>
             </Link>
           </li>

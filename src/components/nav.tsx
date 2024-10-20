@@ -29,9 +29,7 @@ export function Navbar() {
               <Link
                 key={path}
                 href={path}
-                className={`transition-colors py-1 px-2 ${
-                  isActive ? 'text-primary' : 'text-muted-foreground hover:text-primary'
-                }`}
+                className={`transition-colors py-1 px-2 ${isActive ? 'text-primary' : 'text-muted-foreground'}`}
               >
                 {name}
               </Link>
