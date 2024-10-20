@@ -75,7 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="antialiased font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <ReadingProgressBar />
-          <div className="max-w-4xl mx-auto px-4 py-8 container">
+          <div className="max-w-3xl mx-auto px-4 py-8 container">
             <Navbar />
             <main className="mt-6">{children}</main>
             <Footer />

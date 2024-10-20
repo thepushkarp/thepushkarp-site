@@ -60,7 +60,7 @@ now while you're at it, check me out here:`}
               target="_blank"
               href={link.href}
             >
-              <p className="ml-2 h-7">{link.label}</p>
+              <p className="h-7">{link.label}</p>
               <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
                 <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
               </span>
