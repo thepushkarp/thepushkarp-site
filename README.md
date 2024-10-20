@@ -15,7 +15,7 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Animate external link icon on hover
 - [x] Add site source code link in footer
 - [x] Automatic last edited date in every post
-- [ ] Homogenize link styles and colour usage
+- [x] Homogenize link styles and colour usage
 - [ ] Make layout consistent across all pages
 - [ ] Improve OG Image generation
 - [ ] Improve content for landing page

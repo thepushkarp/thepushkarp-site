@@ -5,19 +5,19 @@
 @layer base {
   :root {
     --background: 210 30% 98%;
-    --foreground: 220 20% 20%;
+    --foreground: 220 35% 35%;
     --card: 210 25% 97%;
     --card-foreground: 220 20% 20%;
     --popover: 210 25% 97%;
     --popover-foreground: 220 20% 20%;
-    --primary: 210 60% 60%;
+    --primary: 210 70% 70%;
     --primary-foreground: 210 25% 98%;
     --secondary: 210 30% 94%;
     --secondary-foreground: 220 20% 25%;
-    --muted: 210 25% 92%;
-    --muted-foreground: 220 15% 45%;
-    --accent: 210 40% 85%;
-    --accent-foreground: 220 20% 25%;
+    --muted: 210 20% 90%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 210 50% 80%;
+    --accent-foreground: 220 15% 30%;
     --destructive: 0 70% 70%;
     --destructive-foreground: 210 25% 98%;
     --border: 210 25% 90%;
@@ -40,27 +40,27 @@
     --sh-jsxliterals: #6266d1;
     --sh-property: #e25a1c;
     --sh-entity: #e25a1c;
-    --selection-bg: 210 70% 75%;
+    --selection-bg: 210 65% 60%;
     --progress-bar: 210 100% 50%;
     --visited-link-color: 250 50% 60%;
   }
 
   .dark {
-    --background: 220 13% 18%;
-    --foreground: 60 9% 98%;
+    --background: 220 15% 20%;
+    --foreground: 60 15% 90%;
     --card: 220 13% 23%;
     --card-foreground: 60 9% 98%;
     --popover: 220 13% 23%;
     --popover-foreground: 60 9% 98%;
-    --primary: 32 95% 44%;
+    --primary: 32 85% 50%;
     --primary-foreground: 220 13% 18%;
-    --secondary: 220 13% 25%;
+    --secondary: 220 20% 30%;
     --secondary-foreground: 60 9% 98%;
-    --muted: 220 13% 23%;
-    --muted-foreground: 60 5% 64%;
-    --accent: 32 95% 44%;
-    --accent-foreground: 220 13% 18%;
-    --destructive: 0 62.8% 30.6%;
+    --muted: 220 15% 25%;
+    --muted-foreground: 60 5% 80%;
+    --accent: 32 85% 50%;
+    --accent-foreground: 220 15% 20%;
+    --destructive: 0 68% 50%;
     --destructive-foreground: 60 9% 98%;
     --border: 220 13% 28%;
     --input: 220 13% 23%;
@@ -74,7 +74,7 @@
     --sh-identifier: #e6e6e6;
     --sh-keyword: #ff9933;
     --sh-string: #66cccc;
-    --selection-bg: 32 95% 30%;
+    --selection-bg: 32 85% 35%;
     --progress-bar: 32 95% 44%;
     --visited-link-color: 280 40% 60%;
   }
