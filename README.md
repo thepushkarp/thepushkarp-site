@@ -16,7 +16,7 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Add site source code link in footer
 - [x] Automatic last edited date in every post
 - [x] Homogenize link styles and colour usage
-- [ ] Make layout consistent across all pages
+- [X] Make layout consistent across all pages
 - [ ] Improve OG Image generation
 - [ ] Improve content for landing page
 - [ ] Add content from TIL site

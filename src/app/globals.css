@@ -83,6 +83,10 @@
     background-color: hsl(var(--selection-bg));
   }
 
+  html {
+    overflow-y: scroll;
+  }
+
   .custom-link:visited {
     text-decoration-color: hsl(var(--visited-link-color));
   }

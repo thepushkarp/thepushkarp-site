@@ -20,7 +20,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <aside className="mb-16 w-full max-w-[800px] mx-auto">
+    <aside className="mb-16 w-full mx-auto">
       <div className="flex justify-between items-center">
         <nav className="flex items-center space-x-4">
           {Object.entries(navItems).map(([path, { name }]) => {
