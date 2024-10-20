@@ -16,9 +16,24 @@ export default function Page() {
     }
   };
 
+  const links = [
+    {
+      label: 'the nibble',
+      href: 'https://nibbles.dev',
+    },
+    {
+      label: 'github',
+      href: 'https://github.com/thepushkarp',
+    },
+    {
+      label: 'twitter',
+      href: 'https://twitter.com/thepushkarp',
+    },
+  ];
+
   return (
     <section>
-      <h1 className="mb-8 text-3xl font-semibold tracking-tighter">pushkar patel</h1>
+      <h1 className="mb-8 font-semibold tracking-tighter">pushkar patel</h1>
       <p className="mb-4 whitespace-pre-wrap" style={{ lineHeight: '1.6' }}>
         {`hi,
 for most of my time i write software.
@@ -37,45 +52,21 @@ i wish you had better things to care.
 now while you're at it, check me out here:`}
       </p>
       <ul className="font-sm mt-4 flex flex-col space-x-0 space-y-2 text-muted-foreground md:flex-row md:space-x-4 md:space-y-0">
-        <li>
-          <Link
-            className="flex items-center transition-all hover:text-primary group"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://nibbles.dev"
-          >
-            <p className="ml-2 h-7">the nibble</p>
-            <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
-              <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="flex items-center transition-all hover:text-primary group"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/thepushkarp"
-          >
-            <p className="ml-2 h-7">github</p>
-            <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
-              <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="flex items-center transition-all hover:text-primary group"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://twitter.com/thepushkarp"
-          >
-            <p className="ml-2 h-7">twitter</p>
-            <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
-              <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
-            </span>
-          </Link>
-        </li>
+        {links.map(link => (
+          <li key={link.href}>
+            <Link
+              className="flex items-center transition-all hover:text-primary group"
+              rel="noopener noreferrer"
+              target="_blank"
+              href={link.href}
+            >
+              <p className="ml-2 h-7">{link.label}</p>
+              <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
+                <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
+              </span>
+            </Link>
+          </li>
+        ))}
         <li>
           <span
             className="transition-all hover:text-primary"
