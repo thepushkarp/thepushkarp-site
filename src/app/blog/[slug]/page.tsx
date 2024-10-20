@@ -89,8 +89,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       />
       <h1 className="title font-semibold tracking-tighter">{post.metadata.title}</h1>
       {post.metadata.summary && <p className="text-m">{post.metadata.summary}</p>}
-      <div className="flex justify-between items-center mt-2 mb-8 text-xs">
-        <p className="text-sm text-muted-foreground">{formatDate(post.metadata.publishedAt, true)}</p>
+      <div className="flex flex-col justify-between items-start mt-2 mb-8 text-xs">
+        <p className="text-sm text-muted-foreground">Published on: {formatDate(post.metadata.publishedAt, true)}</p>
+        <p className="text-sm text-muted-foreground">Last Edited on: {formatDate(post.metadata.lastEdited, true)}</p>
       </div>
       <article className="prose prose-quoteless prose-neutral dark:prose-invert">
         <CustomMDX source={post.content} />

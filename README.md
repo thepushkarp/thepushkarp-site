@@ -14,8 +14,8 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Kino Dark mode (inspiration: https://x.com/benfryc/status/1846982819425190100)
 - [x] Animate external link icon on hover
 - [x] Add site source code link in footer
+- [x] Automatic last edited date in every post
 - [ ] Homogenize link styles and colour usage
-- [ ] Automatic last edited date in every post
 - [ ] Improve OG Image generation
 - [ ] Improve content for landing page
 - [ ] Add content from TIL site

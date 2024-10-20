@@ -43,11 +43,18 @@ export function readMDXFile(filePath) {
 function getMDXData(dir) {
   let mdxFiles = getMDXFiles(dir);
   return mdxFiles.map(file => {
-    let { metadata, content } = readMDXFile(path.join(dir, file));
+    let filePath = path.join(dir, file);
+    let { metadata, content } = readMDXFile(filePath);
     let slug = path.basename(file, path.extname(file));
 
+    let stats = fs.statSync(filePath);
+    let lastEdited = stats.mtime.toISOString();
+
     return {
-      metadata,
+      metadata: {
+        ...metadata,
+        lastEdited,
+      },
       slug,
       content,
     };
