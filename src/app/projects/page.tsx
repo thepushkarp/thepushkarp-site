@@ -4,26 +4,26 @@ import path from 'path';
 import { baseUrl } from '@/app/sitemap';
 
 export const metadata = {
-  title: 'projects',
+  title: 'selected projects',
   description: 'stuff i work on and tinker with',
   openGraph: {
-    title: 'projects',
+    title: 'selected projects',
     description: 'stuff i work on and tinker with',
     type: 'article',
     url: `${baseUrl}/projects`,
     images: [
       {
-        url: `${baseUrl}/og?title=${encodeURIComponent('projects')}&subtitle=${encodeURIComponent('stuff i work on and tinker with')}`,
+        url: `${baseUrl}/og?title=${encodeURIComponent('selected projects')}&subtitle=${encodeURIComponent('stuff i work on and tinker with')}`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'projects',
+    title: 'selected projects',
     description: 'stuff i work on and tinker with',
     creator: '@thepushkarp',
     images: [
-      `${baseUrl}/og?title=${encodeURIComponent('projects')}&subtitle=${encodeURIComponent('stuff i work on and tinker with')}`,
+      `${baseUrl}/og?title=${encodeURIComponent('selected projects')}&subtitle=${encodeURIComponent('stuff i work on and tinker with')}`,
     ],
   },
 };

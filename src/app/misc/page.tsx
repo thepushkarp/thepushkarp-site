@@ -2,26 +2,26 @@ import Link from 'next/link';
 import { baseUrl } from '@/app/sitemap';
 
 export const metadata = {
-  title: 'misc.',
+  title: 'miscellaneous',
   description: 'a potpourri of things i find interesting',
   openGraph: {
-    title: 'misc.',
+    title: 'miscellaneous',
     description: 'a potpourri of things i find interesting',
     type: 'article',
     url: `${baseUrl}/misc`,
     images: [
       {
-        url: `${baseUrl}/og?title=${encodeURIComponent('misc.')}&subtitle=${encodeURIComponent('a potpourri of things i find interesting')}`,
+        url: `${baseUrl}/og?title=${encodeURIComponent('miscellaneous')}&subtitle=${encodeURIComponent('a potpourri of things i find interesting')}`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'misc.',
+    title: 'miscellaneous',
     description: 'a potpourri of things i find interesting',
     creator: '@thepushkarp',
     images: [
-      `${baseUrl}/og?title=${encodeURIComponent('misc.')}&subtitle=${encodeURIComponent('a potpourri of things i find interesting')}`,
+      `${baseUrl}/og?title=${encodeURIComponent('miscellaneous')}&subtitle=${encodeURIComponent('a potpourri of things i find interesting')}`,
     ],
   },
 };
