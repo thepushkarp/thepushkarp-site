@@ -35,10 +35,10 @@ export function Navbar() {
               <Link
                 key={path}
                 href={path}
-                className={`relative transition-colors py-2 px-3 rounded-md ${
+                className={`relative transition-colors py-1 px-2 md:py-2 md:px-3 rounded-md ${
                   isActive
                     ? 'text-primary pointer-events-none'
-                    : 'text-muted-foreground hover:text-primary hover:outline-2 hover:outline-dashed hover:outline-muted'
+                    : 'text-muted-foreground hover:text-primary lg:hover:outline-2 lg:hover:outline-dashed lg:hover:outline-muted'
                 }`}
               >
                 {itemsWithGlowingDot.includes(path) && !isActive && (
