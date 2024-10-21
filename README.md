@@ -22,7 +22,6 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [ ] Improve content for landing page
 - [ ] Add content from TIL site
 - [ ] Image and equation references
-- [ ] Automatic ToC generation
 - [ ] Indicator for blogs read before
 - [ ] Drop Caps, ooofff
 
