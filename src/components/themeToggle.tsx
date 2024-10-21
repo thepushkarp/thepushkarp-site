@@ -27,7 +27,17 @@ export default function ThemeToggle() {
   };
 
   if (!mounted) {
-    return null;
+    return (
+      <Button
+        variant="ghost"
+        size="icon"
+        className="w-9 h-9 relative transition-all duration-300 ease-in-out outline-2 outline-dashed outline-muted hover:bg-transparent hover:text-foreground"
+      >
+        <div className="relative z-20 flex items-center justify-center h-full">
+          <BlendingModeIcon className="h-6 w-6" />
+        </div>
+      </Button>
+    );
   }
 
   return (
@@ -38,19 +48,19 @@ export default function ThemeToggle() {
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="w-9 h-9 relative transition-all duration-300 ease-in-out outline-2 outline-dashed outline-gray-300 dark:outline-gray-600 hover:bg-transparent hover:text-foreground"
+            className="w-9 h-9 relative transition-all duration-300 ease-in-out outline-2 outline-dashed outline-muted hover:bg-transparent hover:text-foreground"
           >
             <div className="relative z-20 flex items-center justify-center h-full">
               {theme === 'light' && <SunIcon className="h-6 w-6" />}
               {theme === 'dark' && <MoonIcon className="h-6 w-6" />}
-              {theme === 'system' && <BlendingModeIcon className="h-6 w-6" />}
+              {(theme === 'system' || !theme) && <BlendingModeIcon className="h-6 w-6" />}
             </div>
           </Button>
         </TooltipTrigger>
         <TooltipContent>
           {theme === 'light' && 'Light Theme'}
           {theme === 'dark' && 'Dark Theme'}
-          {theme === 'system' && 'System Theme'}
+          {(theme === 'system' || !theme) && 'System Theme'}
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

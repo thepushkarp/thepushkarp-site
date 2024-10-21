@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ThemeToggle from '@/components/themeToggle';
+import { GlowingDot } from './glowingDot';
 
 const navItems = {
   '/': {
@@ -11,10 +12,15 @@ const navItems = {
   '/blog': {
     name: 'blog',
   },
+  '/projects': {
+    name: 'projects',
+  },
   '/misc': {
     name: 'misc.',
   },
 };
+
+const itemsWithGlowingDot: string[] = [];
 
 export function Navbar() {
   const pathname = usePathname();
@@ -22,21 +28,30 @@ export function Navbar() {
   return (
     <aside className="mb-16 w-full mx-auto">
       <div className="flex justify-between items-center">
-        <nav className="flex items-center space-x-4">
+        <nav className="flex flex-wrap items-center  gap-4">
           {Object.entries(navItems).map(([path, { name }]) => {
             const isActive = pathname === path;
             return (
               <Link
                 key={path}
                 href={path}
-                className={`transition-colors py-1 px-2 ${isActive ? 'text-primary' : 'text-muted-foreground'}`}
+                className={`relative transition-colors py-2 px-3 rounded-md ${
+                  isActive
+                    ? 'text-primary pointer-events-none'
+                    : 'text-muted-foreground hover:text-primary hover:outline-2 hover:outline-dashed hover:outline-muted'
+                }`}
               >
+                {itemsWithGlowingDot.includes(path) && !isActive && (
+                  <div className="absolute top-1 right-1">
+                    <GlowingDot />
+                  </div>
+                )}
                 {name}
               </Link>
             );
           })}
         </nav>
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 ml-4">
           <ThemeToggle />
         </div>
       </div>

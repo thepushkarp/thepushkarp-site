@@ -10,7 +10,7 @@ export default async function sitemap() {
     priority: 0.7,
   }));
 
-  let routes = ['', '/blog', '/misc', '/etymology', '/poems'].map(route => ({
+  let routes = ['', '/blog', '/projects', '/misc', '/etymology', '/poems'].map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
     changeFrequency: 'daily',

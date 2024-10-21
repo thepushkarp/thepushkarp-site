@@ -157,6 +157,18 @@
     0%, 100% { transform: translate(0, 0); }
     50% { transform: translate(2px, -2px); }
   }
+
+  @keyframes glowingDotPulse {
+    0% {
+      box-shadow: 0 0 0 0 hsl(var(--primary));
+    }
+    70% {
+      box-shadow: 0 0 0 6px transparent;
+    }
+    100% {
+      box-shadow: 0 0 0 0 transparent;
+    }
+  }
 }
 
 @layer components {

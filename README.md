@@ -17,6 +17,7 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Automatic last edited date in every post
 - [x] Homogenize link styles and colour usage
 - [X] Make layout consistent across all pages
+- [X] Add a projects page with an indicator
 - [ ] Improve OG Image generation
 - [ ] Improve content for landing page
 - [ ] Add content from TIL site
