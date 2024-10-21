@@ -14,6 +14,21 @@ export default function ThemeToggle() {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      if (theme === 'dark') {
+        metaThemeColor.setAttribute('content', 'hsl(220, 15%, 20%)'); // Dark mode background color
+      } else if (theme === 'light') {
+        metaThemeColor.setAttribute('content', 'hsl(210, 30%, 98%)'); // Light mode background color
+      } else {
+        // System theme
+        const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        metaThemeColor.setAttribute('content', isDarkMode ? 'hsl(220, 15%, 20%)' : 'hsl(210, 30%, 98%)');
+      }
+    }
+  }, [theme]);
+
   const toggleTheme = () => {
     if (!theme) {
       setTheme('system');

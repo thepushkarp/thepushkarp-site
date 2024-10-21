@@ -34,7 +34,7 @@ export function BlogPosts() {
                 .map(post => (
                   <li key={post.slug} className="mb-1">
                     <Link
-                      className="flex flex-row items-center space-x-2 py-1 px-2 rounded-md hover:outline-2 hover:outline-dashed hover:outline-muted hover:text-primary w-full"
+                      className="flex flex-row items-center space-x-2 py-1 px-2 rounded-md lg:hover:outline-2 lg:hover:outline-dashed lg:hover:outline-muted hover:text-primary w-full"
                       href={`/blog/${post.slug}`}
                     >
                       <span className="flex-shrink-0 select-none text-secondary-foreground">&gt;</span>
