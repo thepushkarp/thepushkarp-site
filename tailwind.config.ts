@@ -71,12 +71,17 @@ const config = {
           '0%, 100%': { transform: 'translate(0, 0)' },
           '50%': { transform: 'translate(2px, -2px)' },
         },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'nudge-top-right': 'nudge-top-right 0.5s ease-in-out infinite',
         'glowing-dot-pulse': 'glowingDotPulse 2s infinite',
+        wiggle: 'wiggle 0.5s ease-in-out infinite',
       },
     },
   },

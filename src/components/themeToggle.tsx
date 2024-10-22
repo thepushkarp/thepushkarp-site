@@ -63,9 +63,9 @@ export default function ThemeToggle() {
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="w-9 h-9 relative transition-all duration-300 ease-in-out outline-2 outline-dashed outline-muted hover:bg-transparent hover:text-foreground"
+            className="w-9 h-9 relative transition-all duration-300 ease-in-out outline-2 outline-dashed outline-muted hover:bg-transparent hover:text-primary"
           >
-            <div className="relative z-20 flex items-center justify-center h-full">
+            <div className="relative z-20 flex items-center justify-center h-full  hover:animate-wiggle">
               {theme === 'light' && <SunIcon className="h-6 w-6" />}
               {theme === 'dark' && <MoonIcon className="h-6 w-6" />}
               {(theme === 'system' || !theme) && <BlendingModeIcon className="h-6 w-6" />}
