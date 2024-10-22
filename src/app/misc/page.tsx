@@ -31,11 +31,13 @@ const pages = [
     title: 'etymology',
     href: '/etymology',
     id: 'etymology',
+    desc: 'word origins i found interesting',
   },
   {
     title: 'poems',
     href: '/poems',
     id: 'poems',
+    desc: 'poems that i liked reading',
   },
 ];
 
@@ -49,7 +51,8 @@ export default function Page() {
           <li key={page.id}>
             <Link href={page.href} className="underline underline-offset-2 decoration-[0.1em] transition-all">
               {page.title}
-            </Link>
+            </Link>{' '}
+            — <em>{page.desc}</em>
           </li>
         ))}
       </ul>
