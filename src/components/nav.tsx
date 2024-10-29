@@ -20,7 +20,7 @@ const navItems = {
   },
 };
 
-const itemsWithGlowingDot: string[] = ['/projects'];
+const itemsWithGlowingDot: string[] = [];
 
 export function Navbar() {
   const pathname = usePathname();
