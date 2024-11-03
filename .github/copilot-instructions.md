@@ -1,6 +1,7 @@
 We use NextJS 14 with TypeScript and TailwindCSS along with shadcn UI component library for this blog project. The blog posts are written in the MDX format.
 
 We use the following Prettier config to format our code so make sure to follow them:
+
 ```json
 {
   "arrowParens": "avoid",

@@ -103,7 +103,12 @@
     @apply decoration-muted-foreground decoration-[0.05em];
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold tracking-tighter font-geist-mono;
   }
 
@@ -112,7 +117,7 @@
   }
 
   h2 {
-    @apply text-2xl mb-4 mt-8 ;
+    @apply text-2xl mb-4 mt-8;
   }
 
   h3 {
@@ -147,15 +152,20 @@
     /* Remove Safari input shadow on mobile */
     input[type='text'],
     input[type='email'] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
   }
 
   @keyframes nudgeTopRight {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(2px, -2px); }
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(2px, -2px);
+    }
   }
 
   @keyframes glowingDotPulse {
