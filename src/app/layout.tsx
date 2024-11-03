@@ -67,13 +67,20 @@ export const metadata: Metadata = {
   },
 };
 
-const cx = (...classes) => classes.filter(Boolean).join(' ');
+const cx = (...classNames: string[]) => classNames.filter(Boolean).join(' ');
+const fontClasses = `${GeistSans.variable} ${GeistMono.variable}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={cx(GeistSans.variable, GeistMono.variable)}>
+    <html lang="en" className={cx(fontClasses, 'dark')}>
       <body className="antialiased font-sans">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          enableColorScheme={false}
+          disableTransitionOnChange
+        >
           <ReadingProgressBar />
           <div className="max-w-3xl mx-auto px-4 py-8 container">
             <Navbar />

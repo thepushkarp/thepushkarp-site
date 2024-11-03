@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MoonIcon, SunIcon, BlendingModeIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
@@ -10,50 +10,17 @@ export default function ThemeToggle() {
   const { setTheme, theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    if (metaThemeColor) {
-      if (theme === 'dark') {
-        metaThemeColor.setAttribute('content', 'hsl(220, 15%, 20%)');
-      } else if (theme === 'light') {
-        metaThemeColor.setAttribute('content', 'hsl(210, 30%, 98%)');
-      } else {
-        // System theme
-        const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        metaThemeColor.setAttribute('content', isDarkMode ? 'hsl(220, 15%, 20%)' : 'hsl(210, 30%, 98%)');
-      }
-    }
-  }, [theme]);
-
   const toggleTheme = () => {
-    if (!theme) {
-      setTheme('system');
-    } else if (theme === 'system') {
-      setTheme('dark');
-    } else if (theme === 'dark') {
-      setTheme('light');
-    } else {
-      setTheme('system');
-    }
+    if (theme === 'light') setTheme('dark');
+    else if (theme === 'dark') setTheme('system');
+    else setTheme('light');
   };
 
-  if (!mounted) {
-    return (
-      <Button
-        variant="ghost"
-        size="icon"
-        className="w-9 h-9 relative transition-all duration-300 ease-in-out outline-dashed outline-muted hover:bg-transparent hover:text-foreground"
-      >
-        <div className="relative z-20 flex items-center justify-center h-full">
-          <BlendingModeIcon className="h-6 w-6" />
-        </div>
-      </Button>
-    );
-  }
+  useEffect(() => {
+    setMounted(true);
+  }, [setMounted]);
+
+  if (!mounted) return null;
 
   return (
     <TooltipProvider>
@@ -65,17 +32,19 @@ export default function ThemeToggle() {
             onClick={toggleTheme}
             className="w-9 h-9 relative transition-all duration-300 ease-in-out outline-dashed outline-muted hover:bg-transparent hover:text-primary"
           >
-            <div className="relative z-20 flex items-center justify-center h-full  hover:animate-wiggle">
-              {theme === 'light' && <SunIcon className="h-6 w-6" />}
-              {theme === 'dark' && <MoonIcon className="h-6 w-6" />}
-              {(theme === 'system' || !theme) && <BlendingModeIcon className="h-6 w-6" />}
+            <span className="sr-only">Toggle theme</span>
+            <div className="relative z-20 flex items-center justify-center h-full hover:animate-wiggle">
+              <BlendingModeIcon
+                className="h-6 w-6 absolute transition-opacity"
+                style={{ opacity: theme === 'system' ? 1 : 0 }}
+              />
+              <MoonIcon className="h-6 w-6 absolute transition-opacity" style={{ opacity: theme === 'dark' ? 1 : 0 }} />
+              <SunIcon className="h-6 w-6 absolute transition-opacity" style={{ opacity: theme === 'light' ? 1 : 0 }} />
             </div>
           </Button>
         </TooltipTrigger>
         <TooltipContent>
-          {theme === 'light' && 'Light Theme'}
-          {theme === 'dark' && 'Dark Theme'}
-          {(theme === 'system' || !theme) && 'System Theme'}
+          <p>{(theme || 'system').charAt(0).toUpperCase() + (theme || 'system').slice(1)} theme</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
