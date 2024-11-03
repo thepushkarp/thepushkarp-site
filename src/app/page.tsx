@@ -51,7 +51,7 @@ this nonsense that for a minute now you've stared.
 i wish you had better things to care.
 now while you're at it, check me out here:`}
       </p>
-      <ul className="font-sm mt-4 flex flex-col space-x-0 space-y-2 text-muted-foreground md:flex-row md:space-x-4 md:space-y-0">
+      <ul className="font-sm mt-4 flex flex-col space-x-0 space-y-2 text-muted-foreground lg:flex-row lg:space-x-4 lg:space-y-0">
         {links.map(link => (
           <li key={link.href}>
             <Link

@@ -32,7 +32,7 @@ const ScrollToTopButton = () => {
     <Button
       variant="secondary"
       size="icon"
-      className={`fixed z-50 rounded-full transition-opacity duration-300 shadow-sm
+      className={`fixed z-50 rounded-full transition-opacity duration-300 shadow-md
         ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
         bottom-4 right-4 w-10 h-10
         lg:bottom-6 lg:right-6 lg:w-16 lg:h-16`}
@@ -41,7 +41,7 @@ const ScrollToTopButton = () => {
       title="Scroll to top"
       tabIndex={isVisible ? 0 : -1}
     >
-      <ArrowUpIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5 md:w-6 md:h-6 text-primary" />
+      <ArrowUpIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5 lg:w-6 lg:h-6 text-primary" />
     </Button>
   );
 };

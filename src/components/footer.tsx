@@ -30,7 +30,7 @@ export default function Footer() {
   return (
     <footer className="mb-16">
       {!isRoot && (
-        <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 md:flex-row md:space-x-4 md:space-y-0 text-muted-foreground">
+        <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 lg:flex-row lg:space-x-4 lg:space-y-0 text-muted-foreground">
           {footerItems.map(({ label, href }) => (
             <li key={label}>
               <Link
