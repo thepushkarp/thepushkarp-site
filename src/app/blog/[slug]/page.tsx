@@ -93,7 +93,6 @@ export default async function BlogPost(props: { params: Promise<{ slug: string }
       {post.metadata.summary && <p className="text-m">{post.metadata.summary}</p>}
       <div className="flex flex-col justify-between items-start mt-2 mb-8 text-xs">
         <p className="text-sm text-muted-foreground">Published: {formatDate(post.metadata.publishedAt, true)}</p>
-        <p className="text-sm text-muted-foreground">Last Edit: {formatDate(post.metadata.lastEdited, true)}</p>
       </div>
       <article className="prose prose-quoteless prose-neutral dark:prose-invert">
         <CustomMDX source={post.content} />

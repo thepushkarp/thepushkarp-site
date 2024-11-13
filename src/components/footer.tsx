@@ -5,7 +5,7 @@ import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 
 export default function Footer() {
   const revealEmail = () => {
-    const email = Array.from(' hi[AT]thepushkarp[DOT]com ').reverse().join('');
+    const email = Array.from(' moc]TOD[prakhsupeht]TA[ih ').reverse().join('');
     const emailElement = document.querySelector('#do-not-doxx-me');
     if (emailElement) {
       emailElement.innerHTML = email;

@@ -3,13 +3,14 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowUpIcon } from '@radix-ui/react-icons';
+import { MIN_SCROLLABLE_HEIGHT } from '@/constants';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > MIN_SCROLLABLE_HEIGHT) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

@@ -1,0 +1,1 @@
+export const MIN_SCROLLABLE_HEIGHT = 300;

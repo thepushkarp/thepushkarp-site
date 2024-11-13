@@ -47,14 +47,8 @@ function getMDXData(dir) {
     let { metadata, content } = readMDXFile(filePath);
     let slug = path.basename(file, path.extname(file));
 
-    let stats = fs.statSync(filePath);
-    let lastEdited = stats.mtime.toISOString();
-
     return {
-      metadata: {
-        ...metadata,
-        lastEdited,
-      },
+      metadata,
       slug,
       content,
     };
