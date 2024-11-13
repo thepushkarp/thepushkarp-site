@@ -18,12 +18,14 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Homogenize link styles and colour usage
 - [x] Make layout consistent across all pages
 - [x] Add a projects page with an indicator
-- [ ] Improve OG Image generation
 - [ ] Improve content for landing page
 - [ ] Add content from TIL site
+- [ ] Improve OG Image generation
+- [ ] Drop Caps for blog, ooofff
+- [ ] Better theme change animation
+- [ ] Animated character
 - [ ] Image and equation references
 - [ ] Indicator for blogs read before
-- [ ] Drop Caps, ooofff
 
 ## credits
 
