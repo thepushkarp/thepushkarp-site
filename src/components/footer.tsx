@@ -4,6 +4,18 @@ import Link from 'next/link';
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 
 export default function Footer() {
+  const revealEmail = () => {
+    const email = Array.from(' hi[AT]thepushkarp[DOT]com ').reverse().join('');
+    const emailElement = document.querySelector('#do-not-doxx-me');
+    if (emailElement) {
+      emailElement.innerHTML = email;
+      emailElement.removeAttribute('role');
+      emailElement.removeAttribute('onClick');
+      emailElement.removeAttribute('onKeyDown');
+      emailElement.className = '';
+    }
+  };
+
   const footerItems = [
     {
       label: 'rss',
@@ -43,6 +55,17 @@ export default function Footer() {
             </Link>
           </li>
         ))}
+        <li>
+          <span
+            className="transition-all hover:text-primary"
+            id="do-not-doxx-me"
+            onClick={revealEmail}
+            onKeyDown={revealEmail}
+            role="button"
+          >
+            mail <span className="text-xs">(click to reveal)</span>
+          </span>
+        </li>
       </ul>
       <div className="flex flex-row">
         <p className="mt-4">
