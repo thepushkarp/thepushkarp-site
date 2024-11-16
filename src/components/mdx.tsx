@@ -95,7 +95,6 @@ function HorizontalRule() {
   return <hr className="my-4" />;
 }
 
-// make one for mono text between backticks
 function Mono({ children }) {
   return <code className="font-mono">{children}</code>;
 }

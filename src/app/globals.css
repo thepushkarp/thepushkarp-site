@@ -109,7 +109,7 @@
   h4,
   h5,
   h6 {
-    @apply font-semibold tracking-tighter font-geist-mono;
+    @apply font-bold tracking-wide font-geist-mono;
   }
 
   h1 {
