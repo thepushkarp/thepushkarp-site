@@ -21,6 +21,7 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [ ] Improve content for landing page
 - [ ] Add content from TIL site
 - [ ] Improve OG Image generation
+- [ ] Add pingback references for blog
 - [ ] Drop Caps for blog, ooofff
 - [ ] Better theme change animation
 - [ ] Animated character
