@@ -9,6 +9,9 @@ export const metadata = {
   openGraph: {
     title: 'etymology',
     description: 'word origins i found interesting',
+    alternates: {
+      canonical: `${baseUrl}/etymology`,
+    },
     type: 'article',
     url: `${baseUrl}/etymology`,
     images: [

@@ -7,6 +7,9 @@ export const metadata = {
   openGraph: {
     title: 'blog',
     description: 'some thoughts, some ideas, some rants, some code',
+    alternates: {
+      canonical: `${baseUrl}/blog`,
+    },
     type: 'article',
     url: `${baseUrl}/blog`,
     images: [

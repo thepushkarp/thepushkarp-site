@@ -6,6 +6,9 @@ import { baseUrl } from '@/app/sitemap';
 export const metadata = {
   title: 'poems',
   description: 'poems that i liked reading',
+  alternates: {
+    canonical: `${baseUrl}/poems`,
+  },
   openGraph: {
     title: 'poems',
     description: 'poems that i liked reading',
