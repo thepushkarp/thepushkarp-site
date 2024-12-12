@@ -21,12 +21,17 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [ ] Improve content for landing page
 - [ ] Add content from TIL site
 - [x] Improve OG Image generation
-- [ ] Add pingback references for blog
+- [ ] Add pingback references for blog and graph view
 - [ ] Drop Caps for blog, ooofff
 - [ ] Better theme change animation
 - [ ] Animated character
 - [ ] Image and equation references
 - [ ] Indicator for blogs read before
+- [ ] Swigly underline for links
+- [ ] Link next to headings
+- [ ] Random Page Link
+- [ ] Search Bar
+- [ ] Swigly HR
 
 ## credits
 
