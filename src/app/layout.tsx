@@ -75,8 +75,8 @@ const fontClasses = `${GeistSans.variable} ${GeistMono.variable}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={cx(fontClasses, 'dark')}>
-      <body className="antialiased font-sans">
+    <html lang="en" className={cx(fontClasses, 'dark')} suppressHydrationWarning>
+      <body className="antialiased font-sans" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

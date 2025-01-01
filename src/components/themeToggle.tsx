@@ -1,18 +1,17 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { MoonIcon, SunIcon, BlendingModeIcon } from '@radix-ui/react-icons';
+import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 export default function ThemeToggle() {
-  const { setTheme, theme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   const toggleTheme = () => {
-    if (theme === 'light') setTheme('dark');
-    else if (theme === 'dark') setTheme('system');
+    if (resolvedTheme === 'light') setTheme('dark');
     else setTheme('light');
   };
 
@@ -34,25 +33,21 @@ export default function ThemeToggle() {
           >
             <span className="sr-only">Toggle theme</span>
             <div className="relative z-20 flex items-center justify-center h-full w-full origin-center">
-              <div className="group-hover:animate-wiggle absolute">
-                <BlendingModeIcon
-                  className="h-6 w-6 transition-opacity"
-                  style={{ opacity: theme === 'system' ? 1 : 0 }}
-                />
+              <div className="absolute">
                 <MoonIcon
-                  className="h-6 w-6 absolute top-0 left-0 transition-opacity"
-                  style={{ opacity: theme === 'dark' ? 1 : 0 }}
+                  className="h-6 w-6 transition-opacity"
+                  style={{ opacity: resolvedTheme === 'dark' ? 1 : 0 }}
                 />
                 <SunIcon
                   className="h-6 w-6 absolute top-0 left-0 transition-opacity"
-                  style={{ opacity: theme === 'light' ? 1 : 0 }}
+                  style={{ opacity: resolvedTheme === 'light' ? 1 : 0 }}
                 />
               </div>
             </div>
           </Button>
         </TooltipTrigger>
         <TooltipContent>
-          <p>{(theme || 'system').charAt(0).toUpperCase() + (theme || 'system').slice(1)} Theme</p>
+          <p>Toggle Theme</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
