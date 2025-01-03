@@ -29,7 +29,7 @@ export default function ThemeToggle() {
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="group w-9 h-9 relative transition-all ease-in-out outline-dashed outline-muted hover:bg-transparent hover:text-primary"
+            className="group w-9 h-9 relative transition-all ease-in-out outline-dashed outline-muted outline-[0.2em] hover:bg-transparent hover:text-primary"
           >
             <span className="sr-only">Toggle theme</span>
             <div className="relative z-20 flex items-center justify-center h-full w-full">

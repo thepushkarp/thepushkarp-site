@@ -55,7 +55,7 @@ export function Navbar() {
         <nav className="relative flex flex-wrap items-center gap-0">
           {activeIndex !== -1 && (
             <div
-              className="absolute bottom-0 left-0 hidden lg:block outline-dashed outline-muted transition-all duration-300 ease-out rounded-md"
+              className="absolute bottom-0 left-0 hidden lg:block outline-dashed outline-[0.2em] outline-muted transition-all duration-300 ease-out rounded-md"
               style={{
                 width: navRefs.current[activeIndex]?.offsetWidth,
                 height: navRefs.current[activeIndex]?.offsetHeight,

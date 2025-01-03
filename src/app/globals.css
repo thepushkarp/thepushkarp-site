@@ -165,11 +165,11 @@
   }
 
   hr {
-    @apply border-dashed border-[0.5px] w-full my-6;
+    @apply border-dashed border-[0.08em] w-full my-6;
   }
 
   .hr-footer {
-    @apply border-dashed border-[1px] w-full my-6;
+    @apply border-dashed border-[0.1em] w-full my-6;
   }
 
   @media (max-width: 640px) {
