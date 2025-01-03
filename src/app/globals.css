@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 210 30% 98%;
+    --background: 210 30% 96%;
     --foreground: 220 35% 35%;
     --card: 210 25% 97%;
     --card-foreground: 220 20% 20%;
@@ -24,11 +24,11 @@
     --input: 210 25% 90%;
     --ring: 210 60% 60%;
     --radius: 0.5rem;
-    --chart-1: 210 60% 70%;
-    --chart-2: 210 50% 75%;
-    --chart-3: 210 40% 80%;
-    --chart-4: 210 55% 72%;
-    --chart-5: 210 45% 77%;
+    --chart-1: 210 60% 60%;
+    --chart-2: 210 70% 40%;
+    --chart-3: 210 50% 40%;
+    --chart-4: 210 60% 45%;
+    --chart-5: 210 70% 50%;
     --font-geist-sans: 'GeistSans', sans-serif;
     --font-geist-mono: 'GeistMono', monospace;
     --sh-class: #080a0c;
@@ -40,13 +40,13 @@
     --sh-jsxliterals: #6266d1;
     --sh-property: #e25a1c;
     --sh-entity: #e25a1c;
-    --selection-bg: 210 65% 60%;
+    --selection-bg: 210 65% 85%;
     --progress-bar: 210 100% 50%;
-    --visited-link-color: 250 50% 60%;
+    --visited-link-color: 280 70% 45%;
   }
 
   .dark {
-    --background: 220 15% 20%;
+    --background: 220 20% 10%;
     --foreground: 60 15% 90%;
     --card: 220 13% 23%;
     --card-foreground: 60 9% 98%;
@@ -65,18 +65,18 @@
     --border: 220 13% 28%;
     --input: 220 13% 23%;
     --ring: 32 95% 44%;
-    --chart-1: 32 95% 44%;
-    --chart-2: 220 13% 40%;
-    --chart-3: 220 13% 60%;
-    --chart-4: 32 70% 50%;
-    --chart-5: 32 50% 60%;
+    --chart-1: 30 95% 40%;
+    --chart-2: 30 80% 50%;
+    --chart-3: 30 70% 60%;
+    --chart-4: 30 60% 65%;
+    --chart-5: 30 50% 45%;
     --sh-class: #ffa64d;
     --sh-identifier: #e6e6e6;
     --sh-keyword: #ff9933;
     --sh-string: #66cccc;
-    --selection-bg: 32 85% 35%;
-    --progress-bar: 32 95% 44%;
-    --visited-link-color: 280 40% 60%;
+    --selection-bg: 32 90% 30%;
+    --progress-bar: 32 95% 50%;
+    --visited-link-color: 280 40% 50%;
   }
 
   ::selection {
@@ -85,6 +85,22 @@
 
   html {
     overflow-y: scroll;
+  }
+
+  .custom-link {
+    @apply relative underline underline-offset-2 decoration-[1em] decoration-dashed;
+  }
+  .custom-link::before {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0 -z-10 bg-primary/10 transition-all duration-200 ease-out;
+  }
+
+  .custom-link:hover::before {
+    @apply h-full;
+  }
+
+  .custom-link:hover {
+    text-decoration-color: transparent;
   }
 
   .custom-link:visited {
@@ -146,6 +162,14 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  hr {
+    @apply border-dashed border-[0.5px] w-full my-6;
+  }
+
+  .hr-footer {
+    @apply border-dashed border-[1px] w-full my-6;
   }
 
   @media (max-width: 640px) {

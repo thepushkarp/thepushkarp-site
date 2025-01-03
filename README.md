@@ -18,20 +18,26 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Homogenize link styles and colour usage
 - [x] Make layout consistent across all pages
 - [x] Add a projects page with an indicator
+- [x] Swigly underline for links
+- [x] Link next to headings
+- [x] Dashed HR
+- [ ] Make a plain OG Image
+- [ ] Add an about page
+  - [ ] Add a section about the site and add source code link in it
 - [ ] Improve content for landing page
-- [ ] Add content from TIL site
-- [x] Improve OG Image generation
-- [ ] Add pingback references for blog and graph view
-- [ ] Drop Caps for blog, ooofff
-- [ ] Better theme change animation
-- [ ] Animated character
+  - [ ] Revise main text
+  - [ ] Add a clock
+- [ ] Add content from other sites
+  - [ ] Expand on Etymology Content
+  - [ ] Add content from TIL
+- [ ] Drop Caps for blog
 - [ ] Image and equation references
-- [ ] Indicator for blogs read before
-- [ ] Swigly underline for links
-- [ ] Link next to headings
+- [ ] Add random animated character
+- [ ] Add pingback references for blog and graph view
 - [ ] Random Page Link
+- [ ] Improve theme change animation
+- [ ] Indicator for blogs read before
 - [ ] Search Bar
-- [ ] Swigly HR
 
 ## credits
 

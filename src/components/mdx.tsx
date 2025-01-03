@@ -6,27 +6,30 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import React from 'react';
-import { ArrowTopRightIcon } from '@radix-ui/react-icons';
+import { ArrowTopRightIcon, Link2Icon } from '@radix-ui/react-icons';
 import 'katex/dist/katex.min.css';
 
 function CustomLink(props) {
   let href = props.href;
 
   if (href.startsWith('/')) {
-    return <Link href={href}>{props.children}</Link>;
+    return (
+      <Link href={href} className="custom-link">
+        {props.children}
+      </Link>
+    );
   }
 
   if (href.startsWith('#')) {
-    return <Link href={href}>{props.children}</Link>;
+    return (
+      <Link href={href} className="custom-link">
+        {props.children}
+      </Link>
+    );
   }
 
   return (
-    <Link
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="duration-200 inline-flex items-center group custom-link"
-    >
+    <Link href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center group custom-link">
       {props.children}
       <span className="inline-block ml-1">
         <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
@@ -72,13 +75,17 @@ function slugify(str) {
 function createHeading(level) {
   return function Heading({ children }) {
     let slug = slugify(children);
-    return React.createElement(`h${level}`, { id: slug }, [
-      React.createElement('a', {
-        href: `#${slug}`,
-        key: `link-${slug}`,
-        className: 'anchor',
-      }),
+    return React.createElement(`h${level}`, { id: slug, className: 'group relative inline-flex items-start' }, [
       children,
+      React.createElement(
+        'a',
+        {
+          href: `#${slug}`,
+          key: `link-${slug}`,
+          className: 'heading-anchor ml-1 opacity-0 group-hover:opacity-100',
+        },
+        React.createElement(Link2Icon, { className: 'inline h-5 w-5' })
+      ),
     ]);
   };
 }
@@ -92,7 +99,7 @@ function PoetryAuthor({ children }) {
 }
 
 function HorizontalRule() {
-  return <hr className="my-4" />;
+  return <hr />;
 }
 
 function Mono({ children }) {

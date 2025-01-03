@@ -38,7 +38,7 @@ export default function Footer() {
   return (
     <footer className="mb-16">
       <div className="mt-8 flex flex-col space-x-0 space-y-0.5"></div>
-      <hr className="border-muted border-dashed w-full border-[1.1px]" />
+      <hr className="hr-footer" />
       <ul className="font-sm mt-4 flex flex-col space-x-0 space-y-2 lg:flex-row lg:space-x-4 lg:space-y-0 text-muted-foreground">
         {footerItems.map(({ label, href }) => (
           <li key={label}>

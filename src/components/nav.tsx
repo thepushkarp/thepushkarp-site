@@ -32,8 +32,17 @@ export function Navbar() {
   const [activeIndex, setActiveIndex] = useState<number>(-1);
   const navRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
+  const isCurrentPathActive = (path: string, pathname: string) => {
+    if (path === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(path);
+  };
+
   const getCurrentPageIndex = useCallback(() => {
-    return navItems.findIndex(({ path }) => path === pathname);
+    return navItems.findIndex(({ path }) => {
+      return isCurrentPathActive(path, pathname);
+    });
   }, [pathname]);
 
   useEffect(() => {
@@ -55,7 +64,7 @@ export function Navbar() {
             />
           )}
           {Object.entries(navItems).map(([index, { name, path }]) => {
-            const isActive = pathname === path;
+            const isActive = isCurrentPathActive(path, pathname);
             return (
               <Link
                 key={path}
