@@ -71,7 +71,7 @@ export default function Footer() {
         <p className="mt-4">
           © {new Date().getFullYear()} Pushkar Patel
           <br />
-          <span className="text-xs">built with love, sweat and tears.</span>
+          <span className="text-xs">built with love, sweat and llms.</span>
         </p>
       </div>
     </footer>
