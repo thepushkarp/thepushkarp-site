@@ -21,7 +21,7 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Swigly underline for links
 - [x] Link next to headings
 - [x] Dashed HR
-- [ ] Better Link Colour
+- [x] Better Link Colour
 - [ ] Make a plain OG Image
 - [ ] Improve content for landing page
   - [ ] Revise main text
