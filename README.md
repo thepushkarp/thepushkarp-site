@@ -21,17 +21,16 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Swigly underline for links
 - [x] Link next to headings
 - [x] Dashed HR
+- [x] Better Link Colour
 - [ ] Make a plain OG Image
-- [ ] Add an about page
-  - [ ] Add a section about the site and add source code link in it
 - [ ] Improve content for landing page
   - [ ] Revise main text
   - [ ] Add a clock
 - [ ] Add content from other sites
   - [ ] Expand on Etymology Content
   - [ ] Add content from TIL
-- [ ] Drop Caps for blog
 - [ ] Image and equation references
+- [ ] Drop Caps for blog
 - [ ] Add random animated character
 - [ ] Add pingback references for blog and graph view
 - [ ] Random Page Link

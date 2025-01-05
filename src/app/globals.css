@@ -10,7 +10,7 @@
     --card-foreground: 220 20% 20%;
     --popover: 210 25% 97%;
     --popover-foreground: 220 20% 20%;
-    --primary: 210 70% 70%;
+    --primary: 210 90% 60%;
     --primary-foreground: 210 25% 98%;
     --secondary: 210 30% 94%;
     --secondary-foreground: 220 20% 25%;
@@ -88,7 +88,8 @@
   }
 
   .custom-link {
-    @apply relative underline underline-offset-2 decoration-[1em] decoration-dashed;
+    @apply relative text-primary transition-colors;
+    text-decoration-color: transparent;
   }
   .custom-link::before {
     content: '';
@@ -97,14 +98,6 @@
 
   .custom-link:hover::before {
     @apply h-full;
-  }
-
-  .custom-link:hover {
-    text-decoration-color: transparent;
-  }
-
-  .custom-link:visited {
-    text-decoration-color: hsl(var(--visited-link-color));
   }
 
   .font-geist-sans {
@@ -169,7 +162,7 @@
   }
 
   .hr-footer {
-    @apply border-dashed border-[0.1em] w-full my-6;
+    @apply border-dashed border-primary/40 border-[0.08em] w-full my-6;
   }
 
   @media (max-width: 640px) {
