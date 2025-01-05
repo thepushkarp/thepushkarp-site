@@ -29,8 +29,8 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [ ] Add content from other sites
   - [ ] Expand on Etymology Content
   - [ ] Add content from TIL
-- [ ] Drop Caps for blog
 - [ ] Image and equation references
+- [ ] Drop Caps for blog
 - [ ] Add random animated character
 - [ ] Add pingback references for blog and graph view
 - [ ] Random Page Link

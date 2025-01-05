@@ -162,7 +162,7 @@
   }
 
   .hr-footer {
-    @apply border-dashed border-[0.1em] w-full my-6;
+    @apply border-dashed border-primary/40 border-[0.08em] w-full my-6;
   }
 
   @media (max-width: 640px) {
