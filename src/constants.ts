@@ -1,1 +1,2 @@
 export const MIN_SCROLLABLE_HEIGHT = 300;
+export const MILLISECONDS_IN_MINUTE = 60000;
