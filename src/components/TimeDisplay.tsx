@@ -6,21 +6,21 @@ import timeDict from '../../public/data/time_dict.json';
 export function TimeDisplay() {
   const [mounted, setMounted] = useState(false);
   const [currentTime, setCurrentTime] = useState<Date | null>(null);
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     setCurrentTime(new Date());
 
-    const timer = setInterval(() => {
-      setIsTransitioning(true);
+    function scheduleNextMinute() {
+      const now = new Date();
+      const msToNextMinute = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
       setTimeout(() => {
         setCurrentTime(new Date());
-        setIsTransitioning(false);
-      }, 300);
-    }, 60000);
+        scheduleNextMinute();
+      }, msToNextMinute);
+    }
 
-    return () => clearInterval(timer);
+    scheduleNextMinute();
   }, []);
 
   if (!mounted || !currentTime) return null;
@@ -36,15 +36,15 @@ export function TimeDisplay() {
   const timePoem = timeDict[poemKey]?.toLowerCase() || 'have a good day!';
 
   return (
-    <aside className="ml-8 w-1/3 lg:w-1/4 font-mono">
+    <div className="pb-8 w-full font-mono">
       <div className="text-xs">
         {day} {date}
       </div>
-      <div className={`text-sm mt-2 transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
+      <div className="text-xs mt-2" style={{ animation: 'clockBlink 2s ease-in-out infinite' }}>
         {timePoem.split('\n').map((line, i) => (
           <p key={i}>{line}</p>
         ))}
       </div>
-    </aside>
+    </div>
   );
 }

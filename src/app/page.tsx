@@ -6,8 +6,9 @@ export default function HomePage() {
   return (
     <main className="flex flex-col text-left">
       <h1 className="mb-8 font-semibold tracking-tighter">pushkar patel</h1>
+      <TimeDisplay />
       <div className="flex flex-row">
-        <section className="border-r border-dashed border-primary/40 pr-8">
+        <section>
           <p className="mb-4 whitespace-pre-wrap" style={{ lineHeight: '1.6' }}>
             {`hi,
 for most of my time i write software.
@@ -26,7 +27,6 @@ i wish you had better things to care.
 now while you're at it, check out my site here :)`}
           </p>
         </section>
-        <TimeDisplay />
       </div>
     </main>
   );

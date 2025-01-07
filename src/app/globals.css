@@ -196,6 +196,21 @@
       box-shadow: 0 0 0 0 transparent;
     }
   }
+
+  @keyframes clockBlink {
+    0%, 100% {
+      opacity: 1;
+    }
+    30%, 70% {
+      opacity: 0.8;
+    }
+    40%, 60% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
 }
 
 @layer components {
