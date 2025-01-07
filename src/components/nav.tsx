@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ThemeToggle from '@/components/themeToggle';
 import { GlowingDot } from './glowingDot';
+import { Menu } from 'lucide-react';
+import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 
 const navItems = [
   {
@@ -30,6 +32,7 @@ const itemsWithGlowingDot: string[] = [];
 export function Navbar() {
   const pathname = usePathname();
   const [activeIndex, setActiveIndex] = useState<number>(-1);
+  const [isOpen, setIsOpen] = useState(false);
   const navRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const isCurrentPathActive = (path: string, pathname: string) => {
@@ -49,10 +52,57 @@ export function Navbar() {
     setActiveIndex(getCurrentPageIndex());
   }, [getCurrentPageIndex]);
 
+  const handleNavigation = (path: string, index: string) => {
+    setIsOpen(false);
+    setActiveIndex(Number(index));
+  };
+
   return (
     <aside className="mb-16 w-full mx-auto">
       <div className="flex justify-between items-center">
-        <nav className="relative flex flex-wrap items-center gap-0">
+        <div className="lg:hidden">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger className="p-2">
+              <Menu className="h-6 w-6" />
+            </SheetTrigger>
+            <SheetContent side="left">
+              <SheetHeader>
+                <Link href="/" onClick={() => setIsOpen(false)}>
+                  <SheetTitle className="text-left cursor-pointer hover:text-primary transition-colors">
+                    pushkar patel
+                  </SheetTitle>
+                </Link>
+              </SheetHeader>
+              <nav className="mt-6 flex flex-col space-y-3">
+                {Object.entries(navItems).map(([index, { name, path }]) => {
+                  const isActive = isCurrentPathActive(path, pathname);
+                  return (
+                    <Link
+                      key={path}
+                      href={path}
+                      passHref
+                      onClick={() => handleNavigation(path, index)}
+                      ref={el => {
+                        navRefs.current[index] = el;
+                      }}
+                      className={`w-full text-left py-2 px-4 rounded-md ${
+                        isActive ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+                      }`}
+                    >
+                      {itemsWithGlowingDot.includes(path) && !isActive && (
+                        <div className="absolute top-1 right-1">
+                          <GlowingDot />
+                        </div>
+                      )}
+                      <span className="z-10">{name}</span>
+                    </Link>
+                  );
+                })}
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
+        <nav className="hidden lg:flex relative flex-wrap items-center gap-0">
           {activeIndex !== -1 && (
             <div
               className="absolute bottom-0 left-0 hidden lg:block outline-dashed outline-[0.2em] outline-muted transition-all duration-300 ease-out rounded-md"
