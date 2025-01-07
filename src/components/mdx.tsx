@@ -8,19 +8,14 @@ import rehypeKatex from 'rehype-katex';
 import React from 'react';
 import { ArrowTopRightIcon, Link2Icon } from '@radix-ui/react-icons';
 import 'katex/dist/katex.min.css';
+import remarkBreaks from 'remark-breaks';
+import remarkEmoji from 'remark-emoji';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 function CustomLink(props) {
   let href = props.href;
 
-  if (href.startsWith('/')) {
-    return (
-      <Link href={href} className="custom-link">
-        {props.children}
-      </Link>
-    );
-  }
-
-  if (href.startsWith('#')) {
+  if (href.startsWith('/') || href.startsWith('#')) {
     return (
       <Link href={href} className="custom-link">
         {props.children}
@@ -90,14 +85,6 @@ function createHeading(level) {
   };
 }
 
-function Poetry({ children }) {
-  return <div className="whitespace-pre-wrap">{children}</div>;
-}
-
-function PoetryAuthor({ children }) {
-  return <div className="italic">{children}</div>;
-}
-
 function HorizontalRule() {
   return <hr />;
 }
@@ -116,8 +103,6 @@ let components = {
   Image: RoundedImage,
   a: CustomLink,
   code: Code,
-  Poetry: Poetry,
-  PoetryAuthor: PoetryAuthor,
   hr: HorizontalRule,
   Mono: Mono,
 };
@@ -127,7 +112,12 @@ export function CustomMDX(mdxSource) {
     <MDXRemote
       {...mdxSource}
       components={{ ...components, ...(mdxSource.components || {}) }}
-      options={{ mdxOptions: { remarkPlugins: [remarkGfm, remarkMath], rehypePlugins: [rehypeKatex] } }}
+      options={{
+        mdxOptions: {
+          remarkPlugins: [remarkGfm, remarkMath, remarkBreaks, remarkEmoji],
+          rehypePlugins: [rehypeKatex, rehypeAutolinkHeadings],
+        },
+      }}
     />
   );
 }
