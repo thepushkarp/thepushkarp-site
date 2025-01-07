@@ -25,7 +25,7 @@ Source code for my portfolio site [thepushkarp.com](https://thepushkarp.com).
 - [x] Make a plain OG Image
 - [ ] Improve content for landing page
   - [ ] Revise main text
-  - [ ] Add a clock
+  - [x] Add a clock
 - [ ] Add content from other sites
   - [ ] Expand on Etymology Content
   - [ ] Add content from TIL

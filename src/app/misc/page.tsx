@@ -1,4 +1,6 @@
-import Link from 'next/link';
+import { CustomMDX } from '@/components/mdx';
+import { readMDXFile } from '@/app/blog/utils';
+import path from 'path';
 import { baseUrl } from '@/app/sitemap';
 
 export const metadata = {
@@ -29,36 +31,16 @@ export const metadata = {
   },
 };
 
-const pages = [
-  {
-    title: 'etymology',
-    href: '/etymology',
-    id: 'etymology',
-    desc: 'word origins i found interesting',
-  },
-  {
-    title: 'poems',
-    href: '/poems',
-    id: 'poems',
-    desc: 'poems that i liked reading',
-  },
-];
-
 export default function Page() {
+  const { content } = readMDXFile(path.join(process.cwd(), 'src', 'app', 'misc', 'misc.mdx'));
+
   return (
     <section>
       <h1 className="font-semibold text-3xl mb-2 tracking-tighter">{metadata.title}</h1>
       <p className="text-muted-foreground mb-8">{metadata.description}</p>
-      <ul className="list-disc list-inside space-y-2">
-        {pages.map(page => (
-          <li key={page.id}>
-            <Link href={page.href} className="underline underline-offset-2 decoration-[0.1em] transition-all">
-              {page.title}
-            </Link>{' '}
-            — <em>{page.desc}</em>
-          </li>
-        ))}
-      </ul>
+      <article className="prose prose-quoteless prose-neutral dark:prose-invert">
+        <CustomMDX source={content} />
+      </article>
     </section>
   );
 }
