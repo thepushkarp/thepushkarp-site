@@ -2,20 +2,9 @@
 
 import Link from 'next/link';
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
+import { RevealMail } from './reveal-mail';
 
 export default function Footer() {
-  const revealEmail = () => {
-    const email = Array.from(' moc]TOD[prakhsupeht]TA[ih ').reverse().join('');
-    const emailElement = document.querySelector('#do-not-doxx-me');
-    if (emailElement) {
-      emailElement.innerHTML = email;
-      emailElement.removeAttribute('role');
-      emailElement.removeAttribute('onClick');
-      emailElement.removeAttribute('onKeyDown');
-      emailElement.className = '';
-    }
-  };
-
   const footerItems = [
     {
       label: 'rss',
@@ -56,15 +45,7 @@ export default function Footer() {
           </li>
         ))}
         <li>
-          <span
-            className="transition-all hover:text-primary"
-            id="do-not-doxx-me"
-            onClick={revealEmail}
-            onKeyDown={revealEmail}
-            role="button"
-          >
-            mail <span className="text-xs">(click to reveal)</span>
-          </span>
+          <RevealMail placeholder="mail" className="transition-all hover:text-primary" />
         </li>
       </ul>
       <div className="flex flex-row">
