@@ -11,6 +11,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'selected projects',
+    siteName: 'pushkar patel',
     description: 'stuff i work on and tinker with',
     type: 'article',
     url: `${baseUrl}/projects`,

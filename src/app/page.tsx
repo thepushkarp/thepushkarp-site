@@ -5,30 +5,29 @@ import path from 'path';
 import { baseUrl } from '@/app/sitemap';
 
 export const metadata = {
-  title: 'poems',
-  description: 'poems that i liked reading',
+  title: 'pushkar patel',
+  description: "pushkar's site",
   alternates: {
     canonical: `${baseUrl}/poems`,
   },
   openGraph: {
-    title: 'poems',
-    description: 'poems that i liked reading',
+    title: 'pushkar patel',
+    siteName: 'pushkar patel',
+    description: "pushkar's site",
     type: 'article',
     url: `${baseUrl}/poems`,
     images: [
       {
-        url: `${baseUrl}/og?title=${encodeURIComponent('poems')}&subtitle=${encodeURIComponent('poems that i liked reading')}`,
+        url: `${baseUrl}/og?title=${encodeURIComponent('pushkar patel')}}`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'poems',
-    description: 'poems that i liked reading',
+    title: 'pushkar patel',
+    description: "pushkar's site",
     creator: '@thepushkarp',
-    images: [
-      `${baseUrl}/og?title=${encodeURIComponent('poems')}&subtitle=${encodeURIComponent('poems that i liked reading')}`,
-    ],
+    images: [`${baseUrl}/og?title=${encodeURIComponent('pushkar patel')}}`],
   },
 };
 

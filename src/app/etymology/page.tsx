@@ -8,6 +8,7 @@ export const metadata = {
   description: 'word origins i found interesting',
   openGraph: {
     title: 'etymology',
+    siteName: 'pushkar patel',
     description: 'word origins i found interesting',
     alternates: {
       canonical: `${baseUrl}/etymology`,

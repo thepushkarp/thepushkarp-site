@@ -11,6 +11,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'poems',
+    siteName: 'pushkar patel',
     description: 'poems that i liked reading',
     type: 'article',
     url: `${baseUrl}/poems`,

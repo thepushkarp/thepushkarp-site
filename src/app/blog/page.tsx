@@ -6,6 +6,7 @@ export const metadata = {
   description: 'some thoughts, some ideas, some rants, some code',
   openGraph: {
     title: 'blog',
+    siteName: 'pushkar patel',
     description: 'some thoughts, some ideas, some rants, some code',
     alternates: {
       canonical: `${baseUrl}/blog`,

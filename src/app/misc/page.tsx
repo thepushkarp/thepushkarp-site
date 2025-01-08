@@ -8,6 +8,7 @@ export const metadata = {
   description: 'a potpourri of things i find interesting',
   openGraph: {
     title: 'miscellaneous',
+    siteName: 'pushkar patel',
     description: 'a potpourri of things i find interesting',
     alternates: {
       canonical: `${baseUrl}/misc`,
