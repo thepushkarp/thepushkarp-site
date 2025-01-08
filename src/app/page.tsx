@@ -18,7 +18,7 @@ export const metadata = {
     url: `${baseUrl}/poems`,
     images: [
       {
-        url: `${baseUrl}/og?title=${encodeURIComponent('pushkar patel')}}`,
+        url: `${baseUrl}/og?title=${encodeURIComponent('pushkar patel')}`,
       },
     ],
   },
@@ -27,7 +27,7 @@ export const metadata = {
     title: 'pushkar patel',
     description: "pushkar's site",
     creator: '@thepushkarp',
-    images: [`${baseUrl}/og?title=${encodeURIComponent('pushkar patel')}}`],
+    images: [`${baseUrl}/og?title=${encodeURIComponent('pushkar patel')}`],
   },
 };
 
