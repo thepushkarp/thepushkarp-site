@@ -36,7 +36,7 @@ export async function generateMetadata(props) {
       type: 'article',
       publishedTime,
       siteName: 'pushkar patel',
-      locale: 'en_GB',
+      locale: 'en_IN',
       url: `${baseUrl}/blog/${post.slug}`,
       images: [
         {

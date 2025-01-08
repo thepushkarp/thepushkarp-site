@@ -31,11 +31,11 @@ export const metadata: Metadata = {
     description: "pushkar's site.",
     url: baseUrl,
     siteName: 'pushkar patel',
-    locale: 'en_GB',
+    locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: '/images/android-chrome-512x512.png',
+        url: `${baseUrl}/og?title=${encodeURIComponent('pushkar patel')}`,
         width: 512,
         height: 512,
       },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     description: "pushkar's site.",
     creator: '@thepushkarp',
     card: 'summary_large_image',
-    images: ['/images/android-chrome-512x512.png'],
+    images: [`${baseUrl}/og?title=${encodeURIComponent('pushkar patel')}`],
     site: '@thepushkarp',
   },
   robots: {
