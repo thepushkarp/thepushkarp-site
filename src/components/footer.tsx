@@ -25,7 +25,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="mb-16">
+    <footer className="mb-16 font-departure-mono">
       <div className="mt-8 flex flex-col space-x-0 space-y-0.5"></div>
       <hr className="hr-footer" />
       <ul className="font-sm mt-4 flex flex-col space-x-0 space-y-2 lg:flex-row lg:space-x-4 lg:space-y-0 text-muted-foreground">

@@ -58,7 +58,7 @@ export function Navbar() {
   };
 
   return (
-    <aside className="mb-16 w-full mx-auto">
+    <aside className="mb-16 w-full mx-auto font-departure-mono">
       <div className="flex justify-between items-center">
         <div className="lg:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -68,12 +68,12 @@ export function Navbar() {
             <SheetContent side="left">
               <SheetHeader>
                 <Link href="/" onClick={() => setIsOpen(false)}>
-                  <SheetTitle className="text-left cursor-pointer hover:text-primary transition-colors">
+                  <SheetTitle className="text-left cursor-pointer hover:text-primary transition-colors font-geist-mono">
                     pushkar patel
                   </SheetTitle>
                 </Link>
               </SheetHeader>
-              <nav className="mt-6 flex flex-col space-y-3">
+              <nav className="mt-6 flex flex-col space-y-3 font-departure-mono">
                 {Object.entries(navItems).map(([index, { name, path }]) => {
                   const isActive = isCurrentPathActive(path, pathname);
                   return (

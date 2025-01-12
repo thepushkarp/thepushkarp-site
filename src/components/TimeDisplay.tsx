@@ -36,7 +36,7 @@ export function TimeDisplay() {
   const timePoem = timeDict[poemKey]?.toLowerCase() || 'have a good day!';
 
   return (
-    <div className="pb-8 w-full font-mono">
+    <div className="pb-8 w-full font-departure-mono">
       <div className="text-xs">
         {day} {date}
       </div>

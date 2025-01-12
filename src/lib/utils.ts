@@ -5,6 +5,8 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export const cx = (...classNames: string[]) => classNames.filter(Boolean).join(' ');
+
 function getTimeDifference(currentDate: Date, targetDate: Date) {
   const diffTime = currentDate.getTime() - targetDate.getTime();
   const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));

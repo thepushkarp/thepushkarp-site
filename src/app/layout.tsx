@@ -11,6 +11,8 @@ import { ThemeProvider } from '@/components/themeProvider';
 import { GoogleAnalytics } from '@/components/googleAnalytics';
 import ScrollToTopButton from '@/components/scrollToTopButton';
 import ReadingProgressBar from '@/components/readingProgressBar';
+import localFont from 'next/font/local';
+import { cx } from '@/lib/utils';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -70,8 +72,8 @@ export const metadata: Metadata = {
   },
 };
 
-const cx = (...classNames: string[]) => classNames.filter(Boolean).join(' ');
-const fontClasses = `${GeistSans.variable} ${GeistMono.variable}`;
+const DepartureMono = localFont({ src: '../../public/fonts/DepartureMono-Regular.woff2' });
+const fontClasses = `${GeistSans.variable} ${GeistMono.variable} ${DepartureMono.className}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

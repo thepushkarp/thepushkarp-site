@@ -35,6 +35,7 @@
     --chart-5: 210 70% 50%;
     --font-geist-sans: 'GeistSans', sans-serif;
     --font-geist-mono: 'GeistMono', monospace;
+    --font-departure-mono: 'DepartureMono', monospace;
     --selection-bg: 210 65% 85%;
     --progress-bar: 210 100% 50%;
     --visited-link-color: 280 70% 45%;
@@ -97,6 +98,10 @@
 
   .font-geist-mono {
     font-family: var(--font-geist-mono);
+  }
+
+  .font-departure-mono {
+    font-family: var(--font-departure-mono);
   }
 
   a {
