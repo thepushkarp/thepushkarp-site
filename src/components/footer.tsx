@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
-import { RevealMail } from './reveal-mail';
+import { RevealMail } from './revealMail';
 
 export default function Footer() {
   const footerItems = [
@@ -45,7 +45,7 @@ export default function Footer() {
           </li>
         ))}
         <li>
-          <RevealMail placeholder="mail" className="transition-all hover:text-primary" />
+          <RevealMail placeholder="mail" />
         </li>
       </ul>
       <div className="flex flex-row">
