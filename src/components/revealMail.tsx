@@ -19,8 +19,7 @@ export function RevealMail({ placeholder }: { placeholder: string }) {
         onKeyDown={handleReveal}
         className="transition-all hover:text-primary cursor-pointer"
       >
-        {placeholder}
-        <span className="text-xs">(click to reveal)</span>
+        {placeholder} <span className="text-xs">(click to reveal)</span>
       </span>
     );
   }
