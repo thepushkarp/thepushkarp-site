@@ -35,7 +35,7 @@ export default function Page() {
     <section>
       <h1 className="font-semibold text-3xl mb-2 tracking-tighter">blog</h1>
       <p className="text-muted-foreground mb-8">some thoughts, some ideas, some rants, some code</p>
-      <BlogPosts />
+      <div className="prose prose-neutral dark:prose-invert">{/* Add list of all blog posts here */}</div>
     </section>
   );
 }

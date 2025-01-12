@@ -1,3 +1,15 @@
+import createMDX from '@next/mdx';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import remarkBreaks from 'remark-breaks';
+import remarkEmoji from 'remark-emoji';
+import remarkFrontmatter from 'remark-frontmatter';
+import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
+import remarkToc from 'remark-toc';
+import remarkMdx from 'remark-mdx';
+import rehypeSlug from 'rehype-slug';
+import rehypeKatex from 'rehype-katex';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
@@ -17,4 +29,20 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [
+      remarkGfm,
+      [remarkMath, { singleDollarTextMath: true }],
+      remarkBreaks,
+      [remarkEmoji, { accessible: true }],
+      remarkFrontmatter,
+      remarkMdxFrontmatter,
+      [remarkToc, { heading: 'Index', ordered: true }],
+      remarkMdx,
+    ],
+    rehypePlugins: [rehypeSlug, [rehypeKatex, { strict: false }]],
+  },
+});
+
+export default withMDX(nextConfig);

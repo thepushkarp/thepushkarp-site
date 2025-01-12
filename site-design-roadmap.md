@@ -24,7 +24,7 @@
   - [x] Add a rhyme clock
 - [ ] Improve the terrible mdx situation
 - [ ] Add content from other sites
-  - [ ] Expand on Etymology Content
+  - [ ] Expand on Etymology content into subpages
   - [ ] Add content from TIL
 - [ ] Image and equation references
 - [ ] Public Key
