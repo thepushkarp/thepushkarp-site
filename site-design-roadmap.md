@@ -32,6 +32,5 @@
 - [ ] Add random animated character
 - [ ] Add pingback references for blog and graph view
 - [ ] Random Page Link
-- [ ] Improve theme change animation
 - [ ] Indicator for blogs read before
 - [ ] Search Bar

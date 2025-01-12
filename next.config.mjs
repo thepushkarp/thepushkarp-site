@@ -9,6 +9,8 @@ import remarkToc from 'remark-toc';
 import remarkMdx from 'remark-mdx';
 import rehypeSlug from 'rehype-slug';
 import rehypeKatex from 'rehype-katex';
+import rehypeCallouts from 'rehype-callouts';
+import rehypeStarryNight, { defaultPluginPack } from '@microflash/rehype-starry-night';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -41,7 +43,12 @@ const withMDX = createMDX({
       [remarkToc, { heading: 'Index', ordered: true }],
       remarkMdx,
     ],
-    rehypePlugins: [rehypeSlug, [rehypeKatex, { strict: false }]],
+    rehypePlugins: [
+      rehypeSlug,
+      rehypeCallouts,
+      [rehypeStarryNight, { plugins: defaultPluginPack }],
+      [rehypeKatex, { strict: false }],
+    ],
   },
 });
 
