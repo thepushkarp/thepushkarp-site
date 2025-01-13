@@ -26,6 +26,7 @@
 - [ ] Add content from other sites
   - [ ] Expand on Etymology content into subpages
   - [ ] Add content from TIL
+- [ ] Share to other site
 - [ ] Image and equation references
 - [ ] Public Key
 - [ ] Drop Caps for blog

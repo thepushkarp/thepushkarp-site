@@ -7,10 +7,12 @@ import remarkFrontmatter from 'remark-frontmatter';
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import remarkToc from 'remark-toc';
 import remarkMdx from 'remark-mdx';
+import remarkInlineCodeLang from '@microflash/rehype-starry-night/remark-inline-code-lang';
 import rehypeSlug from 'rehype-slug';
 import rehypeKatex from 'rehype-katex';
 import rehypeCallouts from 'rehype-callouts';
 import rehypeStarryNight, { defaultPluginPack } from '@microflash/rehype-starry-night';
+import rehypeStarryNightInline from '@microflash/rehype-starry-night/rehype-starry-night-inline';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -35,19 +37,27 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [
       remarkGfm,
-      [remarkMath, { singleDollarTextMath: true }],
+      [remarkMath, { singleDollarTextMath: false }],
       remarkBreaks,
       [remarkEmoji, { accessible: true }],
       remarkFrontmatter,
       remarkMdxFrontmatter,
       [remarkToc, { heading: 'Index', ordered: true }],
+      remarkInlineCodeLang,
       remarkMdx,
     ],
     rehypePlugins: [
+      [
+        rehypeKatex,
+        {
+          throwOnError: false,
+          strict: false,
+        },
+      ],
       rehypeSlug,
       rehypeCallouts,
       [rehypeStarryNight, { plugins: defaultPluginPack }],
-      [rehypeKatex, { strict: false }],
+      rehypeStarryNightInline,
     ],
   },
 });
