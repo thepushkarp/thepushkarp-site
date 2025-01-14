@@ -46,7 +46,7 @@ export default function Footer() {
           </li>
         ))}
         <li>
-          <RevealMail placeholder="mail" />
+          <RevealMail placeholder="mail" isLink={false} />
         </li>
       </ul>
       <div className="flex flex-row">

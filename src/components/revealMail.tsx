@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export function RevealMail({ placeholder }: { placeholder: string }) {
+export function RevealMail({ placeholder, isLink }: { placeholder: string; isLink: boolean }) {
   const reversedValue = ['moc', ']TOD[', 'prakhsupeht', ']TA[', 'ih'];
   const [revealed, setRevealed] = useState(false);
 
@@ -17,7 +17,7 @@ export function RevealMail({ placeholder }: { placeholder: string }) {
         tabIndex={0}
         onClick={handleReveal}
         onKeyDown={handleReveal}
-        className="transition-all hover:text-primary cursor-pointer"
+        className={`transition-all hover:text-primary cursor-pointer ${isLink ? 'custom-link' : ''}`}
       >
         {placeholder} <span className="text-xs">(click to reveal)</span>
       </span>
