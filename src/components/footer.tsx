@@ -9,7 +9,7 @@ export default function Footer() {
   const footerItems = [
     {
       label: 'rss',
-      href: '/rss',
+      href: '/rss.xml',
     },
     {
       label: 'twitter',

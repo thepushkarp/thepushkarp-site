@@ -3,7 +3,6 @@ import { Feed } from 'feed';
 import { getBlogPosts } from '@/app/blog/utils';
 import { baseUrl } from '@/app/sitemap';
 
-// Helper function to escape XML special characters
 function escapeXml(unsafe: string): string {
   return unsafe
     .replace(/&/g, '&amp;')
@@ -13,7 +12,7 @@ function escapeXml(unsafe: string): string {
     .replace(/'/g, '&apos;');
 }
 
-export async function GET() {
+export async function generateFeed() {
   const feed = new Feed({
     title: escapeXml("pushkar patel's blog"),
     description: escapeXml('some thoughts, some ideas, some rants, some code'),
@@ -26,7 +25,9 @@ export async function GET() {
     updated: new Date(),
     generator: 'Feed for Node.js',
     feedLinks: {
-      rss2: `${baseUrl}/rss`,
+      rss2: `${baseUrl}/rss.xml`,
+      atom: `${baseUrl}/atom.xml`,
+      json: `${baseUrl}/feed.json`,
     },
     author: {
       name: 'Pushkar Patel',
@@ -77,11 +78,5 @@ export async function GET() {
     });
   }
 
-  return new Response(feed.rss2(), {
-    headers: {
-      'Content-Type': 'application/xml; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600, s-maxage=18000',
-      'x-content-type-options': 'nosniff',
-    },
-  });
+  return feed;
 }
