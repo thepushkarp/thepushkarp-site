@@ -1,15 +1,13 @@
-import { loadGoogleFont } from '@/lib/utils';
 import { ImageResponse } from 'next/og';
-import { NextRequest } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+import { loadGoogleFont } from '@/lib/utils';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const title = searchParams.get('title') || "pushkar's site";
   const subtitle = searchParams.get('subtitle') || '';
   const domain = 'thepushkarp.com';
-
-  // All text content for font loading
-  const allText = `${title}${subtitle}${domain}`;
 
   // Dark theme colors
   const backgroundColor = 'hsl(220, 20%, 10%)'; // --background

@@ -1,7 +1,8 @@
 import Link from 'next/link';
+
 import { getBlogPosts } from '@/app/blog/utils';
-import { formatDateYYYYMMDD } from '@/lib/utils';
 import { baseUrl } from '@/app/sitemap';
+import { formatDateYYYYMMDD } from '@/lib/utils';
 
 export const metadata = {
   title: 'blog',

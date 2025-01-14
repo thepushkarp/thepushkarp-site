@@ -1,4 +1,5 @@
 import { baseUrl } from '@/app/sitemap';
+
 import MiscMdx from './misc.mdx';
 
 export const metadata = {

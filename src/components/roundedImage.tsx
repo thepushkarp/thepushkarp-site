@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+
 import ImprovedLink from './improvedLink';
 
 const RoundedImage = props => {

@@ -1,7 +1,8 @@
 'use client';
 
-import { MIN_SCROLLABLE_HEIGHT } from '@/constants';
 import { useEffect, useState } from 'react';
+
+import { MIN_SCROLLABLE_HEIGHT } from '@/constants';
 
 const ReadingProgressBar = () => {
   const [progress, setProgress] = useState(0);

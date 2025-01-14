@@ -1,5 +1,6 @@
-import ProjectsMdx from './projects.mdx';
 import { baseUrl } from '@/app/sitemap';
+
+import ProjectsMdx from './projects.mdx';
 
 export const metadata = {
   title: 'selected projects',

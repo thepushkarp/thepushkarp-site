@@ -1,6 +1,6 @@
-import { TimeDisplay } from '@/components/TimeDisplay';
 import IndexMdx from '@/app/index.mdx';
 import { baseUrl } from '@/app/sitemap';
+import { TimeDisplay } from '@/components/TimeDisplay';
 
 export const metadata = {
   title: 'pushkar patel',

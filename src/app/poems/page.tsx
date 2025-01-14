@@ -1,4 +1,5 @@
 import { baseUrl } from '@/app/sitemap';
+
 import PoemsMdx from './poems.mdx';
 
 export const metadata = {

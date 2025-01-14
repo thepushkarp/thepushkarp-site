@@ -1,12 +1,14 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState, useEffect, useRef, useCallback } from 'react';
+
 import ThemeToggle from '@/components/themeToggle';
-import { GlowingDot } from './glowingDot';
-import { Menu } from 'lucide-react';
 import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
+
+import { GlowingDot } from './glowingDot';
 
 const navItems = [
   {

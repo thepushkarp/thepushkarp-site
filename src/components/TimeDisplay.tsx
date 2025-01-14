@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+
 import timeDict from '../../public/data/time_dict.json';
 
 export function TimeDisplay() {

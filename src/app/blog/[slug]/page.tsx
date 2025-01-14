@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+
 import { getBlogPosts } from '@/app/blog/utils';
 import { baseUrl } from '@/app/sitemap';
 import { formatDate } from '@/lib/utils';

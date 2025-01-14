@@ -1,9 +1,10 @@
 'use client';
 
+import { ArrowUpIcon } from '@radix-ui/react-icons';
 import { useState, useEffect } from 'react';
+
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { ArrowUpIcon } from '@radix-ui/react-icons';
 import { MIN_SCROLLABLE_HEIGHT } from '@/constants';
 
 const ScrollToTopButton = () => {

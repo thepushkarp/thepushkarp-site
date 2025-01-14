@@ -3,7 +3,7 @@ export const baseUrl = 'https://thepushkarp.com';
 export default async function sitemap() {
   // TODO: add blogposts
 
-  let routes = ['', '/blog', '/projects', '/misc', '/etymology', '/poems'].map(route => ({
+  const routes = ['', '/blog', '/projects', '/misc', '/etymology', '/poems'].map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
     changeFrequency: 'daily',

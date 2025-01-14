@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
 import { Link2Icon } from '@radix-ui/react-icons';
+import type { ReactNode } from 'react';
 
 type HeadingProps = {
   id?: string;

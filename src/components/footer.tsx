@@ -1,7 +1,8 @@
 'use client';
 
-import Link from 'next/link';
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
+
 import { RevealMail } from './revealMail';
 
 export default function Footer() {

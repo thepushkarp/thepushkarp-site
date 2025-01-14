@@ -1,4 +1,5 @@
 import type { MDXComponents } from 'mdx/types';
+
 import ImprovedLink from './components/improvedLink';
 import LinkedHeading from './components/linkedHeading';
 
