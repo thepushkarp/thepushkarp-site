@@ -12,5 +12,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h4: LinkedHeading('h4'),
     h5: LinkedHeading('h5'),
     h6: LinkedHeading('h6'),
+    ...components,
   };
 }

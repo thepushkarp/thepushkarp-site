@@ -54,7 +54,7 @@ export function Navbar() {
     setActiveIndex(getCurrentPageIndex());
   }, [getCurrentPageIndex]);
 
-  const handleNavigation = (path: string, index: string) => {
+  const handleNavigation = (index: string) => {
     setIsOpen(false);
     setActiveIndex(Number(index));
   };
@@ -83,7 +83,7 @@ export function Navbar() {
                       key={path}
                       href={path}
                       passHref
-                      onClick={() => handleNavigation(path, index)}
+                      onClick={() => handleNavigation(index)}
                       ref={el => {
                         navRefs.current[index] = el;
                       }}
