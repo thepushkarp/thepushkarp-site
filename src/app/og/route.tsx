@@ -64,8 +64,8 @@ export async function GET(request: NextRequest) {
         <div
           style={{
             position: 'absolute',
-            bottom: '48px',
-            right: '32px',
+            bottom: '64px',
+            right: '48px',
             fontSize: '24px',
             color: textColor,
             opacity: 0.8,

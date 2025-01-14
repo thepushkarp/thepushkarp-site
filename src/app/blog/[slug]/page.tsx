@@ -11,8 +11,11 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   if (!post) return;
 
   const {
-    metadata: { title, subtitle },
+    metadata: { title, subtitle, cleanTitle: originalCleanTitle, cleanSubtitle: originalCleanSubtitle },
   } = post;
+
+  const cleanTitle = originalCleanTitle || title;
+  const cleanSubtitle = originalCleanSubtitle || subtitle;
 
   return {
     title,
@@ -28,7 +31,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
       },
       images: [
         {
-          url: `${baseUrl}/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(subtitle)}`,
+          url: `${baseUrl}/og?title=${encodeURIComponent(cleanTitle)}&subtitle=${encodeURIComponent(cleanSubtitle)}`,
         },
       ],
     },
@@ -37,7 +40,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
       title,
       description: subtitle,
       creator: '@thepushkarp',
-      images: [`${baseUrl}/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(subtitle)}`],
+      images: [`${baseUrl}/og?title=${encodeURIComponent(cleanTitle)}&subtitle=${encodeURIComponent(cleanSubtitle)}`],
     },
   };
 }

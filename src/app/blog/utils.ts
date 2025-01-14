@@ -10,6 +10,8 @@ export interface BlogPost {
     slug: string;
     publishedAt: string;
     subtitle: string;
+    cleanTitle?: string;
+    cleanSubtitle?: string;
     lastModifiedAt?: string;
     tags?: string[];
   };
@@ -34,6 +36,8 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
         slug: data.slug,
         publishedAt: data.publishedAt,
         subtitle: data.subtitle,
+        cleanTitle: data.cleanTitle,
+        cleanSubtitle: data.cleanSubtitle,
         lastModifiedAt: data.lastModifiedAt,
         tags: data.tags,
       },
