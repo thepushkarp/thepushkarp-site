@@ -89,8 +89,8 @@ export function Navbar() {
                         isActive ? 'text-primary' : 'text-muted-foreground hover:text-primary'
                       }`}
                     >
-                      {itemsWithGlowingDot.includes(path) && !isActive && (
-                        <div className="absolute top-1 right-1">
+                      {itemsWithGlowingDot.includes(name) && !isActive && (
+                        <div className="relative top-1 right-1">
                           <GlowingDot />
                         </div>
                       )}
@@ -129,7 +129,7 @@ export function Navbar() {
                   isActive ? 'text-primary' : 'text-muted-foreground hover:text-muted-foreground'
                 }`}
               >
-                {itemsWithGlowingDot.includes(path) && !isActive && (
+                {itemsWithGlowingDot.includes(name) && !isActive && (
                   <div className="absolute top-1 right-1">
                     <GlowingDot />
                   </div>

@@ -36,7 +36,7 @@ export default function HomePage() {
       <TimeDisplay />
       <div className="flex flex-row">
         <section>
-          <article className="prose prose-quoteless prose-neutral dark:prose-invert">
+          <article className="prose">
             <IndexMdx />
           </article>
         </section>

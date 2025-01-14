@@ -22,7 +22,8 @@
 - [x] Improve content for landing page
   - [x] Revise main text
   - [x] Add a rhyme clock
-- [ ] Improve the terrible mdx situation
+- [x] Improve the terrible mdx situation
+- [ ] Add back rss and sitemap
 - [ ] Add content from other sites
   - [ ] Expand on Etymology content into subpages
   - [ ] Add content from TIL

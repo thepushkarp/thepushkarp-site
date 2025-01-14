@@ -79,6 +79,20 @@
     overflow-y: scroll;
   }
 
+  .blog-link {
+    text-decoration-color: transparent;
+    width: 100%;
+  }
+
+  ul.blog-list {
+    padding: 0 !important;
+  }
+
+  .blog-list-item {
+    display: flex;
+    padding: 0.25rem 0;
+  }
+
   .custom-link {
     @apply relative text-primary transition-colors;
     text-decoration-color: transparent;

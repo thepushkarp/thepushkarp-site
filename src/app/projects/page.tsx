@@ -35,7 +35,7 @@ export default function Page() {
     <section>
       <h1 className="font-semibold text-3xl mb-2 tracking-tighter">{metadata.title}</h1>
       <p className="text-muted-foreground mb-8">{metadata.description}</p>
-      <article className="prose prose-quoteless prose-neutral dark:prose-invert">
+      <article className="prose">
         <ProjectsMdx />
       </article>
     </section>
