@@ -23,11 +23,12 @@
   - [x] Revise main text
   - [x] Add a rhyme clock
 - [x] Improve the terrible mdx situation
-- [ ] Add back rss and sitemap
+- [x] Add back rss and sitemap
 - [ ] Add content from other sites
   - [ ] Expand on Etymology content into subpages
   - [ ] Add content from TIL
 - [ ] Share to other site
+- [ ] add content in rss
 - [ ] Image and equation references
 - [ ] Public Key
 - [ ] Drop Caps for blog
