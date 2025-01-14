@@ -6,14 +6,14 @@ export const metadata = {
   title: 'pushkar patel',
   description: "pushkar's site",
   alternates: {
-    canonical: `${baseUrl}/poems`,
+    canonical: `${baseUrl}`,
   },
   openGraph: {
     title: 'pushkar patel',
     siteName: 'pushkar patel',
     description: "pushkar's site",
     type: 'article',
-    url: `${baseUrl}/poems`,
+    url: `${baseUrl}`,
     images: [
       {
         url: `${baseUrl}/og?title=${encodeURIComponent('pushkar patel')}`,
