@@ -3,14 +3,11 @@
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 
+import ImprovedLink from './improvedLink';
 import { RevealMail } from './revealMail';
 
 export default function Footer() {
   const footerItems = [
-    {
-      label: 'rss',
-      href: '/rss.xml',
-    },
     {
       label: 'twitter',
       href: 'https://twitter.com/thepushkarp',
@@ -25,29 +22,41 @@ export default function Footer() {
     },
   ];
 
+  const feedItems = [
+    {
+      label: 'rss',
+      href: '/rss.xml',
+    },
+    {
+      label: 'atom',
+      href: '/atom.xml',
+    },
+    {
+      label: 'json',
+      href: '/feed.json',
+    },
+  ];
+
   return (
     <footer className="mb-16 font-departure-mono">
       <div className="mt-8 flex flex-col space-x-0 space-y-0.5"></div>
       <hr className="hr-footer" />
-      <ul className="font-sm mt-4 flex flex-col space-x-0 space-y-2 lg:flex-row lg:space-x-4 lg:space-y-0 text-muted-foreground">
+      <ul className="font-sm mt-4 flex flex-col space-x-0 space-y-2 lg:flex-row lg:space-x-4 lg:space-y-0">
         {footerItems.map(({ label, href }) => (
           <li key={label}>
-            <Link
-              className="flex items-center transition-all hover:text-primary group"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={href}
-            >
-              <p className="h-7">{label}</p>
-              <span className="inline-block transition-transform duration-200 ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
-                <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
-              </span>
-            </Link>
+            <ImprovedLink href={href}>{label}</ImprovedLink>
           </li>
         ))}
         <li>
-          <RevealMail placeholder="mail" isLink={false} />
+          <RevealMail placeholder="mail" isLink={true} />
         </li>
+      </ul>
+      <ul className="font-sm mt-4 flex flex-row space-x-4 space-y-0">
+        {feedItems.map(({ label, href }) => (
+          <li key={label}>
+            <ImprovedLink href={href}>{label}</ImprovedLink>
+          </li>
+        ))}
       </ul>
       <div className="flex flex-row">
         <p className="mt-4">

@@ -94,7 +94,7 @@
   }
 
   .custom-link {
-    @apply relative text-primary transition-colors;
+    @apply relative inline-flex flex-row items-center justify-start content-start w-fit text-primary transition-colors;
     text-decoration-color: transparent;
   }
   .custom-link::before {

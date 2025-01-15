@@ -13,9 +13,9 @@ function ImprovedLink(props) {
   }
 
   return (
-    <Link href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center group custom-link">
+    <Link href={href} target="_blank" rel="noopener noreferrer" className="group custom-link">
       {props.children}
-      <span className="inline-block ml-1">
+      <span className="inline-flex items-center ml-1">
         <ArrowTopRightIcon className="h-3 w-3 -mt-1 group-hover:animate-nudge-top-right" />
       </span>
     </Link>
