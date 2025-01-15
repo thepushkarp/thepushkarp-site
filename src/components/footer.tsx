@@ -1,8 +1,5 @@
 'use client';
 
-import { ArrowTopRightIcon } from '@radix-ui/react-icons';
-import Link from 'next/link';
-
 import ImprovedLink from './improvedLink';
 import { RevealMail } from './revealMail';
 
