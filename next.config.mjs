@@ -1,24 +1,33 @@
+import rehypeStarryNight, { defaultPluginPack } from '@microflash/rehype-starry-night';
+import rehypeStarryNightInline from '@microflash/rehype-starry-night/rehype-starry-night-inline';
+import remarkInlineCodeLang from '@microflash/rehype-starry-night/remark-inline-code-lang';
 import createMDX from '@next/mdx';
-import remarkGfm from 'remark-gfm';
-import remarkMath from 'remark-math';
+import rehypeCallouts from 'rehype-callouts';
+import rehypeKatex from 'rehype-katex';
+import rehypeSlug from 'rehype-slug';
 import remarkBreaks from 'remark-breaks';
 import remarkEmoji from 'remark-emoji';
 import remarkFrontmatter from 'remark-frontmatter';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import remarkMdx from 'remark-mdx';
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import remarkToc from 'remark-toc';
-import remarkMdx from 'remark-mdx';
-import remarkInlineCodeLang from '@microflash/rehype-starry-night/remark-inline-code-lang';
-import rehypeSlug from 'rehype-slug';
-import rehypeKatex from 'rehype-katex';
-import rehypeCallouts from 'rehype-callouts';
-import rehypeStarryNight, { defaultPluginPack } from '@microflash/rehype-starry-night';
-import rehypeStarryNightInline from '@microflash/rehype-starry-night/rehype-starry-night-inline';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   async headers() {
     return [
+      {
+        source: '/.well-known/discord',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/plain',
+          },
+        ],
+      },
       {
         source: '/(.*)',
         headers: [
