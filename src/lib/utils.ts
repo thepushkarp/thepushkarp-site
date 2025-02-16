@@ -18,13 +18,7 @@ function getTimeDifference(currentDate: Date, targetDate: Date) {
   if (diffDays > 1) return `${diffDays}d ago`;
   if (diffDays === 1) return 'Yesterday';
 
-  const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
-  if (diffHours > 0) return `${diffHours}h ago`;
-
-  const diffMinutes = Math.floor(diffTime / (1000 * 60));
-  if (diffMinutes > 0) return `${diffMinutes}m ago`;
-
-  return 'Just now';
+  return 'Today';
 }
 
 export function formatDate(date: string | Date, includeRelative = false): string {
