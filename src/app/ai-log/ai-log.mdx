@@ -1,0 +1,72 @@
+---
+---
+
+import RoundedImage from '../../components/roundedImage';
+
+> [!NOTE]
+> Notes and summaries of stuff on AI. Inspired from [TDM](https://x.com/cto_junior) ji's [AGI Log](https://docs.google.com/document/d/e/2PACX-1vQD8IlBotGdBxp3BnXkSjk8bNZlPV_0EH9ZA6wHd5dNf-BLSiwXUinvgv8ZoBEnNyTCF-chWO30NRw0/pub)
+
+---
+
+## Index
+
+---
+
+## Scaling RL Compute
+
+Blog: https://gr.inc/blog/scaling-rl-compute/
+
+Although DeepSeek's R1-Zero had emergent capabilities at inference-time with minimal supervision, the team still used a cold start data for the final R1 model as this was beneficial for convergence and performance. In addition, the inference-time behaviours of R1 and R1-Zero differ in character, so the role of a small supervised stage may be important.
+
+> "Reinforcement learning was always useful, but getting the details right was the difference between a good post-training recipe and a paradigm shift in the way we use language models."
+
+Reasoning Priors (incorporation of pre-existing knowledge or biases that guide the model's reasoning processes) matter:
+- Better base models make a difference because of more pre-training with more reasoning-like tasks
+- RL Hyperparameters (overly strong model constraints, excessive discounting hence excessive penalty for longer sequences) matter
+- Diverse and and high-quality data
+- Latente judge ability (better base models are better judges)
+- Explicit reward shaping like penalize shorter responses when incorrect
+- SFT Priors (like PRM800K dataset) for jumpstarting inference-time scaling earlier
+
+Inference-time scaling cons:
+- Overthinking and wasted compute — "reasoning models" and "non-reasoning models" are different
+- Lack of generality on tasks not represented in the RL dataset — data diversity
+
+Architectural changes to reduce cost of reasoning:
+- Sliding-window attention (Gemma3 has 5:1)
+- KV Cache Compression (MLHA, SSM models, Cross-Layer Attention)
+- MoE
+
+On parallel inference compute:
+- Reasoning is sequential inference-time scaling
+- Parallel inference compute via multiple generation was the dominant approach before o1
+- Downside — memoryless and cannot learn from previous generations
+
+> "Verifiable rewards allowed us to bootstrap reasoning data, but it's not clear that they are necessary for scaling to other domains once you have those behaviours."
+
+On verifiable rewards
+- DeepSeek-R1 showed that verifiable rewards are key for reasoning, so we should look to code up as many verifiable domains as we can to scale reasoning capabilities. — Wrong Take
+- DeepSeek-R1 showed that verifiable rewards are key for scaling inference-time compute and reinforcing desirable behaviours like backtracking and consideration of alternatives. — More Correct
+- Considering alternatives and backtracking can then be used in more domains, and reinforced when they lead to responses that are preferred by a general reward model.
+- If our reward model or the underlying human preferences are imperfect, then this limits how far we can scale with this approach.
+
+<RoundedImage
+  src="/images/ai-log/checking.png"
+  alt='"As we move towards generative verification, generality increases but the reward signal becomes more costly."'
+  caption='"As we move towards generative verification, generality increases but the reward signal becomes more costly."'
+  width={300}
+  height={300}
+/>
+
+- Some problems can be efficiently verified; some can be efficiently solved
+- "verifiable rewards" in the context of reinforcement learning is a misnomer — current rule-based approaches are checking not verifying. Checking is a fast way to compare a model response with ground truth, where it is assumed that the ground truth has already been verified.
+- The simplest kind of check is rule-based checking like regexing, sympy comparison and, in the case of code, running test cases — lacks generality, cannot be extended to domains which cannot be checked with rule-based approaches.
+- Solution? Inference-compute checking (or "grading") is an alternative that utilises a language model to check a model answer versus a reference answer — more general reward signal by inferencing via an llm
+- Further, inference-compute verification — instead of grading versus a reference answer, a model will verify each step of reasoning from first principles to check correctness. This requires checking that a solution satisfies certain rules or criteria. As step-by-step correctness is needed, verification time scales with solution size (depending on the complexity class).
+
+Compute cost comparison across verification methods:
+- rules-based checking —  checking solutions is much smaller than the cost of generation.
+- inference-compute checking — the cost of checking will scale with the reference answer size, but will usually be smaller than the cost of generation.
+- inference-compute verification — the cost of verification depends on the complexity class of the problem. In the worst case, it might be much more expensive than generation.
+
+> the costs of obtaining good reward signals will increase with domain generality. The reward signals will also become slower to obtain once we hit real-world constraints. These are near-term challenges that will require new methods to let inference-time scaling continue at pace.
