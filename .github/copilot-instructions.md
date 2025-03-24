@@ -4,7 +4,7 @@ This is a personal blog project. I use NextJS 15 + Reach 19 with TypeScript. The
 
 I use the following Prettier config to format our code so make sure to follow them:
 
-```json`
+```json
 {
 "arrowParens": "avoid",
 "semi": true,
@@ -15,7 +15,4 @@ I use the following Prettier config to format our code so make sure to follow th
 "bracketSpacing": true,
 "trailingComma": "es5"
 }
-
-```
-
 ```
