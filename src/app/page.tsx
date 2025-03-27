@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import IndexMdx from '@/app/index.mdx';
 import { baseUrl } from '@/app/sitemap';
 import { TimeDisplay } from '@/components/TimeDisplay';
@@ -30,13 +32,27 @@ export const metadata = {
 };
 
 export default function HomePage() {
+  const imgDimensions = {
+    width: 128,
+    height: 128,
+  };
+
   return (
     <main className="flex flex-col text-left">
       <h1 className="mb-8 font-semibold tracking-tighter">pushkar patel</h1>
       <TimeDisplay />
       <div className="flex flex-row">
-        <section>
-          <article className="prose">
+        <section className="w-full">
+          <article className="prose relative">
+            <div className="float-right ml-4 mb-4 w-[35%] max-w-[256px] min-w-[64px]">
+              <Image
+                src="/images/favicon.svg"
+                alt="Pushkar"
+                width={imgDimensions.width}
+                height={imgDimensions.height}
+                className="w-full h-auto"
+              />
+            </div>
             <IndexMdx />
           </article>
         </section>
