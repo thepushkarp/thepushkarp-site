@@ -6,13 +6,13 @@ I use the following Prettier config to format our code so make sure to follow th
 
 ```json
 {
-"arrowParens": "avoid",
-"semi": true,
-"singleQuote": true,
-"tabWidth": 2,
-"useTabs": false,
-"printWidth": 120,
-"bracketSpacing": true,
-"trailingComma": "es5"
+  "arrowParens": "avoid",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "printWidth": 120,
+  "bracketSpacing": true,
+  "trailingComma": "es5"
 }
 ```
