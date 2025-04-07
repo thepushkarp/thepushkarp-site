@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 // Optional: Set dynamicParams to false if you want 404 for non-pre-rendered slugs
 // export const dynamicParams = false;
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params; // Destructure slug from params
   const post = await getLearningPost(slug); // Use the destructured slug
 
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function LearningSlugPage({ params }: { params: { slug: string } }) {
+export default async function LearningSlugPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params; // Destructure slug from params
   const post = await getLearningPost(slug); // Use the destructured slug
 

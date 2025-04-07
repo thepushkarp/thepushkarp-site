@@ -4,10 +4,10 @@ import { getBlogPosts } from '@/app/blog/utils';
 import { baseUrl } from '@/app/sitemap';
 import { formatDate } from '@/lib/utils';
 
-export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
-  const params = await props.params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const posts = await getBlogPosts();
-  const post = posts.find(post => post.slug === params.slug);
+  const post = posts.find(post => post.slug === slug);
   if (!post) return;
 
   const {
@@ -45,10 +45,10 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   };
 }
 
-export default async function BlogPost(props: { params: Promise<{ slug: string }> }) {
-  const params = await props.params;
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const posts = await getBlogPosts();
-  const post = posts.find(post => post.slug === params.slug);
+  const post = posts.find(post => post.slug === slug);
 
   if (!post) {
     notFound();
