@@ -17,6 +17,7 @@ export interface LearningFrontmatter {
 
 export interface LearningPost {
   slug: string;
+  filename: string;
   frontmatter: LearningFrontmatter;
   content: string;
 }
@@ -28,7 +29,18 @@ const getSlugFromPath = (filePath: string): string => {
 
 // Function to get a single post by slug
 export async function getLearningPost(slug: string): Promise<LearningPost | null> {
-  const filePath = path.join(POSTS_PATH, `${slug}.mdx`);
+  const files = await glob(`${POSTS_PATH}/${slug}.mdx`);
+  if (files.length === 0) {
+    console.warn(`No file found for slug "${slug}" in ${POSTS_PATH}`);
+    return null;
+  }
+  if (files.length > 1) {
+    console.warn(`Multiple files found for slug "${slug}". Using the first one: ${files[0]}`);
+  }
+
+  const filePath = files[0];
+  const filename = path.basename(filePath);
+
   try {
     const source = fs.readFileSync(filePath, 'utf-8');
     const { data, content } = matter(source);
@@ -36,18 +48,23 @@ export async function getLearningPost(slug: string): Promise<LearningPost | null
     // Basic validation for title
     if (!data.title || typeof data.title !== 'string') {
       console.warn(`Post "${slug}" is missing a valid title in frontmatter.`);
-      // Decide how to handle missing title - throw error, use default, etc.
-      // For now, let's allow it but log a warning. You might want stricter validation.
+    }
+
+    // Basic validation for subtitle
+    if (!data.subtitle || typeof data.subtitle !== 'string') {
+      console.warn(`Post "${slug}" is missing a valid subtitle in frontmatter.`);
+      data.subtitle = data.subtitle || 'Default subtitle';
     }
 
     return {
       slug,
+      filename,
       frontmatter: data as LearningFrontmatter,
       content,
     };
   } catch (error) {
     // Handle file not found or other errors
-    console.error(`Error reading learning post "${slug}":`, error);
+    console.error(`Error reading learning post "${slug}" from file ${filePath}:`, error);
     return null;
   }
 }
@@ -65,7 +82,6 @@ export async function getAllLearningPostsMetadata(): Promise<{ slug: string; fro
         // Basic validation for title
         if (!data.title || typeof data.title !== 'string') {
           console.warn(`Post "${slug}" (path: ${filePath}) is missing a valid title in frontmatter.`);
-          // Skip posts without a title for metadata generation
           return null;
         }
 

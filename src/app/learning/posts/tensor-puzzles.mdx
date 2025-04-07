@@ -5,9 +5,15 @@ subtitle: 'my solutions to problems from srush/Tensor-Puzzles'
 tags: ['tensor', 'pytorch', 'numpy']
 ---
 
-This collection of 21 tensor puzzles need you to implement some standard NumPy functions from scratch using first principles broadcasting.
+## Index
 
-Here are my solutions to problems from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles/). The rules are simple:
+---
+
+This collection of 21 tensor puzzles need you to implement some standard NumPy functions from scratch using first principles broadcasting. Here are my solutions to problems from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles/).
+
+## Tensor Puzzle Solutions
+
+The rules are simple:
 
 1. Can use tensor broadcasting
 2. Each puzzle needs to be solved in 1 line (&lt;80 columns) of code.
@@ -31,9 +37,7 @@ Here are my solutions to problems from [srush/Tensor-Puzzles](https://github.com
        return (q * a) + (~q) * b
    ```
 
-## Tensor Puzzle Solutions
-
-1. Puzzle 1 - ones
+### Puzzle 1 - ones
 
 Compute [ones](https://numpy.org/doc/stable/reference/generated/numpy.ones.html) - the vector of all ones.
 
@@ -42,7 +46,7 @@ def ones(i: int) -> TT["i"]:
     return where(arange(i) > -1, 1, 0)
 ```
 
-2. Puzzle 2 - sum
+### Puzzle 2 - sum
 
 Compute [sum](https://numpy.org/doc/stable/reference/generated/numpy.sum.html) - the sum of a vector.
 
@@ -51,7 +55,7 @@ def sum(a: TT) -> TT[1]:
     return ones(a.shape[0]) @ a[:, None]
 ```
 
-3. Puzzle 3 - outer
+### Puzzle 3 - outer
 
 Compute [outer](https://numpy.org/doc/stable/reference/generated/numpy.outer.html) - the outer product of two vectors.
 
@@ -60,7 +64,7 @@ def outer(a: TT["i"],b: TT["j"]) -> TT["i", "j"]:
     return a[:, None] @ b[None, :]
 ```
 
-4. Puzzle 4 - diag
+### Puzzle 4 - diag
 
 Compute [diag](https://numpy.org/doc/stable/reference/generated/numpy.diag.html) - the diagonal vector of a square matrix.
 
@@ -69,7 +73,7 @@ def diag(a: TT["i", "i"]) -> TT["i"]:
     return a[arange(a.shape[0]), arange(a.shape[0])]
 ```
 
-5. Puzzle 5 - eye
+### Puzzle 5 - eye
 
 Compute [eye](https://numpy.org/doc/stable/reference/generated/numpy.eye.html) - the identity matrix.
 
@@ -78,7 +82,7 @@ def eye(j: int) -> TT["i", "i"]:
     return where(arange(j)[:, None] == arange(j)[None, :], 1, 0)
 ```
 
-6. Puzzle 6 - triu
+### Puzzle 6 - triu
 
 Compute [triu](https://numpy.org/doc/stable/reference/generated/numpy.triu.html) - the upper triangular matrix.
 
@@ -87,7 +91,7 @@ def triu(j: int) -> TT["j", "j"]:
     return where(arange(j)[:, None] <= arange(j)[None, :], 1, 0)
 ```
 
-7. Puzzle 7 - cumsum
+### Puzzle 7 - cumsum
 
 Compute [cumsum](https://numpy.org/doc/stable/reference/generated/numpy.cumsum.html) - the cumulative sum.
 
@@ -96,7 +100,7 @@ def cumsum(a: TT["i"]) -> TT["i"]:
     return (a[None, :] @ triu(a.shape[0]))[0]
 ```
 
-8. Puzzle 8 - diff
+### Puzzle 8 - diff
 
 Compute [diff](https://numpy.org/doc/stable/reference/generated/numpy.diff.html) - the running difference.
 
@@ -105,25 +109,25 @@ def diff(a: TT["i"], i: int) -> TT["i"]:
     return where(arange(a.shape[0]) == 0, a[0], a - a[arange(i) - 1])
 ```
 
-9. Puzzle 9 - vstack
+### Puzzle 9 - vstack
 
 Compute [vstack](https://numpy.org/doc/stable/reference/generated/numpy.vstack.html) - the matrix of two vectors
 
+```python
 def vstack(a: TT["i"], b: TT["i"]) -> TT[2, "i"]:
-return where(arange(2)[:, None] == 0, a[None, :], b[None, :])
+    return where(arange(2)[:, None] == 0, a[None, :], b[None, :])
+```
 
-````
-
-10. Puzzle 10 - roll
+### Puzzle 10 - roll
 
 Compute [roll](https://numpy.org/doc/stable/reference/generated/numpy.roll.html) - the vector shifted 1 circular position.
 
 ```python
 def roll(a: TT["i"], i: int) -> TT["i"]:
     return a[(arange(i) + 1) % a.shape[0]]
-````
+```
 
-11. Puzzle 11 - flip
+### Puzzle 11 - flip
 
 Compute [flip](https://numpy.org/doc/stable/reference/generated/numpy.flip.html) - the reversed vector
 
@@ -132,7 +136,7 @@ def flip(a: TT["i"], i: int) -> TT["i"]:
     return a[i - arange(i) - 1]
 ```
 
-12. Puzzle 12 - compress
+### Puzzle 12 - compress
 
 Compute [compress](https://numpy.org/doc/stable/reference/generated/numpy.compress.html) - keep only masked entries (left-aligned).
 
@@ -141,7 +145,7 @@ def compress(g: TT["i", bool], v: TT["i"], i:int) -> TT["i"]:
     return v @ where(g[:, None], arange(i) == (cumsum(1*g) - 1)[:, None], 0)
 ```
 
-13. Puzzle 13 - pad_to
+### Puzzle 13 - pad_to
 
 Compute pad_to - eliminate or add 0s to change size of vector.
 
@@ -150,7 +154,7 @@ def pad_to(a: TT["i"], i: int, j: int) -> TT["j"]:
     return compress(ones(i) <= j, a * (where(arange(i)<j, 1, 0)), j)
 ```
 
-14. Puzzle 14 - sequence_mask
+### Puzzle 14 - sequence_mask
 
 Compute [sequence_mask](https://www.tensorflow.org/api_docs/python/tf/sequence_mask) - pad out to length per batch.
 
@@ -159,7 +163,7 @@ def sequence_mask(values: TT["i", "j"], length: TT["i", int]) -> TT["i", "j"]:
     return (arange(values.shape[1])[None, :] < length[:, None]) * values
 ```
 
-15. Puzzle 15 - bincount
+### Puzzle 15 - bincount
 
 Compute [bincount](https://numpy.org/doc/stable/reference/generated/numpy.bincount.html) - count number of times an entry was seen.
 
@@ -168,25 +172,25 @@ def bincount(a: TT["i"], j: int) -> TT["j"]:
     return ones(a.shape[0]) @ where(a[:, None] == arange(j)[None, :], 1, 0)
 ```
 
-16. Puzzle 16 - scatter_add
+### Puzzle 16 - scatter_add
 
 Compute [scatter_add](https://pytorch-scatter.readthedocs.io/en/1.3.0/functions/add.html) - add together values that link to the same location.
 
+```python
 def scatter_add(values: TT["i"], link: TT["i"], j: int) -> TT["j"]:
-return ones(link.shape[0]) @ (values[:, None] \* where(link[:, None] == arange(j)[None, :], 1, 0))
+    return ones(link.shape[0]) @ (values[:, None] * where(link[:, None] == arange(j)[None, :], 1, 0))
+```
 
-````
-
-17. Puzzle 17 - flatten
+### Puzzle 17 - flatten
 
 Compute [flatten](https://numpy.org/doc/stable/reference/generated/numpy.ndarray.flatten.html)
 
 ```python
 def flatten(a: TT["i", "j"], i:int, j:int) -> TT["i * j"]:
     return a[arange(i*j)// j ] @ eye(j)[:, arange(i*j) % j] * eye(i*j) @ ones(i*j)
-````
+```
 
-18. Puzzle 18 - linspace
+### Puzzle 18 - linspace
 
 Compute [linspace](https://numpy.org/doc/stable/reference/generated/numpy.linspace.html)
 
@@ -195,7 +199,7 @@ def linspace(i: TT[1], j: TT[1], n: int) -> TT["n", float]:
     return i + (j - i) * (arange(n) / where(n > 1, n - 1, 1))
 ```
 
-19. Puzzle 19 - heaviside
+### Puzzle 19 - heaviside
 
 Compute [heaviside](https://numpy.org/doc/stable/reference/generated/numpy.heaviside.html)
 
@@ -204,7 +208,7 @@ def heaviside(a: TT["i"], b: TT["i"]) -> TT["i"]:
     return where(a == 0, b, a>0)
 ```
 
-20. Puzzle 20 - repeat (1d)
+### Puzzle 20 - repeat (1d)
 
 Compute [repeat](https://pytorch.org/docs/stable/generated/torch.Tensor.repeat.html)
 
@@ -213,7 +217,7 @@ def repeat(a: TT["i"], d: TT[1]) -> TT["d", "i"]:
     return ones(d)[:, None] @ a[None, :]
 ```
 
-21. Puzzle 21 - bucketize
+### Puzzle 21 - bucketize
 
 Compute [bucketize](https://pytorch.org/docs/stable/generated/torch.bucketize.html)
 
