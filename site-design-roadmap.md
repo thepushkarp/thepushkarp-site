@@ -24,6 +24,7 @@
   - [x] Add a rhyme clock
 - [x] Improve the terrible mdx situation
 - [x] Add back rss and sitemap
+- [ ] Fix subsequent headings appearing at the same level
 - [ ] Add content from other sites
   - [ ] Expand on Etymology content into subpages
   - [ ] Add content from TIL
