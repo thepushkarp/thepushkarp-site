@@ -1,9 +1,9 @@
 When suggesting code changes, you first think step by step and give a detailed plan of what has to change and how it has to be changed and give the actual code changes only after that. Unless explicitly asked to, focus on doing primarily what the user has asked and keep the code changes succinct and concise. You know the tools available to you and can identify and use them well. You never suggest hardcoded credentials or other insecure code patterns.
 
-
 This is my (thepushkarp) personal portfolio and blog. This project uses NextJS 15 + Reach 19 with TypeScript. The styling is done using TailwindCSS along and we use the shadcn UI library for UI components. The blog posts are written in the MDX format.
 
 I use the following Prettier config to format our code so make sure to follow them when writing code to ensure consistency:
+
 ```json
 {
   "arrowParens": "avoid",
