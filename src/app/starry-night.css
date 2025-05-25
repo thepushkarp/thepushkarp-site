@@ -1,79 +1,121 @@
 :root {
-  --hl-background-color: hsl(220, 23%, 97%);
-  --hl-background-color-inline: var(--hl-background-color);
-  --hl-border-color: hsl(215, 15%, 85%);
-  --hl-outline-color: hsl(215, 15%, 70%, 0.5);
-  --hl-line-highlight-background-color: hsl(220, 23%, 92%);
-  --hl-line-added-background-color: hsla(103, 96%, 73%, 0.5);
-  --hl-line-removed-background-color: hsla(4, 75%, 83%, 0.5);
-  --hl-line-active-background-color: hsl(220, 23%, 89%);
-  --hl-line-number-added-color: hsl(106, 59%, 27%);
-  --hl-line-number-removed-color: hsl(355, 67%, 41%);
+  --hl-background-color: hsl(220, 25%, 94%);
+  --hl-background-color-inline: hsl(220, 30%, 92%);
+  --hl-border-color: hsl(215, 20%, 80%);
+  --hl-outline-color: hsl(215, 20%, 65%, 0.5);
+  --hl-line-highlight-background-color: hsl(220, 45%, 85%);
+  --hl-line-added-background-color: hsla(103, 80%, 85%, 0.7);
+  --hl-line-removed-background-color: hsla(4, 70%, 88%, 0.7);
+  --hl-line-active-background-color: hsl(220, 40%, 83%);
+  --hl-line-number-added-color: hsl(106, 65%, 25%);
+  --hl-line-number-removed-color: hsl(355, 75%, 38%);
 
-  /* add Starry Night CSS properties for light theme here */
-  --hl-background-color: hsl(220, 23%, 97%);
-  --hl-background-color-inline: var(--hl-background-color);
-  --hl-border-color: hsl(215, 15%, 85%);
-  --hl-outline-color: hsl(215, 15%, 70%, 0.5);
-  --hl-line-highlight-background-color: hsl(220, 23%, 92%);
-  --hl-line-added-background-color: hsla(103, 96%, 73%, 0.5);
-  --hl-line-removed-background-color: hsla(4, 75%, 83%, 0.5);
-  --hl-line-active-background-color: hsl(220, 23%, 89%);
-  --hl-line-number-added-color: hsl(106, 59%, 27%);
-  --hl-line-number-removed-color: hsl(355, 67%, 41%);
+  /* Light theme - improved contrast */
+  --hl-background-color: hsl(220, 25%, 94%);
+  --hl-background-color-inline: hsl(220, 30%, 92%);
+  --hl-border-color: hsl(215, 20%, 80%);
+  --hl-outline-color: hsl(215, 20%, 65%, 0.5);
+  --hl-line-highlight-background-color: hsl(220, 45%, 85%);
+  --hl-line-added-background-color: hsla(103, 80%, 85%, 0.7);
+  --hl-line-removed-background-color: hsla(4, 70%, 88%, 0.7);
+  --hl-line-active-background-color: hsl(220, 40%, 83%);
+  --hl-line-number-added-color: hsl(106, 65%, 25%);
+  --hl-line-number-removed-color: hsl(355, 75%, 38%);
+
+  /* Light theme syntax colors for better contrast */
+  --color-prettylights-syntax-comment: hsl(220, 15%, 45%) !important;
+  --color-prettylights-syntax-constant: hsl(260, 70%, 45%) !important;
+  --color-prettylights-syntax-entity: hsl(280, 60%, 40%) !important;
+  --color-prettylights-syntax-storage-modifier-import: hsl(220, 80%, 35%) !important;
+  --color-prettylights-syntax-entity-tag: hsl(120, 60%, 35%) !important;
+  --color-prettylights-syntax-keyword: hsl(340, 70%, 45%) !important;
+  --color-prettylights-syntax-string: hsl(120, 50%, 35%) !important;
+  --color-prettylights-syntax-variable: hsl(200, 80%, 35%) !important;
+  --color-prettylights-syntax-brackethighlighter-unmatched: hsl(0, 70%, 50%) !important;
+  --color-prettylights-syntax-invalid-illegal: hsl(0, 70%, 50%) !important;
+  --color-prettylights-syntax-carriage-return: hsl(0, 70%, 50%) !important;
+  --color-prettylights-syntax-string-regexp: hsl(30, 70%, 40%) !important;
+  --color-prettylights-syntax-markup-list: hsl(220, 60%, 40%) !important;
+  --color-prettylights-syntax-markup-heading: hsl(220, 80%, 35%) !important;
+  --color-prettylights-syntax-markup-italic: hsl(220, 40%, 40%) !important;
+  --color-prettylights-syntax-markup-bold: hsl(220, 40%, 40%) !important;
+  --color-prettylights-syntax-markup-deleted: hsl(0, 60%, 45%) !important;
+  --color-prettylights-syntax-markup-inserted: hsl(120, 60%, 35%) !important;
+  --color-prettylights-syntax-markup-changed: hsl(30, 70%, 40%) !important;
+  --color-prettylights-syntax-markup-ignored: hsl(220, 15%, 45%) !important;
+  --color-prettylights-syntax-meta-diff-range: hsl(280, 60%, 40%) !important;
+  --color-prettylights-syntax-brackethighlighter-angle: hsl(220, 15%, 45%) !important;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: hsl(220, 15%, 45%) !important;
+  --color-prettylights-syntax-constant-other-reference-link: hsl(200, 80%, 35%) !important;
 }
 
 .dark {
-  --hl-background-color: hsl(216, 18%, 11%);
-  --hl-border-color: hsl(215, 11%, 22%);
-  --hl-outline-color: hsl(215, 11%, 37%, 0.5);
-  --hl-line-highlight-background-color: hsl(218, 14%, 17%);
-  --hl-line-added-background-color: hsla(105, 62%, 20%, 0.5);
-  --hl-line-removed-background-color: hsla(356, 69%, 31%, 0.5);
-  --hl-line-active-background-color: hsl(218, 14%, 20%);
-  --hl-line-number-added-color: hsl(105, 51%, 51%);
-  --hl-line-number-removed-color: hsl(3, 77%, 74%);
+  --hl-background-color: hsl(216, 20%, 8%);
+  --hl-border-color: hsl(215, 15%, 25%);
+  --hl-outline-color: hsl(215, 15%, 40%, 0.5);
+  --hl-line-highlight-background-color: hsl(218, 25%, 18%);
+  --hl-line-added-background-color: hsla(105, 50%, 15%, 0.8);
+  --hl-line-removed-background-color: hsla(356, 60%, 25%, 0.8);
+  --hl-line-active-background-color: hsl(218, 30%, 20%);
+  --hl-line-number-added-color: hsl(105, 60%, 55%);
+  --hl-line-number-removed-color: hsl(3, 80%, 70%);
 
-  /* add Starry Night CSS properties for dark theme here */
-  --hl-background-color: hsl(216, 18%, 11%);
-  --hl-border-color: hsl(215, 11%, 22%);
-  --hl-outline-color: hsl(215, 11%, 37%, 0.5);
-  --hl-line-highlight-background-color: hsl(218, 14%, 17%);
-  --hl-line-added-background-color: hsla(105, 62%, 20%, 0.5);
-  --hl-line-removed-background-color: hsla(356, 69%, 31%, 0.5);
-  --hl-line-active-background-color: hsl(218, 14%, 20%);
-  --hl-line-number-added-color: hsl(105, 51%, 51%);
-  --hl-line-number-removed-color: hsl(3, 77%, 74%);
+  /* Dark theme syntax colors for better contrast */
+  --color-prettylights-syntax-comment: hsl(220, 10%, 65%) !important;
+  --color-prettylights-syntax-constant: hsl(260, 60%, 70%) !important;
+  --color-prettylights-syntax-entity: hsl(280, 50%, 75%) !important;
+  --color-prettylights-syntax-storage-modifier-import: hsl(220, 70%, 75%) !important;
+  --color-prettylights-syntax-entity-tag: hsl(120, 50%, 70%) !important;
+  --color-prettylights-syntax-keyword: hsl(340, 60%, 70%) !important;
+  --color-prettylights-syntax-string: hsl(120, 40%, 70%) !important;
+  --color-prettylights-syntax-variable: hsl(200, 70%, 75%) !important;
+  --color-prettylights-syntax-brackethighlighter-unmatched: hsl(0, 70%, 70%) !important;
+  --color-prettylights-syntax-invalid-illegal: hsl(0, 70%, 70%) !important;
+  --color-prettylights-syntax-carriage-return: hsl(0, 70%, 70%) !important;
+  --color-prettylights-syntax-string-regexp: hsl(30, 60%, 75%) !important;
+  --color-prettylights-syntax-markup-list: hsl(220, 50%, 75%) !important;
+  --color-prettylights-syntax-markup-heading: hsl(220, 70%, 80%) !important;
+  --color-prettylights-syntax-markup-italic: hsl(220, 30%, 75%) !important;
+  --color-prettylights-syntax-markup-bold: hsl(220, 30%, 75%) !important;
+  --color-prettylights-syntax-markup-deleted: hsl(0, 50%, 70%) !important;
+  --color-prettylights-syntax-markup-inserted: hsl(120, 50%, 70%) !important;
+  --color-prettylights-syntax-markup-changed: hsl(30, 60%, 75%) !important;
+  --color-prettylights-syntax-markup-ignored: hsl(220, 10%, 65%) !important;
+  --color-prettylights-syntax-meta-diff-range: hsl(280, 50%, 75%) !important;
+  --color-prettylights-syntax-brackethighlighter-angle: hsl(220, 10%, 65%) !important;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: hsl(220, 10%, 65%) !important;
+  --color-prettylights-syntax-constant-other-reference-link: hsl(200, 70%, 75%) !important;
 }
 
 .hl {
   --hlFontFamilyMono: 'GeistMono', ui-monospace, SFMono-Regular, 'Roboto Mono', Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
   --hlFontFamilyCode: var(--hl-font-mono, var(--hlFontFamilyMono));
-  --hlBgColor: var(--hl-background-color, hsl(220, 23%, 97%));
+  --hlBgColor: var(--hl-background-color, hsl(220, 25%, 94%));
   --hlBorderThickness: var(--hl-border-thickness, 1px);
-  --hlBorderColor: var(--hl-border-color, hsl(215, 15%, 85%));
+  --hlBorderColor: var(--hl-border-color, hsl(215, 20%, 80%));
   --hlBorderRadius: var(--hl-border-radius, 12px);
   --hlBorderRadiusSm: calc(var(--hlBorderRadius) / 2);
   --hlOutlineThickness: var(--hl-outline-thickness, 5px);
-  --hlOutlineColor: var(--hl-outline-color, hsl(215, 15%, 85%));
+  --hlOutlineColor: var(--hl-outline-color, hsl(215, 20%, 65%));
   --hlLineGap: var(--hl-line-gap, 1ex);
   --hlLineBorderWidth: var(--hl-line-border-width, 2px);
   --hlLineBorderColor: var(--hl-line-border-color, transparent);
-  --hlLineNumberColor: var(--hl-line-number-color, var(--color-prettylights-syntax-sublimelinter-gutter-mark));
+  --hlLineNumberColor: var(--hl-line-number-color, hsl(220, 15%, 45%));
   --hlLineBgColor: transparent;
-  --hlLineActiveBgColor: var(--hl-line-active-background-color, hsl(220, 23%, 89%));
-  --hlLineHighlightBgColor: var(--hl-line-highlight-background-color, hsl(220, 23%, 92%));
-  --hlLineAddedBgColor: var(--hl-line-added-background-color, hsl(103, 96%, 73%, 0.5));
-  --hlLineRemovedBgColor: var(--hl-line-removed-background-color, hsl(4, 75%, 83%, 0.5));
-  --hlLineNumberAddedColor: var(--hl-line-number-added-color, hsl(106, 59%, 27%));
-  --hlLineNumberRemovedColor: var(--hl-line-number-removed-color, hsl(355, 67%, 41%));
+  --hlLineActiveBgColor: var(--hl-line-active-background-color, hsl(220, 40%, 83%));
+  --hlLineHighlightBgColor: var(--hl-line-highlight-background-color, hsl(220, 45%, 85%));
+  --hlLineAddedBgColor: var(--hl-line-added-background-color, hsla(103, 80%, 85%, 0.7));
+  --hlLineRemovedBgColor: var(--hl-line-removed-background-color, hsla(4, 70%, 88%, 0.7));
+  --hlLineNumberAddedColor: var(--hl-line-number-added-color, hsl(106, 65%, 25%));
+  --hlLineNumberRemovedColor: var(--hl-line-number-removed-color, hsl(355, 75%, 38%));
   --hlLinePromptColor: var(--hl-line-prompt-color, hsl(357, 63%, 58%));
   --hlLinePromptSize: 1em;
 
   background-color: var(--hlBgColor);
   border: var(--hlBorderThickness) solid var(--hlBorderColor);
   border-radius: var(--hlBorderRadius);
+  color: hsl(var(--foreground));
 }
 
 .hl-header {
@@ -91,6 +133,8 @@
   padding: 0.75ch 1ch;
   border-radius: var(--hlBorderRadiusSm);
   background-color: var(--hlLineHighlightBgColor);
+  color: hsl(var(--foreground));
+  font-weight: 500;
 }
 
 .hl pre {
@@ -220,11 +264,19 @@
 }
 
 code.hl-inline {
-  --hlBgInline: var(--hl-background-color-inline, hsl(208, 21%, 14%));
+  --hlBgInline: var(--hl-background-color-inline, hsl(220, 30%, 92%));
   font-family: var(--hl-font-mono);
   background-color: var(--hlBgInline);
   padding-left: 0.5ch;
   padding-right: 0.5ch;
   font-size: 0.95em;
   border-radius: 0.5ch;
+}
+
+.dark code.hl-inline {
+  --hlBgInline: hsl(216, 25%, 12%);
+}
+
+.dark .hl {
+  --hlLineNumberColor: hsl(220, 10%, 65%);
 }

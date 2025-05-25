@@ -1,7 +1,7 @@
 @import 'katex/dist/katex.min.css';
 @import 'rehype-callouts/theme/obsidian';
-@import './starry-night.css';
 @import '@wooorm/starry-night/style/both';
+@import './starry-night.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,7 +36,7 @@
     --font-geist-sans: 'GeistSans', sans-serif;
     --font-geist-mono: 'GeistMono', monospace;
     --font-departure-mono: 'DepartureMono', monospace;
-    --selection-bg: 210 65% 85%;
+    --selection-bg: 210 80% 80%;
     --progress-bar: 210 100% 50%;
     --visited-link-color: 280 70% 45%;
   }
@@ -66,7 +66,7 @@
     --chart-3: 30 70% 60%;
     --chart-4: 30 60% 65%;
     --chart-5: 30 50% 45%;
-    --selection-bg: 32 90% 30%;
+    --selection-bg: 32 70% 25%;
     --progress-bar: 32 95% 50%;
     --visited-link-color: 280 40% 50%;
   }
