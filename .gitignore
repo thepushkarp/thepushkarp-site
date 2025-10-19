@@ -4,7 +4,19 @@
 /node_modules
 /.pnp
 .pnp.js
+
+# Yarn Berry (v4)
+# Keep .yarn/releases and .yarnrc.yml tracked for reproducible builds
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.yarn/cache
 .yarn/install-state.gz
+.yarn/build-state.yml
+.yarn/unplugged
 
 # testing
 /coverage
@@ -20,6 +32,7 @@
 .DS_Store
 *.pem
 .vscode
+.idea
 
 # debug
 npm-debug.log*
