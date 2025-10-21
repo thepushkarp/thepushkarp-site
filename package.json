@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && yarn generate:feeds && yarn generate:sitemap",
+    "build": "tsc && vite build && npm run generate:feeds && npm run generate:sitemap",
     "preview": "vite preview",
     "generate:feeds": "tsx scripts/generate-feeds.ts",
     "generate:sitemap": "tsx scripts/generate-sitemap.ts",
@@ -86,9 +86,8 @@
     "typescript": "^5.9.3",
     "vite": "^6.0.11"
   },
-  "resolutions": {
+  "overrides": {
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
-  },
-  "packageManager": "yarn@4.10.3"
+  }
 }
