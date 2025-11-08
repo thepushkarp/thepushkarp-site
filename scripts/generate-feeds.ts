@@ -17,10 +17,14 @@ function escapeXml(unsafe: string): string {
 
 async function generateFeeds() {
   const distDir = path.join(process.cwd(), 'dist');
+  const publicDir = path.join(process.cwd(), 'public');
 
-  // Ensure dist directory exists
+  // Ensure directories exist
   if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
+  }
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
   }
 
   const feed = new Feed({
@@ -114,11 +118,21 @@ async function generateFeeds() {
   }
 
   // Generate feeds
-  fs.writeFileSync(path.join(distDir, 'rss.xml'), feed.rss2());
-  fs.writeFileSync(path.join(distDir, 'atom.xml'), feed.atom1());
-  fs.writeFileSync(path.join(distDir, 'feed.json'), feed.json1());
+  const rssContent = feed.rss2();
+  const atomContent = feed.atom1();
+  const jsonContent = feed.json1();
 
-  console.log('✅ Generated RSS, Atom, and JSON feeds');
+  // Write to dist directory (for production builds)
+  fs.writeFileSync(path.join(distDir, 'rss.xml'), rssContent);
+  fs.writeFileSync(path.join(distDir, 'atom.xml'), atomContent);
+  fs.writeFileSync(path.join(distDir, 'feed.json'), jsonContent);
+
+  // Write to public directory (for dev server)
+  fs.writeFileSync(path.join(publicDir, 'rss.xml'), rssContent);
+  fs.writeFileSync(path.join(publicDir, 'atom.xml'), atomContent);
+  fs.writeFileSync(path.join(publicDir, 'feed.json'), jsonContent);
+
+  console.log('✅ Generated RSS, Atom, and JSON feeds in dist/ and public/');
 }
 
 generateFeeds();

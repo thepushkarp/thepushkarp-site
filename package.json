@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "yarn generate:feeds && vite",
     "build": "tsc && vite build && yarn generate:feeds && yarn generate:sitemap",
     "preview": "vite preview",
     "generate:feeds": "tsx scripts/generate-feeds.ts",

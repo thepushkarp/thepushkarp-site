@@ -17,6 +17,11 @@ pnpm-lock.yaml
 dist-ssr
 *.local
 
+# generated feeds (generated at build time)
+/public/rss.xml
+/public/atom.xml
+/public/feed.json
+
 # production
 /build
 
