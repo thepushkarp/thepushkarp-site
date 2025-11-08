@@ -5,25 +5,16 @@
 /.pnp
 .pnp.js
 
-# Yarn Berry (v4)
-# Keep .yarn/releases and .yarnrc.yml tracked for reproducible builds
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-.yarn/cache
-.yarn/install-state.gz
-.yarn/build-state.yml
-.yarn/unplugged
+# lockfiles (using npm only, ignore yarn)
+yarn.lock
 
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# vite
+/dist
+dist-ssr
+*.local
 
 # production
 /build
