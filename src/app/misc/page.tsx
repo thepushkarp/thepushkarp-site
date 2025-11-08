@@ -1,6 +1,6 @@
-import { baseUrl } from '@/app/sitemap';
-
 import MiscMdx from './misc.mdx';
+
+import { baseUrl } from '@/app/sitemap';
 
 export const metadata = {
   title: 'miscellaneous',

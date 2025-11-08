@@ -5,8 +5,9 @@
 /.pnp
 .pnp.js
 
-# lockfiles (using npm only, ignore yarn)
-yarn.lock
+# lockfiles (using yarn, ignore others)
+package-lock.json
+pnpm-lock.yaml
 
 # testing
 /coverage

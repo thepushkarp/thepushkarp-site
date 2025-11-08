@@ -1,12 +1,12 @@
 import '@/app/globals.css';
 
+import Footer from '../footer';
+import { Navbar } from '../nav';
+
 import { GoogleAnalytics } from '@/components/googleAnalytics';
 import ReadingProgressBar from '@/components/readingProgressBar';
 import ScrollToTopButton from '@/components/scrollToTopButton';
 import { ThemeProvider } from '@/components/themeProvider';
-
-import Footer from '../footer';
-import { Navbar } from '../nav';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

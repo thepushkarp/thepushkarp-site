@@ -1,6 +1,6 @@
-import { baseUrl } from '@/app/sitemap';
-
 import EtymologyMdx from './etymology.mdx';
+
+import { baseUrl } from '@/app/sitemap';
 
 export const metadata = {
   title: 'etymology',

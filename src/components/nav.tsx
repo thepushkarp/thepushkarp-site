@@ -2,10 +2,10 @@ import { Menu } from 'lucide-react';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+import { GlowingDot } from './glowingDot';
+
 import ThemeToggle from '@/components/themeToggle';
 import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
-
-import { GlowingDot } from './glowingDot';
 
 const navItems = [
   {

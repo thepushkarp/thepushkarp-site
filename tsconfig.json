@@ -32,9 +32,8 @@
     "allowJs": true,
     "esModuleInterop": true,
     "incremental": true,
-    "types": ["vite/client"]
+    "types": ["vite/client", "node"]
   },
-  "include": ["src", "scripts"],
-  "exclude": ["node_modules", "dist"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "scripts"]
 }

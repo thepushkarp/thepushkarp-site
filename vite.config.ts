@@ -1,10 +1,10 @@
+import { execSync } from 'child_process';
+
 import mdx from '@mdx-js/rollup';
 import rehypeStarryNight, { defaultPluginPack } from '@microflash/rehype-starry-night';
 import rehypeStarryNightInline from '@microflash/rehype-starry-night/rehype-starry-night-inline';
 import remarkInlineCodeLang from '@microflash/rehype-starry-night/remark-inline-code-lang';
 import react from '@vitejs/plugin-react';
-import { execSync } from 'child_process';
-import { defineConfig } from 'vite';
 import rehypeCallouts from 'rehype-callouts';
 import rehypeKatex from 'rehype-katex';
 import rehypeSlug from 'rehype-slug';
@@ -15,6 +15,7 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import remarkToc from 'remark-toc';
+import { defineConfig } from 'vite';
 
 // Plugin to generate blog data before build
 function generateBlogDataPlugin() {

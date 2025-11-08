@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && npm run generate:feeds && npm run generate:sitemap",
+    "build": "tsc && vite build && yarn generate:feeds && yarn generate:sitemap",
     "preview": "vite preview",
     "generate:feeds": "tsx scripts/generate-feeds.ts",
     "generate:sitemap": "tsx scripts/generate-sitemap.ts",
@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
-    "@types/node": "^24.8.1",
+    "@types/node": "^24.10.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@typescript-eslint/eslint-plugin": "^8.46.1",

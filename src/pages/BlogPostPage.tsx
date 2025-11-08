@@ -2,15 +2,15 @@ import { Suspense, useMemo, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 
+import NotFoundPage from './NotFoundPage';
+
 import blogPosts from '@/data/blog-posts.json';
 import { formatDate } from '@/lib/utils';
-
-import NotFoundPage from './NotFoundPage';
 
 const baseUrl = 'https://thepushkarp.com';
 
 // Import all MDX files at once using Vite's glob import
-const mdxModules = import.meta.glob('@/app/blog/posts/*.mdx');
+const mdxModules = import.meta.glob('/src/app/blog/posts/*.mdx');
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -30,11 +30,8 @@ export default function BlogPostPage() {
   }
 
   const {
-    metadata: { title, subtitle, cleanTitle: originalCleanTitle, cleanSubtitle: originalCleanSubtitle },
+    metadata: { title, subtitle },
   } = post;
-
-  const cleanTitle = originalCleanTitle || title;
-  const cleanSubtitle = originalCleanSubtitle || subtitle;
 
   return (
     <>
