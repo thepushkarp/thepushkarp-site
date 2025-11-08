@@ -1,5 +1,3 @@
-'use client';
-
 import { ArrowUpIcon } from '@radix-ui/react-icons';
 import { useState, useEffect } from 'react';
 

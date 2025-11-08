@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "todo",
+    "metadata": {
+      "title": "todo.txt",
+      "slug": "todo",
+      "publishedAt": "2024-08-13",
+      "subtitle": "all blogs are currently in my mind's latent space and i'm fighting to get them out...",
+      "cleanTitle": "todo dot txt",
+      "cleanSubtitle": "all blogs are currently in my mind's latent space and i'm fighting to get them out",
+      "lastModifiedAt": "2024-08-13",
+      "tags": [
+        "todo",
+        "init"
+      ]
+    },
+    "filename": "todo.mdx"
+  }
+]

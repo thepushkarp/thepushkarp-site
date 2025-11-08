@@ -1,8 +1,6 @@
-'use client';
-
 import { useState, useEffect } from 'react';
 
-import timeDict from '../../public/data/time_dict.json';
+import timeDict from '@/data/time_dict.json';
 
 export function TimeDisplay() {
   const [mounted, setMounted] = useState(false);

@@ -1,6 +1,6 @@
-import { baseUrl } from '@/app/sitemap';
-
 import AiLogMdx from './ai-log.mdx';
+
+import { baseUrl } from '@/app/sitemap';
 
 export const metadata = {
   title: 'ai-log',

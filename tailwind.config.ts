@@ -15,8 +15,9 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-geist-sans)', ...fontFamily.sans],
-        mono: ['var(--font-geist-mono)', ...fontFamily.mono],
+        sans: ['GeistSans', ...fontFamily.sans],
+        mono: ['GeistMono', ...fontFamily.mono],
+        'departure-mono': ['DepartureMono', ...fontFamily.mono],
       },
       colors: {
         border: 'hsl(var(--border))',

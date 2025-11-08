@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useState } from 'react';
 
 import { MIN_SCROLLABLE_HEIGHT } from '@/constants';
