@@ -1,4 +1,6 @@
+import type { MDXComponents } from 'mdx/types';
 import { Suspense, useMemo, lazy } from 'react';
+import type { ComponentType, LazyExoticComponent } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 
@@ -6,23 +8,27 @@ import NotFoundPage from './NotFoundPage';
 
 import blogPosts from '@/data/blog-posts.json';
 import { formatDate } from '@/lib/utils';
+import { useMDXComponents } from '@/mdx-components';
 
 const baseUrl = 'https://thepushkarp.com';
+type MdxContentComponent = ComponentType<{ components?: MDXComponents }>;
+type MdxModule = { default: MdxContentComponent };
 
 // Import all MDX files at once using Vite's glob import
-const mdxModules = import.meta.glob('/src/app/blog/posts/*.mdx');
+const mdxModules = import.meta.glob<MdxModule>('/src/app/blog/posts/*.mdx');
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find(p => p.slug === slug);
+  const mdxComponents = useMDXComponents({});
 
   // Dynamically import the MDX component
-  const MdxComponent = useMemo(() => {
+  const MdxComponent = useMemo<LazyExoticComponent<MdxContentComponent> | null>(() => {
     if (!post) return null;
     const path = `/src/app/blog/posts/${post.filename}`;
     const importFn = mdxModules[path];
     if (!importFn) return null;
-    return lazy(() => importFn().then((mod: any) => ({ default: mod.default })));
+    return lazy(() => importFn().then(mod => ({ default: mod.default })));
   }, [post]);
 
   if (!post || !MdxComponent) {
@@ -72,7 +78,7 @@ export default function BlogPostPage() {
         </div>
         <article className="prose">
           <Suspense fallback={<div>Loading...</div>}>
-            <MdxComponent />
+            <MdxComponent components={mdxComponents} />
           </Suspense>
         </article>
       </section>

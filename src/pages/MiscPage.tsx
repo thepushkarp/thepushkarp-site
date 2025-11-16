@@ -1,12 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 
 import MiscMdx from '@/app/misc/misc.mdx';
+import { useMDXComponents } from '@/mdx-components';
 
 const baseUrl = 'https://thepushkarp.com';
 
 export default function MiscPage() {
   const title = 'miscellaneous';
   const description = 'a potpourri of things i find interesting';
+  const mdxComponents = useMDXComponents({});
 
   return (
     <>
@@ -35,7 +37,7 @@ export default function MiscPage() {
         <h1 className="font-semibold text-3xl mb-2 tracking-tighter">{title}</h1>
         <p className="text-muted-foreground mb-8">{description}</p>
         <article className="prose">
-          <MiscMdx />
+          <MiscMdx components={mdxComponents} />
         </article>
       </section>
     </>

@@ -123,14 +123,16 @@
 
   .custom-link {
     @apply relative inline-flex flex-row items-center justify-start content-start w-fit text-primary transition-colors;
-    text-decoration-color: transparent;
-  }
-  .custom-link::before {
-    content: '';
-    @apply absolute bottom-0 left-0 w-full h-0 -z-10 bg-primary/10 transition-all duration-200 ease-out;
+    text-decoration: none;
   }
 
-  .custom-link:hover::before {
+  .custom-link::before {
+    content: '';
+    @apply absolute inset-x-0 bottom-0 w-full h-0 rounded-sm -z-10 bg-primary/10 transition-all duration-200 ease-out;
+  }
+
+  .custom-link:hover::before,
+  .custom-link:focus-visible::before {
     @apply h-full;
   }
 
@@ -304,19 +306,9 @@
       text-decoration: none;
     }
 
-    /* Ensure custom-link styles take precedence over generic a styles */
+    /* Ensure anchor markdown still gets the shared custom-link styles */
     .custom-link {
-      @apply relative inline-flex flex-row items-center justify-start content-start w-fit text-primary transition-colors;
       text-decoration: none !important;
-    }
-
-    .custom-link::before {
-      content: '';
-      @apply absolute bottom-0 left-0 w-full h-0 -z-10 bg-primary/10 transition-all duration-200 ease-out;
-    }
-
-    .custom-link:hover::before {
-      @apply h-full;
     }
 
     ul {

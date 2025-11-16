@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 import IndexMdx from '@/app/index.mdx';
 import { TimeDisplay } from '@/components/TimeDisplay';
+import { useMDXComponents } from '@/mdx-components';
 
 const baseUrl = 'https://thepushkarp.com';
 
@@ -10,6 +11,7 @@ export default function HomePage() {
     width: 128,
     height: 128,
   };
+  const mdxComponents = useMDXComponents({});
 
   return (
     <>
@@ -50,7 +52,7 @@ export default function HomePage() {
                   className="w-full h-auto"
                 />
               </div>
-              <IndexMdx />
+              <IndexMdx components={mdxComponents} />
             </article>
           </section>
         </div>

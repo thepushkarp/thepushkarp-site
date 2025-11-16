@@ -1,12 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 
 import EtymologyMdx from '@/app/etymology/etymology.mdx';
+import { useMDXComponents } from '@/mdx-components';
 
 const baseUrl = 'https://thepushkarp.com';
 
 export default function EtymologyPage() {
   const title = 'etymology';
-  const description = 'a look into the origins of words and phrases';
+  const description = 'word origins i found interesting';
+  const mdxComponents = useMDXComponents({});
 
   return (
     <>
@@ -35,7 +37,7 @@ export default function EtymologyPage() {
         <h1 className="font-semibold text-3xl mb-2 tracking-tighter">{title}</h1>
         <p className="text-muted-foreground mb-8">{description}</p>
         <article className="prose">
-          <EtymologyMdx />
+          <EtymologyMdx components={mdxComponents} />
         </article>
       </section>
     </>
