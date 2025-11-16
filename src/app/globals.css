@@ -147,7 +147,8 @@
   }
 
   a {
-    @apply decoration-muted-foreground decoration-[0.05em];
+    /* Links are styled by ImprovedLink component - no default underline */
+    text-decoration: none;
   }
 
   h1,
@@ -296,7 +297,8 @@
     }
 
     a {
-      @apply transition-all underline underline-offset-2 decoration-[0.1em];
+      /* Custom link styles are handled by the ImprovedLink component */
+      /* No default underline - links use colored text with background highlight on hover */
     }
 
     ul {

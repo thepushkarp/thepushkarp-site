@@ -6,7 +6,7 @@
     "dev": "yarn copy:fonts && yarn generate:feeds && vite",
     "build": "yarn copy:fonts && tsc && vite build && yarn generate:feeds && yarn generate:sitemap",
     "preview": "vite preview",
-    "copy:fonts": "mkdir -p public/fonts/geist-sans public/fonts/geist-mono && cp node_modules/geist/dist/fonts/geist-sans/Geist-Variable.woff2 public/fonts/geist-sans/ && cp node_modules/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2 public/fonts/geist-mono/",
+    "copy:fonts": "mkdir -p public/fonts/geist-sans public/fonts/geist-mono && (test -f node_modules/geist/dist/fonts/geist-sans/Geist-Variable.woff2 && cp node_modules/geist/dist/fonts/geist-sans/Geist-Variable.woff2 public/fonts/geist-sans/ && cp node_modules/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2 public/fonts/geist-mono/ || echo 'Fonts already in public/, skipping copy')",
     "generate:feeds": "tsx scripts/generate-feeds.ts",
     "generate:sitemap": "tsx scripts/generate-sitemap.ts",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
