@@ -44,46 +44,33 @@ yarn format
 
 ### Framework & Structure
 
-- **Next.js 15** with App Router (React 19)
+- **React 19** SPA powered by **Vite 7**
+- **React Router v6** for client-side routing
 - **TypeScript** with strict type checking
-- **Yarn v4** as package manager
+- **Yarn v4** (node_modules linker) as package manager
 - MDX-based content management for blog posts and pages
 
 ### Directory Organization
 
 ```
 src/
-├── app/                    # Next.js App Router pages
-│   ├── blog/              # Blog section
-│   │   ├── posts/         # MDX blog posts
-│   │   └── utils.ts       # Blog post loading utilities
-│   ├── ai-log/            # AI experiments log
-│   ├── etymology/         # Etymology content
-│   ├── misc/              # Miscellaneous page
-│   ├── projects/          # Projects showcase
-│   ├── og/                # Open Graph image generation
-│   ├── rss.xml/           # RSS feed route
-│   ├── atom.xml/          # Atom feed route
-│   ├── feed.json/         # JSON feed route
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Homepage (renders index.mdx)
-│   ├── globals.css        # Global styles & CSS variables
-│   └── starry-night.css   # Syntax highlighting styles
-├── components/            # React components
-│   ├── ui/                # shadcn/ui components
-│   ├── nav.tsx            # Navigation bar
-│   ├── footer.tsx         # Footer component
-│   ├── themeToggle.tsx    # Dark/light theme switcher
-│   ├── linkedHeading.tsx  # Headings with anchor links
-│   ├── improvedLink.tsx   # Enhanced link component with external indicators
-│   ├── readingProgressBar.tsx
-│   ├── scrollToTopButton.tsx
-│   └── TimeDisplay.tsx    # Rhyme clock on homepage
-├── lib/                   # Utility functions
-│   ├── utils.ts           # Common utilities (cn, formatDate, etc.)
-│   └── feed.ts            # RSS/Atom feed generation
-├── images/                # Static images imported in components
-└── mdx-components.tsx     # Global MDX component mappings
+├── app/                    # Shared MDX content, global styles
+│   ├── blog/posts/         # MDX blog posts
+│   ├── ai-log/             # Section MDX files
+│   ├── etymology/
+│   ├── misc/
+│   ├── projects/
+│   ├── globals.css         # Global styles & CSS variables
+│   └── starry-night.css    # Syntax highlighting styles
+├── components/             # React components (layout, nav, ui, etc.)
+│   └── ui/                 # shadcn/ui primitives
+├── data/                   # Generated data (blog-posts.json)
+├── pages/                  # React Router route components
+├── scripts/                # Node scripts (feeds, sitemap, blog data)
+├── lib/                    # Utilities (cn, helper functions, feed generation)
+├── App.tsx                 # Router definitions
+├── main.tsx                # React entry point (BrowserRouter + Helmet)
+└── vite.config.ts          # Vite + MDX configuration
 ```
 
 ### Key Architectural Patterns
@@ -91,21 +78,22 @@ src/
 #### MDX Content Pipeline
 
 1. **Blog Posts**: Stored as MDX files in `src/app/blog/posts/`
-2. **Frontmatter**: Parsed using `gray-matter` in `src/app/blog/utils.ts`
+2. **Frontmatter**: Parsed at build time by `scripts/generate-blog-data.ts`
+   which outputs `src/data/blog-posts.json`
 3. **Required frontmatter fields**:
    - `title`: Post title
    - `slug`: URL-friendly identifier
    - `publishedAt`: Publication date (YYYY-MM-DD)
    - `subtitle`: Short description
    - Optional: `cleanTitle`, `cleanSubtitle`, `lastModifiedAt`, `tags`
-4. **Processing**: Extensive remark/rehype plugin chain (see next.config.mjs)
+4. **Processing**: Vite MDX plugin chain configured in `vite.config.ts`
 5. **Component overrides**: Defined in `src/mdx-components.tsx`
    - All links use `ImprovedLink` (adds external link indicators)
    - All headings use `LinkedHeading` (adds anchor links)
 
 #### MDX Plugin Stack
 
-Configured in `next.config.mjs`:
+Configured in `vite.config.ts`:
 
 **Remark plugins** (Markdown → AST):
 
@@ -127,7 +115,7 @@ Configured in `next.config.mjs`:
 
 #### Styling System
 
-- **Tailwind CSS**: Utility-first styling
+- **Tailwind CSS 3.4**: Utility-first styling (configured in `tailwind.config.ts`)
 - **CSS Variables**: Theme colors defined in `src/app/globals.css`
 - **shadcn/ui**: Component library (configured in `components.json`)
   - Base color: slate
@@ -195,7 +183,6 @@ Configured in `tsconfig.json`:
 
 ## Deployment
 
-- Hosted on **Vercel**
-- Custom headers configured in `vercel.json` (security headers)
-- Additional CSP headers in `next.config.mjs`
+- Hosted on **Vercel** (SPA rewrite directs all routes to `index.html`)
+- Custom security headers configured in `vercel.json`
 - Automatic deployments on push to main branch
