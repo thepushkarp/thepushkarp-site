@@ -147,7 +147,8 @@
   }
 
   a {
-    /* Links are styled by ImprovedLink component - no default underline */
+    /* Links are styled by ImprovedLink component - colored text, no underline */
+    @apply text-primary;
     text-decoration: none;
   }
 
@@ -298,7 +299,9 @@
 
     a {
       /* Custom link styles are handled by the ImprovedLink component */
-      /* No default underline - links use colored text with background highlight on hover */
+      /* Links use colored text with background highlight on hover - no underline */
+      @apply text-primary;
+      text-decoration: none;
     }
 
     ul {
