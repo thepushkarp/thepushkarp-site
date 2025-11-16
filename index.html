@@ -10,6 +10,27 @@
     <link rel="icon" href="/images/favicon.svg" sizes="any" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180" type="image/png" />
 
+    <!-- Connection Hints -->
+    <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
+    <link rel="preconnect" href="https://va.vercel-scripts.com" crossorigin />
+    <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
+    <link rel="preconnect" href="https://vitals.vercel-insights.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+    <!-- Hero Preload -->
+    <link
+      rel="preload"
+      as="image"
+      href="/images/avatar.webp"
+      type="image/webp"
+      imagesrcset="/images/avatar.webp 1x, /images/avatar.png 2x"
+      imagesizes="(max-width: 768px) 45vw, 256px"
+      fetchpriority="high"
+    />
+
     <!-- Font Preload -->
     <link rel="preload" href="/fonts/DepartureMono-Regular.woff2" as="font" type="font/woff2" crossorigin />
 
@@ -17,11 +38,6 @@
     <title>pushkar patel</title>
     <meta name="description" content="pushkar's site." />
 
-    <!-- Content Security Policy -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://va.vercel-scripts.com https://*.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.vercel.app https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; connect-src 'self' https://*.vercel.app https://vitals.vercel-insights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;"
-    />
   </head>
   <body>
     <div id="root"></div>

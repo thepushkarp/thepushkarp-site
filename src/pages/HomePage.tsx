@@ -44,13 +44,20 @@ export default function HomePage() {
           <section className="w-full">
             <article className="prose relative">
               <div className="float-right ml-4 mb-4 w-[35%] max-w-[256px] min-w-[64px]">
-                <img
-                  src="/images/favicon.svg"
-                  alt="Pushkar"
-                  width={imgDimensions.width}
-                  height={imgDimensions.height}
-                  className="w-full h-auto"
-                />
+                <picture>
+                  <source srcSet="/images/avatar.webp" type="image/webp" />
+                  <source srcSet="/images/avatar.png" type="image/png" />
+                  <img
+                    src="/images/avatar.png"
+                    alt="Pushkar"
+                    width={imgDimensions.width}
+                    height={imgDimensions.height}
+                    className="w-full h-auto rounded-2xl"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <IndexMdx components={mdxComponents} />
             </article>
