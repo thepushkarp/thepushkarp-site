@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 
 export function RevealMail({ placeholder, isLink }: { placeholder: string; isLink: boolean }) {

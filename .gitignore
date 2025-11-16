@@ -5,25 +5,22 @@
 /.pnp
 .pnp.js
 
-# Yarn Berry (v4)
-# Keep .yarn/releases and .yarnrc.yml tracked for reproducible builds
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-.yarn/cache
-.yarn/install-state.gz
-.yarn/build-state.yml
-.yarn/unplugged
+# lockfiles (using yarn, ignore others)
+package-lock.json
+pnpm-lock.yaml
 
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# vite
+/dist
+dist-ssr
+*.local
+
+# generated feeds (generated at build time)
+/public/rss.xml
+/public/atom.xml
+/public/feed.json
 
 # production
 /build
@@ -49,3 +46,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local development scripts
+/scripts/local

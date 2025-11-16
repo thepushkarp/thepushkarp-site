@@ -1,14 +1,11 @@
-'use client';
-
 import { Menu } from 'lucide-react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
+import { GlowingDot } from './glowingDot';
 
 import ThemeToggle from '@/components/themeToggle';
 import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
-
-import { GlowingDot } from './glowingDot';
 
 const navItems = [
   {
@@ -32,7 +29,8 @@ const navItems = [
 const itemsWithGlowingDot: string[] = [];
 
 export function Navbar() {
-  const pathname = usePathname();
+  const location = useLocation();
+  const pathname = location.pathname;
   const [activeIndex, setActiveIndex] = useState<number>(-1);
   const [isOpen, setIsOpen] = useState(false);
   const navRefs = useRef<(HTMLAnchorElement | null)[]>([]);
@@ -69,7 +67,7 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="left">
               <SheetHeader>
-                <Link href="/" onClick={() => setIsOpen(false)}>
+                <Link to="/" onClick={() => setIsOpen(false)}>
                   <SheetTitle className="text-left cursor-pointer hover:text-primary transition-colors font-geist-mono">
                     pushkar patel
                   </SheetTitle>
@@ -81,11 +79,10 @@ export function Navbar() {
                   return (
                     <Link
                       key={path}
-                      href={path}
-                      passHref
+                      to={path}
                       onClick={() => handleNavigation(index)}
                       ref={el => {
-                        navRefs.current[index] = el;
+                        navRefs.current[Number(index)] = el;
                       }}
                       className={`w-full text-left py-2 px-4 rounded-md ${
                         isActive ? 'text-primary' : 'text-muted-foreground hover:text-primary'
@@ -120,12 +117,11 @@ export function Navbar() {
             return (
               <Link
                 key={path}
-                href={path}
-                passHref
+                to={path}
                 onMouseEnter={() => setActiveIndex(Number(index))}
                 onMouseLeave={() => setActiveIndex(getCurrentPageIndex())}
                 ref={el => {
-                  navRefs.current[index] = el;
+                  navRefs.current[Number(index)] = el;
                 }}
                 className={`group relative transition-colors py-1 px-3 lg:py-2 lg:px-5 rounded-md ${
                   isActive ? 'text-primary' : 'text-muted-foreground hover:text-muted-foreground'

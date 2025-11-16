@@ -1,5 +1,3 @@
-'use client';
-
 import ImprovedLink from './improvedLink';
 import { RevealMail } from './revealMail';
 

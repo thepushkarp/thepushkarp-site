@@ -2,6 +2,34 @@
 @import 'rehype-callouts/theme/obsidian';
 @import '@wooorm/starry-night/style/both';
 @import './starry-night.css';
+
+/* Geist Sans Font - Variable Font */
+@font-face {
+  font-family: 'GeistSans';
+  src: url('/fonts/geist-sans/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Geist Mono Font - Variable Font */
+@font-face {
+  font-family: 'GeistMono';
+  src: url('/fonts/geist-mono/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Departure Mono Font */
+@font-face {
+  font-family: 'DepartureMono';
+  src: url('/fonts/DepartureMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -95,14 +123,16 @@
 
   .custom-link {
     @apply relative inline-flex flex-row items-center justify-start content-start w-fit text-primary transition-colors;
-    text-decoration-color: transparent;
-  }
-  .custom-link::before {
-    content: '';
-    @apply absolute bottom-0 left-0 w-full h-0 -z-10 bg-primary/10 transition-all duration-200 ease-out;
+    text-decoration: none;
   }
 
-  .custom-link:hover::before {
+  .custom-link::before {
+    content: '';
+    @apply absolute inset-x-0 bottom-0 w-full h-0 rounded-sm -z-10 bg-primary/10 transition-all duration-200 ease-out;
+  }
+
+  .custom-link:hover::before,
+  .custom-link:focus-visible::before {
     @apply h-full;
   }
 
@@ -119,7 +149,9 @@
   }
 
   a {
-    @apply decoration-muted-foreground decoration-[0.05em];
+    /* Links are styled by ImprovedLink component - colored text, no underline */
+    @apply text-primary;
+    text-decoration: none;
   }
 
   h1,
@@ -164,7 +196,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 
   hr {
@@ -268,7 +300,15 @@
     }
 
     a {
-      @apply transition-all underline underline-offset-2 decoration-[0.1em];
+      /* Custom link styles are handled by the ImprovedLink component */
+      /* Links use colored text with background highlight on hover - no underline */
+      @apply text-primary;
+      text-decoration: none;
+    }
+
+    /* Ensure anchor markdown still gets the shared custom-link styles */
+    .custom-link {
+      text-decoration: none !important;
     }
 
     ul {
