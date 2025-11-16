@@ -88,8 +88,9 @@
 }
 
 .hl {
-  --hlFontFamilyMono: 'GeistMono', ui-monospace, SFMono-Regular, 'Roboto Mono', Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+  --hlFontFamilyMono:
+    'GeistMono', ui-monospace, SFMono-Regular, 'Roboto Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
   --hlFontFamilyCode: var(--hl-font-mono, var(--hlFontFamilyMono));
   --hlBgColor: var(--hl-background-color, hsl(220, 25%, 94%));
   --hlBorderThickness: var(--hl-border-thickness, 1px);

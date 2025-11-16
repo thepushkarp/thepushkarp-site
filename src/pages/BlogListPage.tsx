@@ -17,7 +17,7 @@ export default function BlogListPage() {
       acc[year].push(post);
       return acc;
     },
-    {} as Record<number, typeof blogPosts>,
+    {} as Record<number, typeof blogPosts>
   );
 
   // Sort years in descending order

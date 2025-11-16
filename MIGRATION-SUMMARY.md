@@ -3,6 +3,7 @@
 ## ✅ Completed Migration Tasks
 
 ### 1. **Build Tool & Configuration**
+
 - ✅ Created `vite.config.ts` with all MDX plugins (remark & rehype)
 - ✅ Updated `package.json` with Vite, React Router, and other dependencies
 - ✅ Created `tsconfig.json` and `tsconfig.node.json` for Vite/TypeScript
@@ -10,6 +11,7 @@
 - ✅ Created `index.html` as entry point
 
 ### 2. **Routing & Navigation**
+
 - ✅ Implemented React Router v6 in `src/App.tsx`
 - ✅ Created all route pages in `src/pages/`:
   - `HomePage.tsx`
@@ -24,34 +26,40 @@
 - ✅ Updated `src/components/improvedLink.tsx` to use React Router `Link`
 
 ### 3. **Layout & Components**
+
 - ✅ Created `src/components/layout/Layout.tsx` with theme provider and layout structure
 - ✅ Created `src/main.tsx` as React entry point with `HelmetProvider` and `BrowserRouter`
 - ✅ Updated `src/components/googleAnalytics.tsx` to work without Next.js `Script` component
 - ✅ Replaced `next/image` with standard `<img>` tags
 
 ### 4. **SEO & Metadata**
+
 - ✅ Implemented `react-helmet-async` for managing meta tags
 - ✅ Added SEO meta tags to all page components
 - ✅ All pages have proper Open Graph and Twitter Card metadata
 
 ### 5. **Blog Data Management**
+
 - ✅ Created `scripts/generate-blog-data.ts` to generate blog post metadata at build time
 - ✅ Configured Vite plugin to run blog data generation before build
 - ✅ Updated blog pages to import from `@/data/blog-posts.json`
 - ✅ Blog post pages use dynamic imports with `React.lazy()`
 
 ### 6. **Static File Generation**
+
 - ✅ Created `scripts/generate-feeds.ts` for RSS/Atom/JSON feeds
 - ✅ Created `scripts/generate-sitemap.ts` for sitemap.xml and robots.txt
 - ✅ Updated build script to run these generators after Vite build
 
 ### 7. **Styling & Theming**
+
 - ✅ All Tailwind CSS configurations work as-is
 - ✅ Dark/light theme switching preserved (next-themes works without Next.js)
 - ✅ All global styles, fonts, and CSS preserved
 - ✅ Font loading updated to use standard CSS `@font-face`
 
 ### 8. **Analytics & Tracking**
+
 - ✅ Migrated Google Analytics integration
 - ✅ Vercel Analytics and Speed Insights still work (React compatible)
 
@@ -60,12 +68,15 @@
 ## 🔧 Next Steps (To Complete Migration)
 
 ### 1. **Install Dependencies**
+
 ```bash
 yarn install
 ```
 
 ### 2. **Create Static OG Images**
+
 Create the following images in `public/images/`:
+
 - `og-default.png` (1200x630px)
 - `og-blog.png`
 - `og-projects.png`
@@ -73,20 +84,25 @@ Create the following images in `public/images/`:
 - `og-etymology.png`
 - `og-ai-log.png`
 
-*(See `public/images/OG-IMAGES-README.md` for details)*
+_(See `public/images/OG-IMAGES-README.md` for details)_
 
 ### 3. **Set Environment Variables**
+
 Copy `.env.example` to `.env.local` and add your Google Analytics ID:
+
 ```bash
 cp .env.example .env.local
 # Edit .env.local and add your GA_MEASUREMENT_ID
 ```
 
 ### 4. **Test Development Server**
+
 ```bash
 yarn dev
 ```
+
 Visit `http://localhost:3000` and test:
+
 - All routes (/, /blog, /projects, /misc, /etymology, /ai-log)
 - Blog post pages
 - Navigation (desktop & mobile)
@@ -94,18 +110,23 @@ Visit `http://localhost:3000` and test:
 - MDX rendering (code highlighting, math, callouts, etc.)
 
 ### 5. **Test Production Build**
+
 ```bash
 yarn build
 yarn preview
 ```
+
 Verify:
+
 - All routes work
 - Feeds generated (`dist/rss.xml`, `dist/atom.xml`, `dist/feed.json`)
 - Sitemap generated (`dist/sitemap.xml`)
 - Robots.txt generated (`dist/robots.txt`)
 
 ### 6. **Clean Up Old Next.js Files**
+
 Once everything works, remove:
+
 ```bash
 rm -rf .next
 rm next.config.mjs
@@ -126,6 +147,7 @@ rm src/lib/feed.ts
 ```
 
 Also update each section folder (projects, misc, etc.) to move MDX files:
+
 ```bash
 # Example: keep only the .mdx files, remove page.tsx
 rm src/app/projects/page.tsx
@@ -135,6 +157,7 @@ rm src/app/ai-log/page.tsx
 ```
 
 ### 7. **Update CLAUDE.md**
+
 Replace the Next.js architecture documentation with Vite + React Router documentation.
 
 ---
@@ -142,6 +165,7 @@ Replace the Next.js architecture documentation with Vite + React Router document
 ## 📊 Architecture Changes
 
 ### Before (Next.js)
+
 ```
 Next.js App Router
 ├── Server-side rendering
@@ -153,6 +177,7 @@ Next.js App Router
 ```
 
 ### After (React + Vite)
+
 ```
 React SPA with Vite
 ├── Client-side rendering
@@ -178,6 +203,7 @@ React SPA with Vite
 ## 📦 New Package Structure
 
 ### Added Dependencies
+
 - `vite` - Build tool
 - `@vitejs/plugin-react` - React plugin for Vite
 - `react-router-dom` - Client-side routing
@@ -186,12 +212,14 @@ React SPA with Vite
 - `tsx` - TypeScript execution for build scripts
 
 ### Removed Dependencies
+
 - `next` - Next.js framework
 - `@next/mdx` - Next.js MDX integration
 - `@vercel/og` - Dynamic OG image generation
 - `next-mdx-remote` - Server-side MDX rendering
 
 ### Kept Dependencies
+
 - All MDX plugins (remark/rehype)
 - `next-themes` (works standalone)
 - Tailwind CSS ecosystem
@@ -203,21 +231,26 @@ React SPA with Vite
 ## 🚀 Build Process
 
 ### Development
+
 ```bash
 yarn dev  # Starts Vite dev server on port 3000
 ```
 
 ### Production Build
+
 ```bash
 yarn build
 ```
+
 This runs:
+
 1. TypeScript type checking
 2. Vite build (includes blog data generation)
 3. Feed generation script
 4. Sitemap generation script
 
 ### Preview Production Build
+
 ```bash
 yarn preview
 ```
@@ -227,6 +260,7 @@ yarn preview
 ## 🔄 Deployment (Vercel)
 
 The `vercel.json` configuration ensures:
+
 - All routes rewrite to `/index.html` (SPA routing)
 - Security headers preserved
 - Static files served correctly

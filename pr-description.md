@@ -5,6 +5,7 @@ This PR migrates the entire site from **Next.js 15** to a simpler **React + Vite
 ### Motivation
 
 Next.js forces complex patterns for SSR/CSR that aren't needed for a personal site. This migration results in:
+
 - 🚀 Faster development (Vite HMR)
 - 🪶 Lighter bundle (no Next.js runtime)
 - 🎯 Simpler mental model (pure React SPA)
@@ -15,12 +16,14 @@ Next.js forces complex patterns for SSR/CSR that aren't needed for a personal si
 ## Changes Made
 
 ### Build System & Configuration
+
 - ✅ Added **Vite** as build tool with optimized config
 - ✅ Configured **@mdx-js/rollup** with all existing remark/rehype plugins
 - ✅ Updated TypeScript config for Vite compatibility
 - ✅ Created build scripts for feeds, sitemap, and robots.txt generation
 
 ### Routing & Pages
+
 - ✅ Implemented **React Router v6** for client-side routing
 - ✅ Created 8 page components in `src/pages/`:
   - `HomePage.tsx`
@@ -34,6 +37,7 @@ Next.js forces complex patterns for SSR/CSR that aren't needed for a personal si
 - ✅ Configured SPA routing in `vercel.json`
 
 ### Components & Layout
+
 - ✅ Created `Layout.tsx` component replacing Next.js root layout
 - ✅ Implemented **react-helmet-async** for SEO/meta tags
 - ✅ Updated navigation to use `useLocation()` hook
@@ -42,11 +46,13 @@ Next.js forces complex patterns for SSR/CSR that aren't needed for a personal si
 - ✅ Replaced `next/image` with standard `<img>` tags
 
 ### Data Management
+
 - ✅ Created `scripts/generate-blog-data.ts` to generate blog metadata at build time
 - ✅ Blog posts loaded from JSON file with `React.lazy()` for MDX
 - ✅ Preserved all frontmatter and metadata structure
 
 ### Static File Generation
+
 - ✅ `scripts/generate-feeds.ts` - Creates RSS, Atom, and JSON feeds
 - ✅ `scripts/generate-sitemap.ts` - Creates sitemap.xml and robots.txt
 - ✅ All generated at build time in `dist/` directory
@@ -87,11 +93,13 @@ Before merging, please verify:
 ## New Build Process
 
 ### Development
+
 ```bash
 yarn dev  # Vite dev server on port 3000
 ```
 
 ### Production
+
 ```bash
 yarn build  # Runs: tsc → vite build → generate feeds → generate sitemap
 yarn preview  # Preview production build
@@ -122,6 +130,7 @@ After merging and verifying everything works:
 ## Deployment
 
 No changes needed! The existing Vercel setup will work:
+
 - SPA routing configured in `vercel.json`
 - Static files served correctly
 - Security headers preserved
@@ -131,6 +140,7 @@ No changes needed! The existing Vercel setup will work:
 ## Additional Notes
 
 **Tradeoffs made:**
+
 - ❌ Dynamic OG image generation → ✅ Static OG images
 - ❌ Server-rendered meta tags → ✅ Client-rendered (still works for SEO)
 - ❌ ISR/SSG → ✅ Pure SPA (appropriate for personal site)

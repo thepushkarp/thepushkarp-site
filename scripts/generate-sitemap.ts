@@ -50,7 +50,7 @@ ${allRoutes
     <lastmod>${route.lastModified}</lastmod>
     <changefreq>${route.changeFrequency}</changefreq>
     <priority>${route.priority}</priority>
-  </url>`,
+  </url>`
   )
   .join('\n')}
 </urlset>`;

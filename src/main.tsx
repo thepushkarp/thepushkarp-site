@@ -18,5 +18,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <SpeedInsights />
       </BrowserRouter>
     </HelmetProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

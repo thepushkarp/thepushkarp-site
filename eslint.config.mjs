@@ -82,7 +82,7 @@ export default [
       // General rules
       'no-console': 'off',
       'no-undef': 'off', // TypeScript handles this
+      ...prettier.rules,
     },
   },
-  prettier,
 ];
