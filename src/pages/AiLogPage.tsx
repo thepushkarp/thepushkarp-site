@@ -1,9 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 
 import AiLogMdx from '@/app/ai-log/ai-log.mdx';
+import { generateSEOMeta } from '@/lib/seo';
 import { useMDXComponents } from '@/mdx-components';
-
-const baseUrl = 'https://thepushkarp.com';
 
 export default function AiLogPage() {
   const title = 'ai-log';
@@ -12,24 +11,15 @@ export default function AiLogPage() {
 
   return (
     <>
-      <Helmet>
-        <title>{title} | pushkar patel</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`${baseUrl}/ai-log`} />
-
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${baseUrl}/ai-log`} />
-        <meta property="og:site_name" content="pushkar patel" />
-        <meta property="og:image" content={`${baseUrl}/images/og-ai-log.png`} />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:creator" content="@thepushkarp" />
-        <meta name="twitter:image" content={`${baseUrl}/images/og-ai-log.png`} />
-      </Helmet>
+      <Helmet
+        {...generateSEOMeta({
+          title,
+          description,
+          path: '/ai-log',
+          ogImage: '/images/og-ai-log.png',
+          ogType: 'article',
+        })}
+      />
 
       <section>
         <h1 className="font-semibold text-3xl mb-2 tracking-tighter">{title}</h1>

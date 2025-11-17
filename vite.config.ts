@@ -1,5 +1,3 @@
-import { execSync } from 'child_process';
-
 import mdx from '@mdx-js/rollup';
 import rehypeStarryNight, { defaultPluginPack } from '@microflash/rehype-starry-night';
 import rehypeStarryNightInline from '@microflash/rehype-starry-night/rehype-starry-night-inline';
@@ -17,12 +15,16 @@ import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import remarkToc from 'remark-toc';
 import { defineConfig } from 'vite';
 
+// Import the generator function directly (runs in Node.js context)
 function generateBlogDataPlugin() {
   return {
     name: 'generate-blog-data',
     buildStart() {
       console.log('Generating blog data...');
-      execSync('tsx scripts/generate-blog-data.ts', { stdio: 'inherit' });
+      // Use dynamic import to avoid bundling the script into the Vite config
+      import('./scripts/generate-blog-data.ts').then(module => {
+        module.default();
+      });
     },
   };
 }

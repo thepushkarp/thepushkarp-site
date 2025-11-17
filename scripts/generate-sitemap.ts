@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import matter from 'gray-matter';
+import { loadBlogPosts } from './utils/content';
 
 const baseUrl = 'https://thepushkarp.com';
 
@@ -19,21 +19,14 @@ function generateSitemap() {
     priority: route === '' ? 1.0 : 0.8,
   }));
 
-  const postsDir = path.join(process.cwd(), 'src', 'app', 'blog', 'posts');
-  const filenames = fs.readdirSync(postsDir).filter(f => f.endsWith('.mdx'));
+  const posts = loadBlogPosts();
 
-  const blogRoutes = filenames.map(filename => {
-    const filePath = path.join(postsDir, filename);
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
-    const { data } = matter(fileContent);
-
-    return {
-      url: `${baseUrl}/blog/${data.slug}`,
-      lastModified: data.lastModifiedAt || data.publishedAt,
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    };
-  });
+  const blogRoutes = posts.map(post => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: post.metadata.lastModifiedAt || post.metadata.publishedAt,
+    changeFrequency: 'weekly',
+    priority: 0.6,
+  }));
 
   const allRoutes = [...staticRoutes, ...blogRoutes];
 

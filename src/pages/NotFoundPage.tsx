@@ -1,13 +1,19 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
+import { generateSEOMeta } from '@/lib/seo';
+
 export default function NotFoundPage() {
   return (
     <>
-      <Helmet>
-        <title>404 - Page Not Found | pushkar patel</title>
-        <meta name="description" content="Page not found" />
-      </Helmet>
+      <Helmet
+        {...generateSEOMeta({
+          title: '404 - Page Not Found',
+          description: 'Page not found',
+          path: '/404',
+          noindex: true,
+        })}
+      />
 
       <section className="flex flex-col items-center justify-center min-h-[50vh] text-center">
         <h1 className="font-semibold text-6xl mb-4 tracking-tighter">404</h1>

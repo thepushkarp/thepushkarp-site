@@ -179,7 +179,7 @@ Configured in `tsconfig.json`:
 
 - Blog posts: MDX files in `src/app/blog/posts/`
 - Static assets: `public/` directory
-- Time rhyme data: `public/data/time_dict.json` (used by TimeDisplay)
+- Time rhyme data: `src/data/time_dict.json` (used by TimeDisplay via static import)
 
 ## Deployment
 

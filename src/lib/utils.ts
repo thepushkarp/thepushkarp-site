@@ -5,8 +5,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const cx = (...classNames: string[]) => classNames.filter(Boolean).join(' ');
-
 function getTimeDifference(currentDate: Date, targetDate: Date) {
   const diffTime = currentDate.getTime() - targetDate.getTime();
   const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
@@ -53,19 +51,4 @@ export function formatDateYYYYMMDD(date: string): string {
   const day = String(targetDate.getDate()).padStart(2, '0');
 
   return `${year}-${month}-${day}`;
-}
-
-export async function loadGoogleFont(font: string, text: string) {
-  const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(text)}`;
-  const css = await (await fetch(url)).text();
-  const resource = css.match(/src: url\((.+)\) format\('(opentype|truetype)'\)/);
-
-  if (resource) {
-    const response = await fetch(resource[1]);
-    if (response.status == 200) {
-      return await response.arrayBuffer();
-    }
-  }
-
-  throw new Error('failed to load font data');
 }
