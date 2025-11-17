@@ -7,7 +7,6 @@ import { formatDateYYYYMMDD } from '@/lib/utils';
 const baseUrl = 'https://thepushkarp.com';
 
 export default function BlogListPage() {
-  // Group posts by year
   const postsByYear = blogPosts.reduce(
     (acc, post) => {
       const year = new Date(post.metadata.publishedAt).getFullYear();
@@ -20,7 +19,6 @@ export default function BlogListPage() {
     {} as Record<number, typeof blogPosts>
   );
 
-  // Sort years in descending order
   const years = Object.keys(postsByYear)
     .map(Number)
     .sort((a, b) => b - a);
@@ -32,7 +30,6 @@ export default function BlogListPage() {
         <meta name="description" content="some thoughts, some ideas, some rants, some code" />
         <link rel="canonical" href={`${baseUrl}/blog`} />
 
-        {/* Open Graph */}
         <meta property="og:title" content="blog" />
         <meta property="og:description" content="some thoughts, some ideas, some rants, some code" />
         <meta property="og:type" content="article" />
@@ -40,7 +37,6 @@ export default function BlogListPage() {
         <meta property="og:site_name" content="pushkar patel" />
         <meta property="og:image" content={`${baseUrl}/images/og-blog.png`} />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="blog" />
         <meta name="twitter:description" content="some thoughts, some ideas, some rants, some code" />

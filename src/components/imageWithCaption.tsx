@@ -4,7 +4,6 @@ import { renderCaptionContent } from './captionContent';
 
 import { cn } from '@/lib/utils';
 
-
 type ImageWithCaptionProps = ImgHTMLAttributes<HTMLImageElement> & {
   title?: string;
 };
