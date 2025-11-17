@@ -17,7 +17,6 @@ export default function ProjectsPage() {
         <meta name="description" content={description} />
         <link rel="canonical" href={`${baseUrl}/projects`} />
 
-        {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="article" />
@@ -25,7 +24,6 @@ export default function ProjectsPage() {
         <meta property="og:site_name" content="pushkar patel" />
         <meta property="og:image" content={`${baseUrl}/images/og-projects.png`} />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />

@@ -22,7 +22,6 @@ function generateBlogData() {
   const postsDir = path.join(process.cwd(), 'src', 'app', 'blog', 'posts');
   const outputPath = path.join(process.cwd(), 'src', 'data', 'blog-posts.json');
 
-  // Ensure data directory exists
   const dataDir = path.dirname(outputPath);
   if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
@@ -52,7 +51,6 @@ function generateBlogData() {
     };
   });
 
-  // Sort by date (newest first)
   posts.sort((a, b) => {
     return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
   });

@@ -20,7 +20,6 @@ export default function HomePage() {
         <meta name="description" content="pushkar's site" />
         <link rel="canonical" href={baseUrl} />
 
-        {/* Open Graph */}
         <meta property="og:title" content="pushkar patel" />
         <meta property="og:description" content="pushkar's site" />
         <meta property="og:type" content="website" />
@@ -28,7 +27,6 @@ export default function HomePage() {
         <meta property="og:site_name" content="pushkar patel" />
         <meta property="og:image" content={`${baseUrl}/images/og-default.png`} />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="pushkar patel" />
         <meta name="twitter:description" content="pushkar's site" />

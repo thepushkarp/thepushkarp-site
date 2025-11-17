@@ -22,7 +22,6 @@ export default function BlogPostPage() {
   const post = blogPosts.find(p => p.slug === slug);
   const mdxComponents = useMDXComponents({});
 
-  // Dynamically import the MDX component
   const MdxComponent = useMemo<LazyExoticComponent<MdxContentComponent> | null>(() => {
     if (!post) return null;
     const path = `/src/app/blog/posts/${post.filename}`;
@@ -46,7 +45,6 @@ export default function BlogPostPage() {
         <meta name="description" content={subtitle} />
         <link rel="canonical" href={`${baseUrl}/blog/${post.slug}`} />
 
-        {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={subtitle} />
         <meta property="og:type" content="article" />
@@ -54,7 +52,6 @@ export default function BlogPostPage() {
         <meta property="og:site_name" content="pushkar patel" />
         <meta property="og:image" content={`${baseUrl}/images/og-blog.png`} />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={subtitle} />

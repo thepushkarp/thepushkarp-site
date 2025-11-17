@@ -19,7 +19,6 @@ async function generateFeeds() {
   const distDir = path.join(process.cwd(), 'dist');
   const publicDir = path.join(process.cwd(), 'public');
 
-  // Ensure directories exist
   if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
   }
@@ -49,7 +48,6 @@ async function generateFeeds() {
     },
   });
 
-  // Add homepage
   feed.addItem({
     title: escapeXml('pushkar patel'),
     id: baseUrl,
@@ -58,7 +56,6 @@ async function generateFeeds() {
     date: new Date(),
   });
 
-  // Add blog index
   feed.addItem({
     title: escapeXml('blog | pushkar patel'),
     id: `${baseUrl}/blog`,
@@ -67,7 +64,6 @@ async function generateFeeds() {
     date: new Date(),
   });
 
-  // Add blog posts
   const postsDir = path.join(process.cwd(), 'src', 'app', 'blog', 'posts');
   const filenames = fs.readdirSync(postsDir).filter(f => f.endsWith('.mdx'));
 
@@ -89,7 +85,6 @@ async function generateFeeds() {
     };
   });
 
-  // Sort by date (newest first)
   posts.sort((a, b) => {
     return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
   });
@@ -117,7 +112,6 @@ async function generateFeeds() {
     });
   }
 
-  // Generate feeds
   const rssContent = feed.rss2();
   const atomContent = feed.atom1();
   const jsonContent = feed.json1();
