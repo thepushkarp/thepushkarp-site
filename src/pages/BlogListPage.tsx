@@ -2,9 +2,8 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 import blogPosts from '@/data/blog-posts.json';
+import { generateSEOMeta } from '@/lib/seo';
 import { formatDateYYYYMMDD } from '@/lib/utils';
-
-const baseUrl = 'https://thepushkarp.com';
 
 export default function BlogListPage() {
   const postsByYear = blogPosts.reduce(
@@ -25,24 +24,15 @@ export default function BlogListPage() {
 
   return (
     <>
-      <Helmet>
-        <title>blog | pushkar patel</title>
-        <meta name="description" content="some thoughts, some ideas, some rants, some code" />
-        <link rel="canonical" href={`${baseUrl}/blog`} />
-
-        <meta property="og:title" content="blog" />
-        <meta property="og:description" content="some thoughts, some ideas, some rants, some code" />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${baseUrl}/blog`} />
-        <meta property="og:site_name" content="pushkar patel" />
-        <meta property="og:image" content={`${baseUrl}/images/og-blog.png`} />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="blog" />
-        <meta name="twitter:description" content="some thoughts, some ideas, some rants, some code" />
-        <meta name="twitter:creator" content="@thepushkarp" />
-        <meta name="twitter:image" content={`${baseUrl}/images/og-blog.png`} />
-      </Helmet>
+      <Helmet
+        {...generateSEOMeta({
+          title: 'blog',
+          description: 'some thoughts, some ideas, some rants, some code',
+          path: '/blog',
+          ogImage: '/images/og-blog.png',
+          ogType: 'article',
+        })}
+      />
 
       <section>
         <h1 className="font-semibold text-3xl mb-2 tracking-tighter">blog</h1>

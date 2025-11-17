@@ -1,25 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-import matter from 'gray-matter';
-
-interface BlogPost {
-  slug: string;
-  metadata: {
-    title: string;
-    slug: string;
-    publishedAt: string;
-    subtitle: string;
-    cleanTitle?: string;
-    cleanSubtitle?: string;
-    lastModifiedAt?: string;
-    tags?: string[];
-  };
-  filename: string;
-}
+import { loadBlogPosts } from './utils/content';
 
 function generateBlogData() {
-  const postsDir = path.join(process.cwd(), 'src', 'app', 'blog', 'posts');
   const outputPath = path.join(process.cwd(), 'src', 'data', 'blog-posts.json');
 
   const dataDir = path.dirname(outputPath);
@@ -27,36 +11,19 @@ function generateBlogData() {
     fs.mkdirSync(dataDir, { recursive: true });
   }
 
-  const filenames = fs.readdirSync(postsDir).filter(f => f.endsWith('.mdx'));
+  const posts = loadBlogPosts();
 
-  const posts: BlogPost[] = filenames.map(filename => {
-    const filePath = path.join(postsDir, filename);
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
+  // Remove content field for JSON output (only metadata needed)
+  const postsWithoutContent = posts.map(({ content, ...post }) => post);
 
-    const { data } = matter(fileContent);
-
-    return {
-      slug: data.slug,
-      metadata: {
-        title: data.title,
-        slug: data.slug,
-        publishedAt: data.publishedAt,
-        subtitle: data.subtitle,
-        cleanTitle: data.cleanTitle,
-        cleanSubtitle: data.cleanSubtitle,
-        lastModifiedAt: data.lastModifiedAt,
-        tags: data.tags,
-      },
-      filename: filename,
-    };
-  });
-
-  posts.sort((a, b) => {
-    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
-  });
-
-  fs.writeFileSync(outputPath, JSON.stringify(posts, null, 2));
-  console.log(`Generated blog data for ${posts.length} posts at ${outputPath}`);
+  fs.writeFileSync(outputPath, JSON.stringify(postsWithoutContent, null, 2));
+  console.log(`✅ Generated blog data for ${posts.length} posts at ${outputPath}`);
 }
 
-generateBlogData();
+// Export for use in Vite plugin
+export default generateBlogData;
+
+// Run if called directly via tsx (check if this file is being executed directly)
+if (import.meta.url === `file://${process.argv[1]}` || process.argv[1]?.endsWith('generate-blog-data.ts')) {
+  generateBlogData();
+}

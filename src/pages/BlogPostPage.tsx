@@ -7,10 +7,9 @@ import { useParams } from 'react-router-dom';
 import NotFoundPage from './NotFoundPage';
 
 import blogPosts from '@/data/blog-posts.json';
+import { generateSEOMeta } from '@/lib/seo';
 import { formatDate } from '@/lib/utils';
 import { useMDXComponents } from '@/mdx-components';
-
-const baseUrl = 'https://thepushkarp.com';
 type MdxContentComponent = ComponentType<{ components?: MDXComponents }>;
 type MdxModule = { default: MdxContentComponent };
 
@@ -40,24 +39,15 @@ export default function BlogPostPage() {
 
   return (
     <>
-      <Helmet>
-        <title>{title} | pushkar patel</title>
-        <meta name="description" content={subtitle} />
-        <link rel="canonical" href={`${baseUrl}/blog/${post.slug}`} />
-
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={subtitle} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${baseUrl}/blog/${post.slug}`} />
-        <meta property="og:site_name" content="pushkar patel" />
-        <meta property="og:image" content={`${baseUrl}/images/og-blog.png`} />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={subtitle} />
-        <meta name="twitter:creator" content="@thepushkarp" />
-        <meta name="twitter:image" content={`${baseUrl}/images/og-blog.png`} />
-      </Helmet>
+      <Helmet
+        {...generateSEOMeta({
+          title,
+          description: subtitle,
+          path: `/blog/${post.slug}`,
+          ogImage: '/images/og-blog.png',
+          ogType: 'article',
+        })}
+      />
 
       <section>
         <h1 className="font-semibold text-3xl mb-2 tracking-tighter">{post.metadata.title}</h1>

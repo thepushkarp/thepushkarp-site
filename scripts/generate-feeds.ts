@@ -2,7 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 import { Feed } from 'feed';
-import matter from 'gray-matter';
+
+import { loadBlogPosts } from './utils/content';
 
 const baseUrl = 'https://thepushkarp.com';
 
@@ -15,7 +16,7 @@ function escapeXml(unsafe: string): string {
     .replace(/'/g, '&apos;');
 }
 
-async function generateFeeds() {
+function generateFeeds() {
   const distDir = path.join(process.cwd(), 'dist');
   const publicDir = path.join(process.cwd(), 'public');
 
@@ -64,30 +65,7 @@ async function generateFeeds() {
     date: new Date(),
   });
 
-  const postsDir = path.join(process.cwd(), 'src', 'app', 'blog', 'posts');
-  const filenames = fs.readdirSync(postsDir).filter(f => f.endsWith('.mdx'));
-
-  const posts = filenames.map(filename => {
-    const filePath = path.join(postsDir, filename);
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
-    const { data, content } = matter(fileContent);
-
-    return {
-      slug: data.slug,
-      metadata: {
-        title: data.title,
-        publishedAt: data.publishedAt,
-        subtitle: data.subtitle,
-        lastModifiedAt: data.lastModifiedAt,
-        tags: data.tags,
-      },
-      content,
-    };
-  });
-
-  posts.sort((a, b) => {
-    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
-  });
+  const posts = loadBlogPosts();
 
   for (const post of posts) {
     feed.addItem({
@@ -107,7 +85,7 @@ async function generateFeeds() {
         modified: new Date(post.metadata.lastModifiedAt),
       }),
       ...(post.metadata.tags && {
-        category: post.metadata.tags.map((tag: string) => ({ name: escapeXml(tag) })),
+        category: post.metadata.tags.map(tag => ({ name: escapeXml(tag) })),
       }),
     });
   }
